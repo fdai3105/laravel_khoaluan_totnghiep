@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +17,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::resource('/', DashboardController::class);
 Route::resource('product', ProductController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('brand', BrandController::class);
+Route::resource('user', UserController::class);

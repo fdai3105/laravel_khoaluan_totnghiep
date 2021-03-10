@@ -20,7 +20,7 @@ class CommentFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition(): array {
         return [
             'comment' => $this->faker->sentence,
             'product_id' => Product::all()->random()->id,

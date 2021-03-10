@@ -20,7 +20,7 @@ class ProductFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition(): array {
         return [
             'name' => $this->faker->name,
             'price' => $this->faker->numberBetween(1000, 10000000),

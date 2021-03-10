@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -10,7 +13,7 @@ class ProductController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function index() {
         $products = Product::all();
@@ -22,7 +25,7 @@ class ProductController extends Controller {
      *
      * @return Response
      */
-    public function create() {
+    public function create(): Response {
         //
     }
 
@@ -32,7 +35,7 @@ class ProductController extends Controller {
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request) {
+    public function store(Request $request): Response {
         //
     }
 

@@ -2,9 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Address;
-use App\Models\Comment;
-use App\Models\Reply;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder {

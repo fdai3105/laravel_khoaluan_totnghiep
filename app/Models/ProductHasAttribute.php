@@ -16,10 +16,11 @@ class ProductHasAttribute extends Model {
     public $timestamps = true;
 
     public function product(): BelongsTo {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class, 'attribute_id');
+
     }
 
-    public function attribute(): BelongsTo {
-        return $this->belongsTo(Attribute::class);
+    public function attributee(): BelongsTo {
+        return $this->belongsTo(Attribute::class, 'attribute_id');
     }
 }

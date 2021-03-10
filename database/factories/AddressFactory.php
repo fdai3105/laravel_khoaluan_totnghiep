@@ -19,7 +19,7 @@ class AddressFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition(): array {
         return [
             'city' => $this->faker->state,
             'district' => $this->faker->city,

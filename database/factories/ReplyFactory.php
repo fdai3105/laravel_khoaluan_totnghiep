@@ -20,7 +20,7 @@ class ReplyFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition(): array {
         return [
             'reply' => $this->faker->sentence,
             'comment_id' => Comment::all()->random()->id,

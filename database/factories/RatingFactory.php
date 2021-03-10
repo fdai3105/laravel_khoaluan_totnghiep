@@ -20,7 +20,7 @@ class RatingFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition(): array {
         return [
             'rating' => $this->faker->numberBetween(0, 5),
             'comment' => $this->faker->sentence,

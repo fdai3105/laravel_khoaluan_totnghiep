@@ -15,7 +15,7 @@ class Attribute extends Model {
 
     public $timestamps = true;
 
-    public function ProductAttribute() : HasMany {
+    public function productAttribute() : HasMany {
         return $this->hasMany(ProductHasAttribute::class);
     }
 }
