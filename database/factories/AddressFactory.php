@@ -3,10 +3,10 @@
 namespace Database\Factories;
 
 use App\Models\Address;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AddressFactory extends Factory
-{
+class AddressFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,10 +19,13 @@ class AddressFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
-            //
+            'city' => $this->faker->state,
+            'district' => $this->faker->city,
+            'ward' => $this->faker->streetName,
+            'address' => $this->faker->streetAddress,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }

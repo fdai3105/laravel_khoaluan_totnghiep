@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Comment;
 use App\Models\Reply;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ReplyFactory extends Factory
-{
+class ReplyFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,10 +20,11 @@ class ReplyFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
-            //
+            'reply' => $this->faker->sentence,
+            'comment_id' => Comment::all()->random()->id,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }

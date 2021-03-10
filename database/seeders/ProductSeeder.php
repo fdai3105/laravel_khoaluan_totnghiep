@@ -2,17 +2,16 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
-{
+class ProductSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
-        //
+    public function run() {
+        Product::factory()->count(30)->create();
     }
 }

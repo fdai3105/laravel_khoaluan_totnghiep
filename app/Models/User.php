@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable {
     use HasFactory, Notifiable;
+
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -20,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone', 'gender',
     ];
 
     /**
@@ -29,7 +31,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        //        'remember_token',
     ];
 
     /**
@@ -38,6 +40,23 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        //        'email_verified_at' => 'datetime',
     ];
+
+    public function ratings() {
+        return $this->hasMany(Rating::class);
+    }
+
+    public function comment() {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function reply() {
+        return $this->hasMany(Reply::class);
+    }
+
+    public function order() {
+        return $this->hasMany(Order::class);
+    }
+
 }

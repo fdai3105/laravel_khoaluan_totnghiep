@@ -3,10 +3,11 @@
 namespace Database\Factories;
 
 use App\Models\Comment;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CommentFactory extends Factory
-{
+class CommentFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,10 +20,11 @@ class CommentFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
-            //
+            'comment' => $this->faker->sentence,
+            'product_id' => Product::all()->random()->id,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }

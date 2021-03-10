@@ -5,8 +5,7 @@ namespace Database\Factories;
 use App\Models\Brand;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class BrandFactory extends Factory
-{
+class BrandFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,10 +18,9 @@ class BrandFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
-            //
+            'name' => $this->faker->company,
         ];
     }
 }

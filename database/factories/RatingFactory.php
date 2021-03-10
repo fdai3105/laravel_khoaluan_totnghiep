@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\Product;
 use App\Models\Rating;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RatingFactory extends Factory
-{
+class RatingFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -19,10 +20,12 @@ class RatingFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
-            //
+            'rating' => $this->faker->numberBetween(0, 5),
+            'comment' => $this->faker->sentence,
+            'product_id' => Product::all()->random()->id,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }
