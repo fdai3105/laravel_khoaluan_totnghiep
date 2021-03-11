@@ -60,4 +60,13 @@ class Product extends Model {
     public function ratings(): HasMany {
         return $this->hasMany(Rating::class);
     }
+
+    public function calculationRating() {
+        $total = 0;
+        foreach ($this->ratings as $rating) {
+            $total += $rating->rating;
+        }
+        if ($total == 0) return 0;
+        return round(($total / $this->ratings->count()) * 2) / 2;
+    }
 }
