@@ -2,11 +2,40 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 
+/**
+ * App\Models\User
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $password
+ * @property string $phone
+ * @property int $gender
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection|Comment[] $comment
+ * @property-read int|null $comment_count
+ * @property-read DatabaseNotificationCollection|DatabaseNotification[] $notifications
+ * @property-read int|null $notifications_count
+ * @property-read Collection|Order[] $order
+ * @property-read int|null $order_count
+ * @property-read Collection|Rating[] $ratings
+ * @property-read int|null $ratings_count
+ * @property-read Collection|Reply[] $reply
+ * @property-read int|null $reply_count
+ * @mixin Eloquent
+ */
 class User extends Authenticatable {
     use HasFactory, Notifiable;
 

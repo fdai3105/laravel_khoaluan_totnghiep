@@ -8,6 +8,11 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
+/**
+ * @group Category
+ *
+ * APIs for category
+ */
 class CategoryController extends Controller {
     /**
      * Display a listing of the resource.
@@ -18,44 +23,45 @@ class CategoryController extends Controller {
         return new CategoryResource(Category::all());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request) {
-        //
-    }
+    //    /**
+    //     * Store a newly created resource in storage.
+    //     *
+    //     * @param Request $request
+    //     * @return Response
+    //     */
+    //    public function store(Request $request) {
+    //        //
+    //    }
 
     /**
      * Display the specified resource.
      *
      * @param int $id
-     * @return Response
+     * @return CategoryResource
      */
-    public function show($id) {
-        //
+    public function show(int $id): CategoryResource {
+        $category = Category::findOrFail($id);
+        return new CategoryResource($category);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int $id
-     * @return Response
-     */
-    public function update(Request $request, $id) {
-        //
-    }
+    //    /**
+    //     * Update the specified resource in storage.
+    //     *
+    //     * @param Request $request
+    //     * @param int $id
+    //     * @return Response
+    //     */
+    //    public function update(Request $request, $id) {
+    //        //
+    //    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function destroy($id) {
-        //
-    }
+    //    /**
+    //     * Remove the specified resource from storage.
+    //     *
+    //     * @param int $id
+    //     * @return Response
+    //     */
+    //    public function destroy($id) {
+    //        //
+    //    }
 }
