@@ -20,6 +20,13 @@ use Illuminate\Support\Carbon;
  * @property-read Collection|Product[] $product
  * @property-read int|null $product_count
  * @mixin Eloquent
+ * @method static Builder|Category newModelQuery()
+ * @method static Builder|Category newQuery()
+ * @method static Builder|Category query()
+ * @method static Builder|Category whereCreatedAt($value)
+ * @method static Builder|Category whereId($value)
+ * @method static Builder|Category whereName($value)
+ * @method static Builder|Category whereUpdatedAt($value)
  */
 class Category extends Model {
     use HasFactory;

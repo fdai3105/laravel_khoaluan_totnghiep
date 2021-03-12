@@ -7,6 +7,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductAttribute;
+use App\Models\ProductImage;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -14,6 +15,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
+use Sopamo\LaravelFilepond\Filepond;
+use function PHPUnit\Framework\isEmpty;
 
 class ProductController extends Controller {
     /**
@@ -46,14 +49,27 @@ class ProductController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function store(Request $request) {
-        $attribute_value = $request->input('attributes');
-        $attribute_type = $request->input('attribute_type');
+        $images = $request->file('images');
+        $attributeValues = $request->input('attributes');
+        $attributeTypes = $request->input('attribute_type');
 
         $product = Product::create($request->all());
-        foreach ($attribute_value as $key => $value) {
+
+        if ($request->hasFile('images')) {
+            foreach($images as $file) {
+                $image = new ProductImage();
+                $fileName = preg_replace("/\s+/", "", $product->name . '_' . $file->getClientOriginalName());
+                $fileAddress = $file->move('upload', $fileName);
+
+                $image->image = $fileAddress;
+                $image->product_id = $product->id;
+                $image->save();
+            }
+        }
+        foreach ($attributeValues as $key => $value) {
             ProductAttribute::create([
                 'product_id' => $product->id,
-                'attribute_id' => $attribute_type[$key],
+                'attribute_id' => $attributeTypes[$key],
                 'attribute' => $value,
             ]);
         }

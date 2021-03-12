@@ -11,7 +11,7 @@
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
         <div class="w-1/2 bg-white inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <form action="{{ route('product.store') }}" method="POST">
+            <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 {{-- footer body --}}
@@ -72,7 +72,7 @@
                         <div class="flex-1">
                             <div class="mb-8">
                                 <label for="name" class="text-xs font-semibold">Images</label>
-                                <input type="file" name="images[]" class="filepond" multiple />
+                                <input name="images[]" type="file" accept="image/*" {{--id="filepond"--}} multiple>
                             </div>
 
                             <div id="attribute_fields" class="mb-4">
@@ -129,7 +129,7 @@
 
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <script>
-    const inputElement = document.querySelector('input[type="file"]');
+    const inputElement = document.getElementById('filepond');
     const pond = FilePond.create(inputElement);
 
     function addProductModal() {

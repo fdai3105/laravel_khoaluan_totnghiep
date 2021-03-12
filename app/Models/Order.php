@@ -18,6 +18,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read int|null $order_detail_count
  * @property-read User $user
  * @mixin Eloquent
+ * @method static Builder|Order newModelQuery()
+ * @method static Builder|Order newQuery()
+ * @method static Builder|Order query()
  */
 class Order extends Model {
     use HasFactory;

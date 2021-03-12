@@ -21,6 +21,16 @@ use Illuminate\Support\Carbon;
  * @property-read Product $product
  * @property-read User $user
  * @mixin Eloquent
+ * @method static Builder|Rating newModelQuery()
+ * @method static Builder|Rating newQuery()
+ * @method static Builder|Rating query()
+ * @method static Builder|Rating whereComment($value)
+ * @method static Builder|Rating whereCreatedAt($value)
+ * @method static Builder|Rating whereId($value)
+ * @method static Builder|Rating whereProductId($value)
+ * @method static Builder|Rating whereRating($value)
+ * @method static Builder|Rating whereUpdatedAt($value)
+ * @method static Builder|Rating whereUserId($value)
  */
 class Rating extends Model {
     use HasFactory;

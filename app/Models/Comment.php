@@ -21,6 +21,17 @@ use Illuminate\Support\Carbon;
  * @property-read Product $product
  * @property-read User $user
  * @mixin Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Reply[] $reply
+ * @property-read int|null $reply_count
+ * @method static Builder|Comment newModelQuery()
+ * @method static Builder|Comment newQuery()
+ * @method static Builder|Comment query()
+ * @method static Builder|Comment whereComment($value)
+ * @method static Builder|Comment whereCreatedAt($value)
+ * @method static Builder|Comment whereId($value)
+ * @method static Builder|Comment whereProductId($value)
+ * @method static Builder|Comment whereUpdatedAt($value)
+ * @method static Builder|Comment whereUserId($value)
  */
 class Comment extends Model {
     use HasFactory;

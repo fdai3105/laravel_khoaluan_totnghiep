@@ -22,6 +22,16 @@ use Illuminate\Support\Carbon;
  * @property-read Order $order
  * @property-read Product $product
  * @mixin Eloquent
+ * @method static Builder|OrderDetail newModelQuery()
+ * @method static Builder|OrderDetail newQuery()
+ * @method static Builder|OrderDetail query()
+ * @method static Builder|OrderDetail whereCreatedAt($value)
+ * @method static Builder|OrderDetail whereId($value)
+ * @method static Builder|OrderDetail whereOrderId($value)
+ * @method static Builder|OrderDetail whereProductId($value)
+ * @method static Builder|OrderDetail whereQuantity($value)
+ * @method static Builder|OrderDetail whereTotal($value)
+ * @method static Builder|OrderDetail whereUpdatedAt($value)
  */
 class OrderDetail extends Model {
     use HasFactory;

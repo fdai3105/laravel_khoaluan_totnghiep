@@ -20,6 +20,15 @@ use Illuminate\Support\Carbon;
  * @property-read Comment $comment
  * @property-read User $user
  * @mixin Eloquent
+ * @method static Builder|Reply newModelQuery()
+ * @method static Builder|Reply newQuery()
+ * @method static Builder|Reply query()
+ * @method static Builder|Reply whereCommentId($value)
+ * @method static Builder|Reply whereCreatedAt($value)
+ * @method static Builder|Reply whereId($value)
+ * @method static Builder|Reply whereReply($value)
+ * @method static Builder|Reply whereUpdatedAt($value)
+ * @method static Builder|Reply whereUserId($value)
  */
 class Reply extends Model {
     use HasFactory;

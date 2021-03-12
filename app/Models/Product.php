@@ -31,6 +31,17 @@ use Illuminate\Support\Carbon;
  * @property-read Collection|Rating[] $ratings
  * @property-read int|null $ratings_count
  * @mixin Eloquent
+ * @method static Builder|Product newModelQuery()
+ * @method static Builder|Product newQuery()
+ * @method static Builder|Product query()
+ * @method static Builder|Product whereBrandId($value)
+ * @method static Builder|Product whereCategoryId($value)
+ * @method static Builder|Product whereCreatedAt($value)
+ * @method static Builder|Product whereDesc($value)
+ * @method static Builder|Product whereId($value)
+ * @method static Builder|Product whereName($value)
+ * @method static Builder|Product wherePrice($value)
+ * @method static Builder|Product whereUpdatedAt($value)
  */
 class Product extends Model {
     use HasFactory;

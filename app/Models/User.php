@@ -35,6 +35,19 @@ use Illuminate\Support\Carbon;
  * @property-read Collection|Reply[] $reply
  * @property-read int|null $reply_count
  * @mixin Eloquent
+ * @property string|null $avatar
+ * @method static Builder|User newModelQuery()
+ * @method static Builder|User newQuery()
+ * @method static Builder|User query()
+ * @method static Builder|User whereAvatar($value)
+ * @method static Builder|User whereCreatedAt($value)
+ * @method static Builder|User whereEmail($value)
+ * @method static Builder|User whereGender($value)
+ * @method static Builder|User whereId($value)
+ * @method static Builder|User whereName($value)
+ * @method static Builder|User wherePassword($value)
+ * @method static Builder|User wherePhone($value)
+ * @method static Builder|User whereUpdatedAt($value)
  */
 class User extends Authenticatable {
     use HasFactory, Notifiable;
