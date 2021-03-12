@@ -2,24 +2,25 @@
 
 namespace Database\Factories;
 
-use App\Models\ProductAttribute;
+use App\Models\ProductImage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProductHasAttributeFactory extends Factory
+class ProductImageFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = ProductAttribute::class;
+    protected $model = ProductImage::class;
 
     /**
      * Define the model's default state.
      *
      * @return array
      */
-    public function definition(): array {
+    public function definition()
+    {
         return [
             //
         ];

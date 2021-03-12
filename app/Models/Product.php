@@ -22,7 +22,7 @@ use Illuminate\Support\Carbon;
  * @property int $brand_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property-read Collection|ProductHasAttribute[] $attributes
+ * @property-read Collection|ProductAttribute[] $attributes
  * @property-read int|null $attributes_count
  * @property-read Brand $brand
  * @property-read Category $category
@@ -37,7 +37,7 @@ class Product extends Model {
 
     protected $table = 'products';
 
-    protected $fillable = ['name', 'price', 'desc', 'category_id', 'brand_id'];
+    protected $fillable = ['id', 'name', 'price', 'desc', 'category_id', 'brand_id'];
 
     public $timestamps = true;
 
@@ -50,7 +50,7 @@ class Product extends Model {
     }
 
     public function attributes(): HasMany {
-        return $this->hasMany(ProductHasAttribute::class);
+        return $this->hasMany(ProductAttribute::class);
     }
 
     public function comments(): HasMany {

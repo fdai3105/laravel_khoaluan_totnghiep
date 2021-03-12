@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
@@ -21,4 +22,5 @@ Route::resource('/', DashboardController::class);
 Route::resource('product', ProductController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('brand', BrandController::class);
+Route::resource('attribute', AttributeController::class);
 Route::resource('user', UserController::class);

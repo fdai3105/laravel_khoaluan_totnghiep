@@ -18,14 +18,12 @@ use Illuminate\Support\Carbon;
  * @property int $attribute_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property-read Attribute $attributee
- * @property-read Product $product
  * @mixin Eloquent
  */
-class ProductHasAttribute extends Model {
+class ProductAttribute extends Model {
     use HasFactory;
 
-    protected $table = 'product_has_attributes';
+    protected $table = 'product_attributes';
 
     protected $fillable = ['product_id', 'attribute_id', 'attribute'];
 
@@ -33,10 +31,9 @@ class ProductHasAttribute extends Model {
 
     public function product(): BelongsTo {
         return $this->belongsTo(Product::class, 'attribute_id');
-
     }
 
-    public function attributee(): BelongsTo {
+    public function attributeType(): BelongsTo {
         return $this->belongsTo(Attribute::class, 'attribute_id');
     }
 }

@@ -16,7 +16,7 @@ use Illuminate\Support\Carbon;
  * @property string $name
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property-read Collection|ProductHasAttribute[] $productAttribute
+ * @property-read Collection|ProductAttribute[] $productAttribute
  * @property-read int|null $product_attribute_count
  * @mixin Eloquent
  */
@@ -30,6 +30,6 @@ class Attribute extends Model {
     public $timestamps = true;
 
     public function productAttribute() : HasMany {
-        return $this->hasMany(ProductHasAttribute::class);
+        return $this->hasMany(ProductAttribute::class);
     }
 }

@@ -1,14 +1,14 @@
 @extends('index')
 
 @section('body')
-    @include('category.particles.add-modal')
+    @include('attribute.particles.add-modal')
 
     <div class="h-screen flex-1 flex flex-col bg-gray-800 py-4 lg:py-8 px-4 lg:px-6 xl:px-8 overflow-hidden">
         <!-- topbar -->
         <div class="max-w-screen-2xl w-full mx-auto flex justify-between">
             <div class="hidden md:block">
-                <h1 class="text-2xl mb-1 font-bold text-blue-100">Category overview</h1>
-                <p class="text-lg text-blue-200 hidden lg:block">{{ $categories->count() }} items</p>
+                <h1 class="text-2xl mb-1 font-bold text-blue-100">Attribute overview</h1>
+                <p class="text-lg text-blue-200 hidden lg:block">{{ $attributes->count() }} items</p>
             </div>
             <div class="flex space-x-4 flex-1 justify-between md:justify-end">
                 <div class="relative md:max-w-xs w-full">
@@ -24,7 +24,7 @@
                            placeholder="Enter your search term...">
                 </div>
                 <div class="flex space-x-4">
-                    <button type="button" onclick="addCategoryModal()"
+                    <button type="button" onclick="addAttributeModal()"
                             class="bg-gray-600 rounded-lg h-10 px-3 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-60">
                         <svg class="w-6 h-6 text-blue-100 opacity-80" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
@@ -49,37 +49,37 @@
                 <thead>
                 <tr>
                     <th class="bg-gray-600 py-2 px-3 sticky top-0">ID</th>
-                    <th class="bg-gray-600 py-2 px-3 sticky top-0">Brand</th>
+                    <th class="bg-gray-600 py-2 px-3 sticky top-0">Attribute</th>
                     <th class="bg-gray-600 py-2 px-3 sticky top-0">Last updated</th>
                     <th class="bg-gray-600 py-2 px-3 sticky top-0">Created</th>
                     <th class="bg-gray-600 py-2 px-3 sticky top-0"></th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-600 text-blue-100 text-opacity-80">
-                @foreach($categories as $category)
+                @foreach($attributes as $attribute)
                     <tr>
-                        <td class="py-3 px-3">#{{ $category->id }}</td>
-                        <td class="py-3 px-3">{{ $category->name }}</td>
-                        <td class="py-3 px-3">{{ $category->updated_at }}</td>
-                        <td class="py-3 px-3">{{ $category->created_at }}</td>
+                        <td class="py-3 px-3">#{{ $attribute->id }}</td>
+                        <td class="py-3 px-3">{{ $attribute->name }}</td>
+                        <td class="py-3 px-3">{{ $attribute->updated_at }}</td>
+                        <td class="py-3 px-3">{{ $attribute->created_at }}</td>
 
                         {{-- actions --}}
                         <td class="py-3 px-3">
                             <!-- edit button -->
-                            @include('category.particles.edit-modal',['category'=>$category])
+                            @include('attribute.particles.edit-modal',['category'=>$attribute])
                             <button type="button"
                                     class="bg-green-600 hover:bg-green-700 mr-1 rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-green-400"
-                                    onclick="editCategoryModal({{ $category->id}})">
+                                    onclick="editCategoryModal({{ $attribute->id}})">
                                 <svg class="w-4 h-4 text-blue-100 opacity-80" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                 </svg>
                             </button>
 
                             <!-- remove button -->
-                            @include('category.particles.remove-modal',['id'=> $category->id, 'name'=>$category->name])
+                            @include('attribute.particles.remove-modal',['id'=> $attribute->id, 'name'=>$attribute->name])
                             <button type="button"
                                     class="bg-red-600 hover:bg-red-700 rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-red-400"
-                                    onclick="removeCategoryModal({{ $category->id }})">
+                                    onclick="removeCategoryModal({{ $attribute->id }})">
                                 <svg class="w-4 h-4 text-blue-100 opacity-80" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>

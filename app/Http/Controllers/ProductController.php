@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attribute;
+use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductAttribute;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Redirector;
 
 class ProductController extends Controller {
     /**
@@ -17,7 +23,11 @@ class ProductController extends Controller {
      */
     public function index() {
         $products = Product::all();
-        return view('product.index', ['products' => $products]);
+        $categories = Category::all();
+        $brands = Brand::all();
+        $attributes = Attribute::all();
+
+        return view('product.index', ['products' => $products, 'categories' => $categories, 'brands' => $brands, 'attributes' => $attributes]);
     }
 
     /**
@@ -33,19 +43,31 @@ class ProductController extends Controller {
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Response
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function store(Request $request): Response {
-        //
+    public function store(Request $request) {
+        $attribute_value = $request->input('attributes');
+        $attribute_type = $request->input('attribute_type');
+
+        $product = Product::create($request->all());
+        foreach ($attribute_value as $key => $value) {
+            ProductAttribute::create([
+                'product_id' => $product->id,
+                'attribute_id' => $attribute_type[$key],
+                'attribute' => $value,
+            ]);
+        }
+
+        return redirect('product');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Product $product
+     * @param int $id
      * @return Response
      */
-    public function show(Product $product) {
+    public function show(int $id) {
         //
     }
 
@@ -63,20 +85,22 @@ class ProductController extends Controller {
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Product $product
-     * @return Response
+     * @param int $id
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function update(Request $request, Product $product) {
-        //
+    public function update(Request $request, int $id) {
+        Product::find($id)->update($request->all());
+        return redirect('product');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Product $product
-     * @return Response
+     * @param int $id
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function destroy(Product $product) {
-        //
+    public function destroy(int $id) {
+        Product::findOrFail($id)->delete();
+        return redirect('product');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Attribute;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -11,15 +11,15 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 
-class CategoryController extends Controller {
+class AttributeController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return Application|Factory|View|Response
      */
     public function index() {
-        $categories = Category::all();
-        return view('category.index', ['categories' => $categories]);
+        $attributes = Attribute::all();
+        return view('attribute.index', ['attributes' => $attributes]);
     }
 
     /**
@@ -38,27 +38,27 @@ class CategoryController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function store(Request $request) {
-        Category::create($request->all());
-        return redirect("category");
+        Attribute::create($request->all());
+        return redirect("attribute");
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Category $category
+     * @param int $id
      * @return Response
      */
-    public function show(Category $category) {
+    public function show($id) {
         //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Category $category
+     * @param int $id
      * @return Response
      */
-    public function edit(Category $category) {
+    public function edit($id) {
         //
     }
 
@@ -67,21 +67,19 @@ class CategoryController extends Controller {
      *
      * @param Request $request
      * @param int $id
-     * @return Application|RedirectResponse|Response|Redirector
+     * @return Response
      */
     public function update(Request $request, int $id) {
-        Category::find($id)->update($request->all());
-        return redirect('category');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return Application|RedirectResponse|Response|Redirector
+     * @return Response
      */
     public function destroy(int $id) {
-        Category::findOrFail($id)->delete();
-        return redirect('category');
+        //
     }
 }

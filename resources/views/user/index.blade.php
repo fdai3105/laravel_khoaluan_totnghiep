@@ -56,7 +56,7 @@
                         <th class="bg-gray-600 py-2 px-3 sticky top-0">Created</th>
                     </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-600 text-blue-100 text-opacity-80 whitespace-nowrap">
+                    <tbody class="divide-y divide-gray-600 text-blue-100 text-opacity-80">
                     @foreach($users as $user)
                         <tr>
                             <td class="py-3 px-3">#{{ $user->id }}</td>
