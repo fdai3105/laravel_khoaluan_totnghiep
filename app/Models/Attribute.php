@@ -19,13 +19,6 @@ use Illuminate\Support\Carbon;
  * @property-read Collection|ProductAttribute[] $productAttribute
  * @property-read int|null $product_attribute_count
  * @mixin Eloquent
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute query()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUpdatedAt($value)
  */
 class Attribute extends Model {
     use HasFactory;
@@ -36,7 +29,7 @@ class Attribute extends Model {
 
     public $timestamps = true;
 
-    public function productAttribute() : HasMany {
+    public function productAttributes() : HasMany {
         return $this->hasMany(ProductAttribute::class);
     }
 }

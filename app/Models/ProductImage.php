@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
 /**
@@ -22,9 +23,11 @@ class ProductImage extends Model {
 
     protected $table = 'product_images';
 
-    protected $fillable = ['image', 'product_id'];
+    protected $fillable = ['name', 'image', 'product_id'];
 
     public $timestamps = true;
 
-    public function product() {}
+    public function product(): BelongsTo {
+        return $this->belongsTo(ProductImage::class);
+    }
 }

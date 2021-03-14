@@ -97,13 +97,13 @@
                                             </div>
                                         @endforeach
                                     </select>
-                                    <div class="flex-shrink-0 h-10 w-10 bg-red-600 flex justify-center align-middle rounded-lg">
-                                        <button type="button" class="text-white outline-none focus:outline-none" onclick="removeAttributeField()">
+                                    <button type="button" class="text-white outline-none focus:outline-none" onclick="removeAttributeField()">
+                                        <div class="flex justify-center items-center h-10 w-10 bg-red-600 rounded-lg">
                                             <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                                             </svg>
-                                        </button>
-                                    </div>
+                                        </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +142,16 @@
     }
 
     function addAttributeField() {
-        const ele = '<div class="mt-1 flex flex-row align-middle"><input type="number" name="attributes[]"class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md"> <select name="attribute_type[]"class="px-2 h-10 w-20 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">@foreach($attributes as $attribute)<div class="px-2 py-2"> <option name="attribute_type[]" value="{{$attribute->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">{{$attribute->name}}</option> </div>@endforeach</select> <div class="flex-shrink-0 h-10 w-10 bg-red-600 flex justify-center align-middle rounded-lg"> <button type="button" class="text-white outline-none focus:outline-none" onclick="removeAttributeField()"> <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /> </svg> </button> </div> </div>'
+        const ele = '<div class="mt-1 flex flex-row align-middle"> ' +
+            '<input type="number" name="attributes[]"class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
+            '<select name="attribute_type[]"class="px-2 h-10 w-20 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
+            '@foreach($attributes as $attribute)<div class="px-2 py-2"> <option name="attribute_type[]" value="{{$attribute->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">{{$attribute->name}}</option> </div>@endforeach' +
+            '</select>' +
+            '<button type="button" class="text-white outline-none focus:outline-none" onclick="removeAttributeField()">' +
+            '<div class="flex justify-center items-center h-10 w-10 bg-red-600 flex justify-center align-middle rounded-lg">' +
+            '<svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> ' +
+            '<path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>' +
+            '</svg></div></button></div>'
         $('#attribute_fields').append(ele)
     }
 

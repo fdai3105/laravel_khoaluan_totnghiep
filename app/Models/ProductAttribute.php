@@ -19,17 +19,6 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @mixin Eloquent
- * @property-read \App\Models\Attribute $attributeType
- * @property-read \App\Models\Product $product
- * @method static Builder|ProductAttribute newModelQuery()
- * @method static Builder|ProductAttribute newQuery()
- * @method static Builder|ProductAttribute query()
- * @method static Builder|ProductAttribute whereAttribute($value)
- * @method static Builder|ProductAttribute whereAttributeId($value)
- * @method static Builder|ProductAttribute whereCreatedAt($value)
- * @method static Builder|ProductAttribute whereId($value)
- * @method static Builder|ProductAttribute whereProductId($value)
- * @method static Builder|ProductAttribute whereUpdatedAt($value)
  */
 class ProductAttribute extends Model {
     use HasFactory;

@@ -12,6 +12,7 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Laravel\Passport\HasApiTokens;
 
 /**
  * App\Models\User
@@ -50,7 +51,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|User whereUpdatedAt($value)
  */
 class User extends Authenticatable {
-    use HasFactory, Notifiable;
+    use HasApiTokens,HasFactory, Notifiable;
 
     protected $table = 'users';
 

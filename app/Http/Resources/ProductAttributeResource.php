@@ -15,7 +15,7 @@ class ProductAttributeResource extends JsonResource {
         return [
             'id' => $this->id,
             'attribute' => $this->attribute,
-            'attribute_type' => $this->attributee->name,
+            'attribute_type' => $this->attributeType->name,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

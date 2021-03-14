@@ -24,3 +24,6 @@ Route::resource('category', CategoryController::class);
 Route::resource('brand', BrandController::class);
 Route::resource('attribute', AttributeController::class);
 Route::resource('user', UserController::class);
+
+Route::get('login', function () { })->name('login');
+Route::get('register', function () { })->name('register');

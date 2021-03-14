@@ -64,6 +64,10 @@ class Product extends Model {
         return $this->hasMany(ProductAttribute::class);
     }
 
+    public function images() : HasMany {
+        return $this->hasMany(ProductImage::class);
+    }
+
     public function comments(): HasMany {
         return $this->hasMany(Comment::class);
     }

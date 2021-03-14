@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
+/**
+ * @group  Rating
+ *
+ * APIs for rating
+ */
 class RatingController extends Controller {
     /**
      * Display a listing of the resource.

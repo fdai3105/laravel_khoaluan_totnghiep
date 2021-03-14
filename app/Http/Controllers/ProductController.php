@@ -15,8 +15,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
-use Sopamo\LaravelFilepond\Filepond;
-use function PHPUnit\Framework\isEmpty;
 
 class ProductController extends Controller {
     /**
@@ -56,11 +54,11 @@ class ProductController extends Controller {
         $product = Product::create($request->all());
 
         if ($request->hasFile('images')) {
-            foreach($images as $file) {
+            foreach ($images as $file) {
                 $image = new ProductImage();
                 $fileName = preg_replace("/\s+/", "", $product->name . '_' . $file->getClientOriginalName());
                 $fileAddress = $file->move('upload', $fileName);
-
+                $image->name = $fileName;
                 $image->image = $fileAddress;
                 $image->product_id = $product->id;
                 $image->save();
