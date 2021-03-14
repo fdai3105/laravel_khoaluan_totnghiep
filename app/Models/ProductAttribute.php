@@ -27,6 +27,7 @@ class ProductAttribute extends Model {
 
     protected $fillable = ['product_id', 'attribute_id', 'attribute'];
 
+
     public $timestamps = true;
 
     public function product(): BelongsTo {

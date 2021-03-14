@@ -11,6 +11,7 @@ use App\Models\ProductImage;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -64,6 +65,7 @@ class ProductController extends Controller {
                 $image->save();
             }
         }
+
         foreach ($attributeValues as $key => $value) {
             ProductAttribute::create([
                 'product_id' => $product->id,
@@ -103,7 +105,50 @@ class ProductController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function update(Request $request, int $id) {
-        Product::find($id)->update($request->all());
+        $attributeValues = $request->input('attributes');
+        $attributeTypes = $request->input('attribute_type');
+        $attributeIds = $request->input('attribute_id');
+        $images = $request->file('images');
+
+        try {
+            Product::find($id)->update($request->all());
+
+            foreach ($attributeValues as $key => $attribute) {
+                if ($attributeIds[$key] == null) {
+                    ProductAttribute::create([
+                        'product_id' => $id,
+                        'attribute_id' => $attributeTypes[$key],
+                        'attribute' => $attribute
+                    ]);
+                    continue;
+                }
+
+                if ($attribute == null) {
+                    ProductAttribute::findOrFail($attributeIds[$key])->delete();
+                    continue;
+                }
+
+                ProductAttribute::findOrFail($attributeIds[$key])
+                    ->update([
+                        'product_id' => $id,
+                        'attribute_id' => $attributeTypes[$key],
+                        'attribute' => $attribute
+                    ]);
+            }
+
+            if ($request->hasFile('images')) {
+                foreach ($images as $file) {
+                    $fileAddress = $file->move('upload', $file->getClientOriginalName());
+                    ProductImage::create([
+                        'name' => $file->getClientOriginalName(),
+                        'image' => $fileAddress,
+                        'product_id' => $id,
+                    ]);
+                }
+            }
+        } catch (\Exception $e) {
+            return redirect('product');
+        }
         return redirect('product');
     }
 

@@ -3,19 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Attribute;
+use App\Models\Product;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class ProductAttributeController extends Controller
-{
+class ProductAttributeController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $products = Product::all();
+        return view('product-attribute.index');
     }
 
     /**
@@ -23,8 +26,7 @@ class ProductAttributeController extends Controller
      *
      * @return Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -34,8 +36,7 @@ class ProductAttributeController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -45,8 +46,7 @@ class ProductAttributeController extends Controller
      * @param Attribute $productAttribute
      * @return Response
      */
-    public function show(Attribute $productAttribute)
-    {
+    public function show(Attribute $productAttribute) {
         //
     }
 
@@ -56,8 +56,7 @@ class ProductAttributeController extends Controller
      * @param Attribute $productAttribute
      * @return Response
      */
-    public function edit(Attribute $productAttribute)
-    {
+    public function edit(Attribute $productAttribute) {
         //
     }
 
@@ -68,8 +67,7 @@ class ProductAttributeController extends Controller
      * @param Attribute $productAttribute
      * @return Response
      */
-    public function update(Request $request, Attribute $productAttribute)
-    {
+    public function update(Request $request, Attribute $productAttribute) {
         //
     }
 
@@ -79,8 +77,7 @@ class ProductAttributeController extends Controller
      * @param Attribute $productAttribute
      * @return Response
      */
-    public function destroy(Attribute $productAttribute)
-    {
+    public function destroy(Attribute $productAttribute) {
         //
     }
 }

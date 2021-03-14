@@ -13,6 +13,7 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
  * APIs for product
  */
 class ProductController extends Controller {
+
     /**
      * Display a listing of the resource.
      *

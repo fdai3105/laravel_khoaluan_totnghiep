@@ -12,6 +12,7 @@
                             <span class="flex-1">Dashboard</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="{{ route('product.index') }}"
                            class="{{ request()->is('product') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-700 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
@@ -22,6 +23,7 @@
                             <span class="flex-1">Product</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="{{ route('category.index') }}"
                            class="{{ request()->is('category') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-700 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
@@ -31,6 +33,7 @@
                             <span class="flex-1">Categories</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="{{ route('brand.index') }}"
                            class="{{ request()->is('brand') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-700 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
@@ -41,6 +44,7 @@
                             <span class="flex-1">Brands</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="{{ route('attribute.index') }}"
                            class="{{ request()->is('attribute') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-700 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
@@ -50,6 +54,7 @@
                             <span class="flex-1">Attributes</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="{{ route('user.index') }}"
                            class="{{ request()->is('user') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-700 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
