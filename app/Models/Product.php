@@ -42,6 +42,8 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Product whereName($value)
  * @method static Builder|Product wherePrice($value)
  * @method static Builder|Product whereUpdatedAt($value)
+ * @property-read Collection|\App\Models\ProductImage[] $images
+ * @property-read int|null $images_count
  */
 class Product extends Model {
     use HasFactory;

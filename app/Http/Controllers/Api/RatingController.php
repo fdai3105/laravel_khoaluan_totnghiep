@@ -18,23 +18,22 @@ class RatingController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @param int $product_id
      * @return AnonymousResourceCollection
      */
-    public function index(int $product_id): AnonymousResourceCollection {
-        //        $ratings = Rating::where('product_id', $product_id);
-        //        return RatingResource::collection($ratings);
+    public function index(): AnonymousResourceCollection {
+        $ratings = Rating::all();
+        return RatingResource::collection($ratings);
     }
 
     /**
      * Display the specified resource.
      *
      * @param int $id
-     * @return AnonymousResourceCollection
+     * @return RatingResource
      */
-    public function show(int $id): AnonymousResourceCollection {
+    public function show(int $id): RatingResource {
         $ratings = Rating::findOrFail($id);
-        return RatingResource::collection($ratings);
+        return new RatingResource($ratings);
     }
 
     /**

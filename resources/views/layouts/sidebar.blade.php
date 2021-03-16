@@ -1,8 +1,8 @@
-<div class="flex flex-col lg:flex-row min-h-screen font-semibold text-blue-100 text-base subpixel-antialiased">
+<div class="min-h-screen font-semibold text-blue-100 text-base subpixel-antialiased">
     <div class="h-screen bg-gray-900 w-54 px-6 py-2 sticky top-0 hidden lg:flex flex-col shadow-inner">
-        <div class="flex-1 py-4">
-            <nav class="md:mt-8 -mx-2">
-                <ul class="text-base pt-2 space-y-3">
+        <div class="py-4">
+            <nav class="flex flex-col md:mt-8 -mx-2">
+                <ul class="flex-1 text-base pt-2 space-y-3">
                     <li>
                         <a href="{{ url('/') }}"
                            class="{{ request()->is('/') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-800 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold">
@@ -64,7 +64,19 @@
                             <span class="flex-1">Users</span>
                         </a>
                     </li>
+
                 </ul>
+
+                {{-- logout --}}
+                <div class="fixed bottom-0 ">
+                    <a href="{{ route('logout') }}"
+                       class="hover:text-gray-600 transition-colors duration-100 text-blue-200 flex items-end py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" />
+                        </svg>
+                        <span class="flex-1">Logout</span>
+                    </a>
+                </div>
             </nav>
         </div>
     </div>

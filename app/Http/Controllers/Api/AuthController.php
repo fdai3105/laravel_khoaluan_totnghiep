@@ -33,7 +33,7 @@ class AuthController extends Controller {
                     'expires_at' => $token->token->expires_at
                 ]);
             } else {
-                return response()->json(['message' => 'fail']);
+                return response()->json(['message' => 'wrong email or password']);
             }
         } catch (\Exception $e) {
             return response()->json(['message' => $e->getMessage()]);
@@ -61,6 +61,7 @@ class AuthController extends Controller {
                 'password' => \Hash::make($request->password),
                 'phone' => $request->phone,
                 'gender' => $request->gender,
+                'level' => 0,
             ]);
             return response()->json(['message' => 'created success']);
         } catch (\Exception $e) {

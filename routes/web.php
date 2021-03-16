@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\AttributeController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductAttributeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +21,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/', DashboardController::class);
-Route::resource('product', ProductController::class);
-Route::resource('category', CategoryController::class);
-Route::resource('brand', BrandController::class);
-Route::resource('attribute', AttributeController::class);
-Route::resource('user', UserController::class);
 
-Route::get('login', function () { })->name('login');
-Route::get('register', function () { })->name('register');
+Route::middleware([CheckRole::class,'verified'])->group(function () {
+    Route::resource('/', DashboardController::class);
+    Route::resource('product', ProductController::class);
+    Route::resource('category', CategoryController::class);
+    Route::resource('brand', BrandController::class);
+    Route::resource('attribute', AttributeController::class);
+    Route::resource('user', UserController::class);
+});
+
+Auth::routes(['verify' => true]);
+Route::get('/logout', [LoginController::class,'logout'])->name('logout');

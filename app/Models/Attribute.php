@@ -19,6 +19,15 @@ use Illuminate\Support\Carbon;
  * @property-read Collection|ProductAttribute[] $productAttribute
  * @property-read int|null $product_attribute_count
  * @mixin Eloquent
+ * @property-read Collection|\App\Models\ProductAttribute[] $productAttributes
+ * @property-read int|null $product_attributes_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUpdatedAt($value)
  */
 class Attribute extends Model {
     use HasFactory;
