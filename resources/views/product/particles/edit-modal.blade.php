@@ -75,6 +75,27 @@
 
                         {{-- column 2 --}}
                         <div class="flex-1">
+
+                            <div class="mb-4">
+                                <label for="name" class="text-xs font-semibold">Stock</label>
+                                <input type="number" name="stock" value="{{ $product->stock }}"
+                                       class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                            </div>
+
+                            <div class="flex flex-row mb-4">
+                                <div class="flex-1 mr-2">
+                                    <label for="name" class="text-xs font-semibold">Warranty</label>
+                                    <input type="number" name="warranty" value="{{ $product->warranty }}"
+                                           class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                                </div>
+
+                                <div class="flex-1 ml-2">
+                                    <label for="name" class="text-xs font-semibold">Discount</label>
+                                    <input type="number" name="discount" value="{{ $product->discount }}"
+                                           class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                                </div>
+                            </div>
+
                             <div class="mb-8">
                                 <label for="name" class="text-xs font-semibold">Images</label>
                                 <br>

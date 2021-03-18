@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Support\Collection;
 
 /**
  * @group  Product
@@ -64,4 +66,32 @@ class ProductController extends Controller {
     //    public function destroy($id) {
     //        //
     //    }
+
+    /**
+     * Show new product sort by
+     *
+     * @param Request $request
+     *
+     * @queryParam  limit Limit of the query. Example : 6
+     */
+    public function hotProducts(Request $request) {
+    }
+
+    /**
+     * Show hot product sort by updated_at
+     *
+     * @param Request $request
+     * @return Collection
+     *
+     * @queryParam  limit Limit of the query. Example: 6
+     */
+    public function newProducts(Request $request): Collection {
+        $limit = $request->input('limit');
+
+        return Product::orderBy('updated_at', 'DESC')
+            ->when($limit, function ($q, $limit) {
+                return $q->limit($limit);
+            })
+            ->get();
+    }
 }

@@ -36,8 +36,12 @@ Route::group(['middleware' => 'auth:api,web'], function () {
 });
 
 Route::apiResource('brand', BrandController::class);
+
 Route::apiResource('category', CategoryController::class);
-Route::apiResource('product', ProductController::class);
+
+//Route::apiResource('product', ProductController::class);
+Route::get('/product/new-product', [ProductController::class, 'newProducts']);
+Route::get('product/hot-product', [ProductController::class, 'hotProducts']);
 
 Route::apiResource('rating', RatingController::class)->only(['index', 'show']);
 Route::get('rating/rating-product/{product_id?}', [RatingController::class, 'getRatingByProduct']);

@@ -25,6 +25,10 @@ class ProductFactory extends Factory {
             'name' => $this->faker->name,
             'price' => $this->faker->numberBetween(1000, 10000000),
             'desc' => $this->faker->text,
+            'stock' => $this->faker->numberBetween(10, 100),
+            'bought' => $this->faker->numberBetween(0, 40),
+            'warranty' => $this->faker->numberBetween(0, 24),
+            'discount' => $this->faker->numberBetween(0, 20),
             'category_id' => Category::all()->random()->id,
             'brand_id' => Brand::all()->random()->id,
         ];

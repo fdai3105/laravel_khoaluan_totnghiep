@@ -42,7 +42,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Product whereName($value)
  * @method static Builder|Product wherePrice($value)
  * @method static Builder|Product whereUpdatedAt($value)
- * @property-read Collection|\App\Models\ProductImage[] $images
+ * @property-read Collection|ProductImage[] $images
  * @property-read int|null $images_count
  */
 class Product extends Model {
@@ -50,7 +50,18 @@ class Product extends Model {
 
     protected $table = 'products';
 
-    protected $fillable = ['id', 'name', 'price', 'desc', 'category_id', 'brand_id'];
+    protected $fillable = [
+        'id',
+        'name',
+        'price',
+        'desc',
+        'stock',
+        'bought',
+        'warranty',
+        'discount',
+        'category_id',
+        'brand_id',
+    ];
 
     public $timestamps = true;
 
@@ -66,7 +77,7 @@ class Product extends Model {
         return $this->hasMany(ProductAttribute::class);
     }
 
-    public function images() : HasMany {
+    public function images(): HasMany {
         return $this->hasMany(ProductImage::class);
     }
 

@@ -67,6 +67,9 @@ class ProductController extends Controller {
         }
 
         foreach ($attributeValues as $key => $value) {
+            if ($value == null) {
+                continue;
+            }
             ProductAttribute::create([
                 'product_id' => $product->id,
                 'attribute_id' => $attributeTypes[$key],

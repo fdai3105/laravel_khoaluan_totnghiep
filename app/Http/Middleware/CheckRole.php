@@ -21,10 +21,10 @@ class CheckRole {
                 return $next($request);
             } else {
                 Auth::logout();
-                return redirect('login');
+                return redirect('login')->withErrors('Bạn không có quyền vào trang này');
             }
         } else {
-            return redirect('login');
+            return redirect('login')->withErrors('Vui lòng kiểm tra lại email và mật khẩu');
         }
     }
 }
