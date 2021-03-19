@@ -30,7 +30,7 @@ class AuthController extends Controller {
                 return response()->json([
                     'user' => $user,
                     'access_token' => $token->accessToken,
-                    'expires_at' => $token->token->expires_at
+                    'expires_at' => $token->token->expires_at,
                 ]);
             } else {
                 return response()->json(['message' => 'wrong email or password']);

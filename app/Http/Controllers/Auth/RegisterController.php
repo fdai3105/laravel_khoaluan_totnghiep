@@ -9,6 +9,11 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @group  Authenticator
+ *
+ * APIs of auth
+ */
 class RegisterController extends Controller {
     /*
     |--------------------------------------------------------------------------

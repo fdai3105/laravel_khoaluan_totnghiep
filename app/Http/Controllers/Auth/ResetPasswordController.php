@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
+/**
+ * @group  Authenticator
+ *
+ * APIs of auth
+ */
 class ResetPasswordController extends Controller
 {
     /*

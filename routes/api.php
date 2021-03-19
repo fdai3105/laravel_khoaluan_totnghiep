@@ -8,7 +8,6 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RatingController;
 use App\Http\Controllers\Api\BrandController;
 use App\Http\Controllers\OrderController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +25,6 @@ Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth:api,web'], function () {
-    Route::get('/demo', function () { return 'dd'; });
     Route::apiResource('rating', RatingController::class)->except(['index', 'show']);
     Route::apiResource('comment', RatingController::class)->except(['index', 'show']);
 
@@ -49,6 +47,7 @@ Route::get('rating/rating-product/{product_id?}', [RatingController::class, 'get
 Route::apiResource('comment', RatingController::class)->only(['index', 'show']);
 Route::get('comment/comment-product/{product_id?}', [CommentController::class, 'getCommentsByProduct']);
 
-Auth::routes(['verify' => true, 'login' => false, 'register' => false]);
-
+Route::group(['middleware' => ['web']], function () {
+    Auth::routes(['verify' => true, 'login' => false, 'register' => false]);
+});
 
