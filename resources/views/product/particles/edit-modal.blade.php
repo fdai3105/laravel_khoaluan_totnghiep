@@ -139,7 +139,7 @@
                                     @endforeach
                                 @else
                                     <div class="mt-1 flex flex-row align-middle">
-                                        <input type="number" name="attributes[]"
+                                        <input type="text" name="attributes[]"
                                                class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         <input name="attribute_id[]" value=""
                                                class="hidden">
@@ -197,7 +197,7 @@
 
     function editAddFields(id) {
         const ele = '<div class="mt-1 flex flex-row align-middle"> ' +
-            '<input type="number" name="attributes[]"class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
+            '<input type="text" name="attributes[]"class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
             '<input name="attribute_id[]" value="" class="hidden">' +
             '<select name="attribute_type[]"class="px-2 h-10 w-20 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
             '@foreach($attributes as $attribute)<div class="px-2 py-2"> <option name="attribute_type[]" value="{{$attribute->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">{{$attribute->name}}</option> </div>@endforeach' +

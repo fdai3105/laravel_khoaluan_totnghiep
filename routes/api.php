@@ -1,13 +1,12 @@
 <?php
 
-use App\Http\Controllers\Api\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RatingController;
 use App\Http\Controllers\Api\BrandController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Api\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +31,7 @@ Route::group(['middleware' => 'auth:api,web'], function () {
         Route::get('order', [OrderController::class, 'index']);
     });
 });
-
+Route::apiResource('product', ProductController::class);
 Route::apiResource('brand', BrandController::class);
 
 Route::apiResource('category', CategoryController::class);

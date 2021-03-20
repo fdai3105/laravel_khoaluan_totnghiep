@@ -8,6 +8,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Env;
 
 /**
  * @group  Product
@@ -17,12 +18,13 @@ use Illuminate\Support\Collection;
 class ProductController extends Controller {
 
     /**
-     * Display a listing of the resource.
+     * Show all products
      *
      * @return AnonymousResourceCollection
      */
     public function index(): AnonymousResourceCollection {
-        return ProductResource::collection(Product::all());
+        $products = Product::paginate(env('APP_PAGINATE', 10));
+        return ProductResource::collection($products);
     }
 
     //    /**
@@ -36,7 +38,7 @@ class ProductController extends Controller {
     //    }
 
     /**
-     * Display the specified resource.
+     * Show one product by id
      *
      * @param int $id
      * @return ProductResource

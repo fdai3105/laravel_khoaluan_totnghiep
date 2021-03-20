@@ -38,7 +38,15 @@ class BrandController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function store(Request $request) {
-        Brand::create($request->all());
+        $brand = Brand::create($request->all());
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = preg_replace("/(?:\s\s+|\n|\t)/", "", $brand->name . '_' . $image->getClientOriginalName());
+            $fileAddress = $image->move('upload', $fileName);
+            $brand->image = $fileAddress;
+            $brand->save();
+        }
         return redirect("brand");
     }
 
@@ -69,7 +77,19 @@ class BrandController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function update(Request $request, int $id) {
-        Brand::find($id)->update($request->all());
+        $brand = Brand::find($id);
+        $brand->update([
+            'name' => $request->input('name'),
+            'desc' => $request->input('desc'),
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = preg_replace("/\s+/", "", $request->input('name') . '_' . $image->getClientOriginalName());
+            $fileAddress = $image->move('upload', $fileName);
+            $brand->update(['image' => $fileAddress]);
+        }
+
         return redirect('brand');
     }
 

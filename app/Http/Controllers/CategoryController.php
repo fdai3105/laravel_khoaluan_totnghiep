@@ -38,7 +38,15 @@ class CategoryController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function store(Request $request) {
-        Category::create($request->all());
+        $category = Category::create($request->all());
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = preg_replace("/(?:\s\s+|\n|\t)/", "", $category->name . '_' . $image->getClientOriginalName());
+            $fileAddress = $image->move('upload', $fileName);
+            $category->image = $fileAddress;
+            $category->save();
+        }
         return redirect("category");
     }
 
@@ -70,7 +78,19 @@ class CategoryController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function update(Request $request, int $id) {
-        Category::find($id)->update($request->all());
+        $category = Category::find($id);
+        $category->update([
+            'name' => $request->input('name'),
+            'desc' => $request->input('desc'),
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = preg_replace("/\s+/", "", $request->input('name') . '_' . $image->getClientOriginalName());
+            $fileAddress = $image->move('upload', $fileName);
+            $category->update(['image' => $fileAddress]);
+        }
+
         return redirect('category');
     }
 

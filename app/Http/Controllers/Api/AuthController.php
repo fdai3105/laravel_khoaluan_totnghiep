@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -20,7 +22,13 @@ class AuthController extends Controller {
      * @param Request $request
      * @return JsonResponse
      */
-    public function login(Request $request): JsonResponse {
+    public function login(LoginRequest $request): JsonResponse {
+        $request->validated();
+
+        $find = User::where('email', '=', $request->input('email'))->first();
+        if (!$find) {
+            return response()->json(['message' => 'This user is not register'], 401);
+        }
         try {
             $credentials = request(['email', 'password']);
             if (\Auth::attempt($credentials)) {
@@ -33,10 +41,10 @@ class AuthController extends Controller {
                     'expires_at' => $token->token->expires_at,
                 ]);
             } else {
-                return response()->json(['message' => 'wrong email or password']);
+                return response()->json(['message' => 'wrong email or password'], 401);
             }
         } catch (\Exception $e) {
-            return response()->json(['message' => $e->getMessage()]);
+            return response()->json(['message' => $e->getMessage()], 422);
         }
 
     }
@@ -52,8 +60,9 @@ class AuthController extends Controller {
      * @bodyParam  gender int gender of user (0 = not known, 1 = male, 2 = female, 8 = not applicable)
      * @return JsonResponse
      */
-    public function register(Request $request): JsonResponse {
-        //        $request->validated();
+    public function register(RegisterRequest $request): JsonResponse {
+        $request->validated();
+
         try {
             User::create([
                 'name' => $request->name,
@@ -65,7 +74,7 @@ class AuthController extends Controller {
             ]);
             return response()->json(['message' => 'created success']);
         } catch (\Exception $e) {
-            return response()->json(['message' => $e->getMessage()]);
+            return response()->json(['message' => $e->getMessage()], 422);
         }
     }
 }

@@ -10,7 +10,7 @@
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
         <div class="w-1/3 bg-white text-gray-800 inline-block align-bottom sm:align-middle rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <form action="{{ route('category.update',$category->id) }}" method="POST">
+            <form action="{{ route('category.update',$category->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -18,9 +18,23 @@
                 <div class="px-4 py-4">
                     <h3 class="text-lg mb-2 leading-6 font-medium text-gray-900">Edit category</h3>
 
-                    <label for="name" class="text-xs font-semibold">Name</label>
-                    <input type="text" name="name" value="{{ $category->name }}"
-                           class="mt-1 px-4 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                    <div class="mb-4">
+                        <label for="name" class="text-xs font-semibold">Name</label>
+                        <input type="text" name="name"
+                               class="mt-1 px-4 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="name" class="text-xs font-semibold">Image</label>
+                        <input type="file" name="image" accept="image/*"
+                               class="mt-1 px-4 h-10 w-full border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="name" class="text-xs font-semibold">Desc</label>
+                        <textarea name="desc"
+                                  class="mt-1 px-2 h-40 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md"></textarea>
+                    </div>
                 </div>
 
                 {{-- modal body --}}
