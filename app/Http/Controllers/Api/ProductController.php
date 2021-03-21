@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Env;
 
 /**
  * @group  Product
@@ -73,27 +73,37 @@ class ProductController extends Controller {
      * Show new product sort by
      *
      * @param Request $request
+     * @return AnonymousResourceCollection
      *
      * @queryParam  limit Limit of the query. Example : 6
      */
-    public function hotProducts(Request $request) {
+    public function popular(Request $request): AnonymousResourceCollection {
+        $limit = $request->input('limit');
+
+        $popularProducts = Product::orderBy('bought', 'DESC')
+            ->when($limit, function ($q, $limit) {
+                return $q->limit($limit);
+            })
+            ->paginate();
+        return ProductResource::collection($popularProducts);
     }
 
     /**
      * Show hot product sort by updated_at
      *
      * @param Request $request
-     * @return Collection
+     * @return AnonymousResourceCollection
      *
      * @queryParam  limit Limit of the query. Example: 6
      */
-    public function newProducts(Request $request): Collection {
+    public function newProducts(Request $request): AnonymousResourceCollection {
         $limit = $request->input('limit');
 
-        return Product::orderBy('updated_at', 'DESC')
+        $newProducts = Product::orderBy('updated_at', 'DESC')
             ->when($limit, function ($q, $limit) {
                 return $q->limit($limit);
             })
             ->get();
+        return ProductResource::collection($newProducts);
     }
 }

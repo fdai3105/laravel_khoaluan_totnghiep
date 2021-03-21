@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Models\User;
+use Auth;
+use Exception;
+use Hash;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 /**
  * @group  Authenticator
@@ -19,7 +21,7 @@ class AuthController extends Controller {
      * Login
      *
      * @bodyParam
-     * @param Request $request
+     * @param LoginRequest $request
      * @return JsonResponse
      */
     public function login(LoginRequest $request): JsonResponse {
@@ -31,7 +33,7 @@ class AuthController extends Controller {
         }
         try {
             $credentials = request(['email', 'password']);
-            if (\Auth::attempt($credentials)) {
+            if (Auth::attempt($credentials)) {
                 $user = $request->user();
                 $token = $user->createToken('Personal Access Token');
                 $token->token->save();
@@ -43,7 +45,7 @@ class AuthController extends Controller {
             } else {
                 return response()->json(['message' => 'wrong email or password'], 401);
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 422);
         }
 
@@ -52,13 +54,13 @@ class AuthController extends Controller {
     /**
      * Created a user
      *
-     * @param Request $request
+     * @param RegisterRequest $request
+     * @return JsonResponse
      * @bodyParam  name string name
      * @bodyParam  email string email
      * @bodyParam  password string password
      * @bodyParam  phone string phone
      * @bodyParam  gender int gender of user (0 = not known, 1 = male, 2 = female, 8 = not applicable)
-     * @return JsonResponse
      */
     public function register(RegisterRequest $request): JsonResponse {
         $request->validated();
@@ -67,13 +69,13 @@ class AuthController extends Controller {
             User::create([
                 'name' => $request->name,
                 'email' => $request->email,
-                'password' => \Hash::make($request->password),
+                'password' => Hash::make($request->password),
                 'phone' => $request->phone,
                 'gender' => $request->gender,
                 'level' => 0,
             ]);
             return response()->json(['message' => 'created success']);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 422);
         }
     }

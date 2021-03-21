@@ -20,6 +20,7 @@ class ProductResource extends JsonResource {
             "desc" => $this->desc,
             "brand" => $this->brand,
             "category" => $this->category,
+            "images" => $this->images,
             'attributes' => ProductAttributeResource::collection($this->attributes),
             "created_at" => $this->created_at,
             "updated_at" => $this->updated_at,

@@ -96,6 +96,7 @@
                                 </div>
                             </div>
 
+                            {{-- images --}}
                             <div class="mb-8">
                                 <label for="name" class="text-xs font-semibold">Images</label>
                                 <br>
