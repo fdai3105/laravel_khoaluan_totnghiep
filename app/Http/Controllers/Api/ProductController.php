@@ -80,12 +80,8 @@ class ProductController extends Controller {
      * @queryParam  limit Limit of the query. Example : 6
      */
     public function popular(Request $request): AnonymousResourceCollection {
-        $limit = $request->input('limit');
-
         $popularProducts = Product::orderBy('bought', 'DESC')
-            ->when($limit, function ($q, $limit) {
-                return $q->limit($limit);
-            })->paginate($this->paginate);
+            ->paginate($this->paginate);
         return ProductResource::collection($popularProducts);
     }
 
@@ -98,12 +94,8 @@ class ProductController extends Controller {
      * @queryParam  limit Limit of the query. Example: 6
      */
     public function newProducts(Request $request): AnonymousResourceCollection {
-        $limit = $request->input('limit');
-
         $newProducts = Product::orderBy('updated_at', 'DESC')
-            ->when($limit, function ($q, $limit) {
-                return $q->limit($limit);
-            })->paginate($this->paginate);
+            ->paginate($this->paginate);
         return ProductResource::collection($newProducts);
     }
 }
