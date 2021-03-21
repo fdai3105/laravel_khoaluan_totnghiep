@@ -17,13 +17,15 @@ use Illuminate\Support\Collection;
  */
 class ProductController extends Controller {
 
+    protected $paginate = 10;
+
     /**
      * Show all products
      *
      * @return AnonymousResourceCollection
      */
     public function index(): AnonymousResourceCollection {
-        $products = Product::paginate(env('APP_PAGINATE', 10));
+        $products = Product::paginate($this->paginate);
         return ProductResource::collection($products);
     }
 
@@ -83,8 +85,7 @@ class ProductController extends Controller {
         $popularProducts = Product::orderBy('bought', 'DESC')
             ->when($limit, function ($q, $limit) {
                 return $q->limit($limit);
-            })
-            ->paginate();
+            })->paginate($this->paginate);
         return ProductResource::collection($popularProducts);
     }
 
@@ -102,8 +103,7 @@ class ProductController extends Controller {
         $newProducts = Product::orderBy('updated_at', 'DESC')
             ->when($limit, function ($q, $limit) {
                 return $q->limit($limit);
-            })
-            ->get();
+            })->paginate($this->paginate);
         return ProductResource::collection($newProducts);
     }
 }
