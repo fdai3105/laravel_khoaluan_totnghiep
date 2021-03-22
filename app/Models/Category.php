@@ -33,11 +33,15 @@ class Category extends Model {
 
     protected $table = 'categories';
 
-    protected $fillable = ['name', 'image', 'desc'];
+    protected $fillable = ['name', 'image', 'desc', 'parent_id'];
 
     public $timestamps = true;
 
     public function product(): HasMany {
         return $this->hasMany(Product::class);
+    }
+
+    public function sub(): HasMany {
+        return $this->hasMany(Category::class,'parent_id');
     }
 }

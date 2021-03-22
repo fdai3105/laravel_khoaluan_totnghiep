@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -23,15 +24,6 @@ class CategoryController extends Controller {
         return new CategoryResource(Category::all());
     }
 
-    //    /**
-    //     * Store a newly created resource in storage.
-    //     *
-    //     * @param Request $request
-    //     * @return Response
-    //     */
-    //    public function store(Request $request) {
-    //        //
-    //    }
 
     /**
      * Display the specified resource.
@@ -44,24 +36,13 @@ class CategoryController extends Controller {
         return new CategoryResource($category);
     }
 
-    //    /**
-    //     * Update the specified resource in storage.
-    //     *
-    //     * @param Request $request
-    //     * @param int $id
-    //     * @return Response
-    //     */
-    //    public function update(Request $request, $id) {
-    //        //
-    //    }
+    public function parentCategory() {
+        $parent = Category::whereNull('parent_id')->get();
+        return $parent;
+    }
 
-    //    /**
-    //     * Remove the specified resource from storage.
-    //     *
-    //     * @param int $id
-    //     * @return Response
-    //     */
-    //    public function destroy($id) {
-    //        //
-    //    }
+    public function subCategory(int $id) {
+        $sub = Category::where('parent_id', '=', $id)->get();
+        return $sub;
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductResource;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
@@ -97,5 +98,28 @@ class ProductController extends Controller {
         $newProducts = Product::orderBy('updated_at', 'DESC')
             ->paginate($this->paginate);
         return ProductResource::collection($newProducts);
+    }
+
+    /**
+     * Show products in parent category
+     *
+     * @param int $id
+     * @return AnonymousResourceCollection
+     */
+    public function productsInParent(int $id): AnonymousResourceCollection {
+        $sub = Category::where('parent_id', '=', $id)->pluck('id')->all();
+        $products = Product::whereIn('category_id', $sub)->get();
+        return ProductResource::collection($products);
+    }
+
+    /**
+     * Show products in sub category
+     *
+     * @param int $id
+     * @return AnonymousResourceCollection
+     */
+    public function productsInSub(int $id): AnonymousResourceCollection {
+        $products = Product::where('category_id', '=', $id)->get();
+        return ProductResource::collection($products);
     }
 }
