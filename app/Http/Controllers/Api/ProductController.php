@@ -30,16 +30,6 @@ class ProductController extends Controller {
         return ProductResource::collection($products);
     }
 
-    //    /**
-    //     * Store a newly created resource in storage.
-    //     *
-    //     * @param Request $request
-    //     * @return Response
-    //     */
-    //    public function store(Request $request) {
-    //        //
-    //    }
-
     /**
      * Show one product by id
      *
@@ -50,27 +40,6 @@ class ProductController extends Controller {
         $product = Product::findOrFail($id);
         return new ProductResource($product);
     }
-
-    //    /**
-    //     * Update the specified resource in storage.
-    //     *
-    //     * @param Request $request
-    //     * @param int $id
-    //     * @return Response
-    //     */
-    //    public function update(Request $request, $id) {
-    //        //
-    //    }
-
-    //    /**
-    //     * Remove the specified resource from storage.
-    //     *
-    //     * @param int $id
-    //     * @return Response
-    //     */
-    //    public function destroy($id) {
-    //        //
-    //    }
 
     /**
      * Show new product sort by

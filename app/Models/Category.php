@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 
@@ -43,5 +44,9 @@ class Category extends Model {
 
     public function sub(): HasMany {
         return $this->hasMany(Category::class,'parent_id');
+    }
+
+    public function parent(): BelongsTo {
+        return $this->belongsTo(Category::class);
     }
 }
