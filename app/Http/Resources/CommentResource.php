@@ -16,7 +16,6 @@ class CommentResource extends JsonResource {
             'id' => $this->id,
             'comment' => $this->comment,
             'user' => new UserResource($this->user),
-            'reply' => ReplyResource::collection($this->reply),
         ];
     }
 }

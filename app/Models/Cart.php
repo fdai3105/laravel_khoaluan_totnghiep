@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\Cart
@@ -14,21 +18,21 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property int $quantity
  * @property int $user_id
  * @property int $product_id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Product[] $product
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Collection|Product[] $product
  * @property-read int|null $product_count
- * @property-read \App\Models\User $user
- * @method static \Illuminate\Database\Eloquent\Builder|Cart newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Cart newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Cart query()
- * @method static \Illuminate\Database\Eloquent\Builder|Cart whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Cart whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Cart whereProductId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Cart whereQuantity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Cart whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Cart whereUserId($value)
- * @mixin \Eloquent
+ * @property-read User $user
+ * @method static Builder|Cart newModelQuery()
+ * @method static Builder|Cart newQuery()
+ * @method static Builder|Cart query()
+ * @method static Builder|Cart whereCreatedAt($value)
+ * @method static Builder|Cart whereId($value)
+ * @method static Builder|Cart whereProductId($value)
+ * @method static Builder|Cart whereQuantity($value)
+ * @method static Builder|Cart whereUpdatedAt($value)
+ * @method static Builder|Cart whereUserId($value)
+ * @mixin Eloquent
  */
 class Cart extends Model {
     use HasFactory;

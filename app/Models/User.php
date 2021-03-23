@@ -36,8 +36,6 @@ use Laravel\Passport\Token;
  * @property-read int|null $order_count
  * @property-read Collection|Rating[] $ratings
  * @property-read int|null $ratings_count
- * @property-read Collection|Reply[] $reply
- * @property-read int|null $reply_count
  * @mixin Eloquent
  * @property string|null $avatar
  * @method static Builder|User newModelQuery()
@@ -109,10 +107,6 @@ class User extends Authenticatable implements MustVerifyEmail {
 
     public function comment(): HasMany {
         return $this->hasMany(Comment::class);
-    }
-
-    public function reply(): HasMany {
-        return $this->hasMany(Reply::class);
     }
 
     public function order(): HasMany {
