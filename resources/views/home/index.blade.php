@@ -6,7 +6,7 @@
         <!-- topbar -->
         <div class="max-w-screen-2xl w-full mx-auto flex justify-between">
             <div class="hidden md:block">
-                <h1 class="text-2xl mb-1 font-bold text-blue-100">Welcome Abigail</h1>
+                <h1 class="text-2xl mb-1 font-bold text-blue-100">Welcome {{ Auth::user()->name }}</h1>
                 <p class="text-lg text-blue-200 hidden lg:block">Dashboard overview</p>
             </div>
             <div class="flex space-x-4 flex-1 justify-between md:justify-end">

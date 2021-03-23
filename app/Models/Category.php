@@ -28,6 +28,15 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Category whereId($value)
  * @method static Builder|Category whereName($value)
  * @method static Builder|Category whereUpdatedAt($value)
+ * @property string|null $image
+ * @property string|null $desc
+ * @property int|null $parent_id
+ * @property-read Category|null $parent
+ * @property-read Collection|Category[] $sub
+ * @property-read int|null $sub_count
+ * @method static Builder|Category whereDesc($value)
+ * @method static Builder|Category whereImage($value)
+ * @method static Builder|Category whereParentId($value)
  */
 class Category extends Model {
     use HasFactory;

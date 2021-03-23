@@ -44,6 +44,14 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Product whereUpdatedAt($value)
  * @property-read Collection|ProductImage[] $images
  * @property-read int|null $images_count
+ * @property int $stock
+ * @property int $bought
+ * @property int $warranty
+ * @property int $discount
+ * @method static Builder|Product whereBought($value)
+ * @method static Builder|Product whereDiscount($value)
+ * @method static Builder|Product whereStock($value)
+ * @method static Builder|Product whereWarranty($value)
  */
 class Product extends Model {
     use HasFactory;

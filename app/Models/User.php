@@ -62,6 +62,8 @@ use Laravel\Passport\Token;
  * @method static Builder|User whereEmailVerifiedAt($value)
  * @method static Builder|User whereLevel($value)
  * @method static Builder|User whereRememberToken($value)
+ * @property-read Collection|\App\Models\Cart[] $cart
+ * @property-read int|null $cart_count
  */
 class User extends Authenticatable implements MustVerifyEmail {
     use HasApiTokens, HasFactory, Notifiable;
@@ -115,6 +117,10 @@ class User extends Authenticatable implements MustVerifyEmail {
 
     public function order(): HasMany {
         return $this->hasMany(Order::class);
+    }
+
+    public function cart(): HasMany {
+        return $this->hasMany(Cart::class);
     }
 
 }

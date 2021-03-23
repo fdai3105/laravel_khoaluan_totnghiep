@@ -27,6 +27,10 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Brand whereId($value)
  * @method static Builder|Brand whereName($value)
  * @method static Builder|Brand whereUpdatedAt($value)
+ * @property string|null $image
+ * @property string|null $desc
+ * @method static Builder|Brand whereDesc($value)
+ * @method static Builder|Brand whereImage($value)
  */
 class Brand extends Model {
     use HasFactory;
