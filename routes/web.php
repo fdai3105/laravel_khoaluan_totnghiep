@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductAttributeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -29,6 +30,7 @@ Route::middleware([CheckRole::class,'verified'])->group(function () {
     Route::resource('brand', BrandController::class);
     Route::resource('attribute', AttributeController::class);
     Route::resource('user', UserController::class);
+    Route::resource('order', OrderController::class);
 });
 
 Auth::routes(['verify' => true]);

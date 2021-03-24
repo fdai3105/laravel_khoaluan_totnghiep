@@ -3,19 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\OrderDetail;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class OrderController extends Controller
-{
+class OrderController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
-    public function index(Request $request)
-    {
-        return $request->user();
+    public function index() {
+        $orders = Order::all();
+        return view('order.index', ['orders' => $orders]);
     }
 
     /**
@@ -23,8 +26,7 @@ class OrderController extends Controller
      *
      * @return Response
      */
-    public function create()
-    {
+    public function create(): Response {
         //
     }
 
@@ -34,20 +36,19 @@ class OrderController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request): Response {
         //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Order $order
-     * @return Response
+     * @param int $id
+     * @return Application|Factory|View|Response
      */
-    public function show(Order $order)
-    {
-        //
+    public function show(int $id) {
+        $order = Order::findOrFail($id);
+        return view('order.show', ['order' => $order]);
     }
 
     /**
@@ -56,8 +57,7 @@ class OrderController extends Controller
      * @param Order $order
      * @return Response
      */
-    public function edit(Order $order)
-    {
+    public function edit(Order $order): Response {
         //
     }
 
@@ -68,8 +68,7 @@ class OrderController extends Controller
      * @param Order $order
      * @return Response
      */
-    public function update(Request $request, Order $order)
-    {
+    public function update(Request $request, Order $order): Response {
         //
     }
 
@@ -79,8 +78,7 @@ class OrderController extends Controller
      * @param Order $order
      * @return Response
      */
-    public function destroy(Order $order)
-    {
+    public function destroy(Order $order): Response {
         //
     }
 }
