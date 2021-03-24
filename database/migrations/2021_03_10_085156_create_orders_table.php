@@ -4,22 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrdersTable extends Migration
-{
+class CreateOrdersTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('status');
             $table->bigInteger('total');
             $table->string('note');
-            $table->foreignId('address_id')->references('id')->on('addresses');
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('address_id')->references('id')->on('addresses')
+                ->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,8 +29,7 @@ class CreateOrdersTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('orders');
     }
 }

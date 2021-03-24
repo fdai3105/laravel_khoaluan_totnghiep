@@ -28,7 +28,8 @@ Route::group(['middleware' => 'auth:api,web'], function () {
     Route::apiResource('comment', RatingController::class)->except(['index', 'show']);
 
     Route::middleware('verified')->group(function () {
-        Route::get('order', [OrderController::class, 'index']);
+        Route::get('orders', [OrderController::class, 'orders']);
+        Route::post('checkout', [OrderController::class, 'checkout']);
     });
 });
 Route::apiResource('brand', BrandController::class);

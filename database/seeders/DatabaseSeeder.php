@@ -18,6 +18,5 @@ class DatabaseSeeder extends Seeder {
         $this->call(AddressSeeder::class);
         $this->call(RatingSeeder::class);
         $this->call(CommentSeeder::class);
-        $this->call(ReplySeeder::class);
     }
 }
