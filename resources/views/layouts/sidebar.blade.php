@@ -32,6 +32,11 @@
                             </svg>
                             <span class="flex-1">Categories</span>
                         </a>
+                        <a href="{{ route('sub-category.index') }}"
+                           class="{{ request()->is('sub-category') ? 'bg-gray-700' : 'bg-gray-900' }} hover:bg-gray-700 transition-colors duration-100 mt-2 text-blue-200 flex items-end py-1 px-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
+                            <div class="w-6 h-6"></div>
+                            <span class="flex-1">Sub categories</span>
+                        </a>
                     </li>
 
                     <li>

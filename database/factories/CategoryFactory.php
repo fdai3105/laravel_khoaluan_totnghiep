@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\ParentCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CategoryFactory extends Factory
@@ -22,6 +23,7 @@ class CategoryFactory extends Factory
     public function definition(): array {
         return [
             'name' => $this->faker->company,
+            'parent_id' => ParentCategory::all()->random()->id,
         ];
     }
 }

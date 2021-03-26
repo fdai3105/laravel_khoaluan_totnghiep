@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\ParentCategory;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -19,7 +20,8 @@ class CategoryController extends Controller {
      */
     public function index() {
         $categories = Category::all();
-        return view('category.index', ['categories' => $categories]);
+        $parents = ParentCategory::all();
+        return view('sub-category.index', ['categories' => $categories, 'parents' => $parents]);
     }
 
     /**
@@ -79,10 +81,7 @@ class CategoryController extends Controller {
      */
     public function update(Request $request, int $id) {
         $category = Category::find($id);
-        $category->update([
-            'name' => $request->input('name'),
-            'desc' => $request->input('desc'),
-        ]);
+        $category->update($request->all());
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -91,7 +90,7 @@ class CategoryController extends Controller {
             $category->update(['image' => $fileAddress]);
         }
 
-        return redirect('category');
+        return redirect('sub-category');
     }
 
     /**
@@ -102,6 +101,6 @@ class CategoryController extends Controller {
      */
     public function destroy(int $id) {
         Category::findOrFail($id)->delete();
-        return redirect('category');
+        return redirect('sub-category');
     }
 }
