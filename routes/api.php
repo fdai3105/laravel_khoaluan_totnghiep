@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CommentController;
+use App\Http\Controllers\Api\ParentCategoryController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RatingController;
 use App\Http\Controllers\Api\BrandController;
@@ -34,15 +35,16 @@ Route::group(['middleware' => 'auth:api,web'], function () {
 });
 Route::apiResource('brand', BrandController::class);
 
+Route::apiResource('parent-category', ParentCategoryController::class);
+Route::get('get-sub-category/{parentId}', [ParentCategoryController::class, 'getSubCategories']);
+
 Route::apiResource('category', CategoryController::class);
-Route::get('parent-category', [CategoryController::class, 'parentCategory']);
-Route::get('parent-category/{id}', [CategoryController::class, 'subCategory']);
 
 Route::apiResource('product', ProductController::class);
 Route::get('new-product', [ProductController::class, 'newProducts']);
 Route::get('popular-product', [ProductController::class, 'popular']);
-Route::get('product-in-parent/{id}', [ProductController::class, 'productsInParent']);
-Route::get('product-in-sub/{id}', [ProductController::class, 'productsInSub']);
+Route::get('product-by-parent-category/{id}', [ProductController::class, 'productsInParent']);
+Route::get('product-by-category/{id}', [ProductController::class, 'productsInSub']);
 
 Route::apiResource('rating', RatingController::class)->only(['index', 'show']);
 Route::get('rating/rating-product/{product_id?}', [RatingController::class, 'getRatingByProduct']);

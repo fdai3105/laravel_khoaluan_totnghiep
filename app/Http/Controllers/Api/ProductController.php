@@ -77,7 +77,7 @@ class ProductController extends Controller {
      */
     public function productsInParent(int $id): AnonymousResourceCollection {
         $sub = Category::where('parent_id', '=', $id)->pluck('id')->all();
-        $products = Product::whereIn('category_id', $sub)->get();
+        $products = Product::whereIn('category_id', $sub)->paginate($this->paginate);
         return ProductResource::collection($products);
     }
 
@@ -88,7 +88,7 @@ class ProductController extends Controller {
      * @return AnonymousResourceCollection
      */
     public function productsInSub(int $id): AnonymousResourceCollection {
-        $products = Product::where('category_id', '=', $id)->get();
+        $products = Product::where('category_id', '=', $id)->paginate($this->paginate);
         return ProductResource::collection($products);
     }
 }

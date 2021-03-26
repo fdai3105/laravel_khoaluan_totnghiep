@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\SubCategoryResource;
 use App\Models\Category;
+use App\Models\ParentCategory;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
@@ -37,22 +38,5 @@ class CategoryController extends Controller {
     public function show(int $id): CategoryResource {
         $category = Category::findOrFail($id);
         return new CategoryResource($category);
-    }
-
-    /**
-     *
-     */
-    public function parentCategory(): AnonymousResourceCollection {
-        $parent = Category::whereNull('parent_id')->get();
-        return CategoryResource::collection($parent);
-    }
-
-    /**
-     * @param int $id
-     * @return AnonymousResourceCollection
-     */
-    public function subCategory(int $id): AnonymousResourceCollection {
-        $sub = Category::where('parent_id', '=', $id)->get();
-        return SubCategoryResource::collection($sub);
     }
 }
