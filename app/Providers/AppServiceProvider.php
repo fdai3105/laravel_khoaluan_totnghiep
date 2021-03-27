@@ -25,7 +25,6 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        ProductResource::withoutWrapping();
-        CategoryResource::wrap('data');
+        //
     }
 }
