@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Resources\ProductResource;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +24,6 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        //
+        ProductResource::withoutWrapping();
     }
 }
