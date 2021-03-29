@@ -26,6 +26,7 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth:api,web'], function () {
     Route::middleware('verified')->group(function () {
+        Route::apiResource('comment', CommentController::class)->only(['store']);
         Route::get('orders', [OrderController::class, 'orders']);
         Route::post('checkout', [OrderController::class, 'checkout']);
     });
@@ -46,7 +47,7 @@ Route::get('product-by-category/{id}', [ProductController::class, 'productsInSub
 Route::apiResource('rating', RatingController::class)->only(['index', 'show']);
 Route::get('rating-by-product/{product_id}', [RatingController::class, 'getRatingByProduct']);
 
-Route::apiResource('comment', RatingController::class)->only(['index', 'show']);
+Route::apiResource('comment', CommentController::class)->only(['index', 'show']);
 Route::get('comment-by-product/{product_id}', [CommentController::class, 'getCommentsByProduct']);
 
 Route::group(['middleware' => ['web']], function () {

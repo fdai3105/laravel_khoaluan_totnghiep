@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CommentResource;
 use App\Models\Comment;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -39,10 +40,15 @@ class CommentController extends Controller {
      * Store a newly Comment
      *
      * @param Request $request
-     * @return Response
+     * @return JsonResponse
      */
-    public function store(Request $request): Response {
-        $request->user()->id;
+    public function store(Request $request): JsonResponse {
+        Comment::create([
+            'comment' => $request->input('comment'),
+            'product_id' => $request->input('product_id'),
+            'user_id' => $request->user()->id,
+        ]);
+        return response()->json(['message' => 'comment success']);
     }
 
     /**
