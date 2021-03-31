@@ -10,6 +10,7 @@ use Auth;
 use Exception;
 use Hash;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 /**
  * @group  Authenticator
@@ -75,6 +76,20 @@ class AuthController extends Controller {
                 'level' => 0,
             ]);
             return response()->json(['message' => 'created success']);
+        } catch (Exception $e) {
+            return response()->json(['message' => $e->getMessage()], 422);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function edit(Request $request): JsonResponse {
+        try {
+            $user = User::find($request->user()->id);
+            $user->update($request->all());
+            return response()->json(['message' => 'updated success']);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 422);
         }

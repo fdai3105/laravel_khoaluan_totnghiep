@@ -29,6 +29,8 @@ Route::group(['middleware' => 'auth:api,web'], function () {
         Route::apiResource('comment', CommentController::class)->only(['store']);
         Route::get('orders', [OrderController::class, 'orders']);
         Route::post('checkout', [OrderController::class, 'checkout']);
+
+        Route::post('user-edit', [AuthController::class, 'edit']);
     });
 });
 Route::apiResource('brand', BrandController::class);

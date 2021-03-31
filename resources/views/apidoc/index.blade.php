@@ -59,7 +59,7 @@
     "http://127.0.0.1:8000/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"corporis","email":"quas","password":"rerum","phone":"dolore","gender":12}'
+    -d '{"name":"dicta","email":"similique","password":"illo","phone":"voluptas","gender":7}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://127.0.0.1:8000/api/register"
@@ -71,11 +71,11 @@ let headers = {
 };
 
 let body = {
-    "name": "corporis",
-    "email": "quas",
-    "password": "rerum",
-    "phone": "dolore",
-    "gender": 12
+    "name": "dicta",
+    "email": "similique",
+    "password": "illo",
+    "phone": "voluptas",
+    "gender": 7
 }
 
 fetch(url, {
@@ -461,43 +461,43 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Bahringer and Sons",
+            "name": "Ratke, Bernhard and Schaefer",
             "image": null,
             "desc": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 2,
-            "name": "McCullough, Feeney and Legros",
+            "name": "Schaefer, Ernser and Nienow",
             "image": null,
             "desc": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 3,
-            "name": "Marks, Olson and Carter",
+            "name": "Gislason, Johnson and Pouros",
             "image": null,
             "desc": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 4,
-            "name": "Cassin Group",
+            "name": "Carroll, Reichert and Bauch",
             "image": null,
             "desc": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 5,
-            "name": "Schimmel-Gusikowski",
+            "name": "Schumm, Lueilwitz and Jacobs",
             "image": null,
             "desc": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         }
     ]
 }</code></pre>
@@ -534,11 +534,11 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": {
         "id": 1,
-        "name": "Bahringer and Sons",
+        "name": "Ratke, Bernhard and Schaefer",
         "image": null,
         "desc": null,
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
+        "created_at": "2021-03-26T13:40:34.000000Z",
+        "updated_at": "2021-03-26T13:40:34.000000Z"
     }
 }</code></pre>
 <h3>HTTP Request</h3>
@@ -594,57 +594,453 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Stiedemann-McClure",
+            "name": "Senger and Sons",
             "image": null,
             "desc": null,
-            "parent_id": 6,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "parent_id": 2,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T14:01:53.000000Z"
         },
         {
             "id": 2,
-            "name": "Walker-Thiel",
+            "name": "Goyette, Mertz and Lehner",
             "image": null,
             "desc": null,
-            "parent_id": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 3,
-            "name": "Brown, Kris and Larkin",
+            "name": "Littel, Kilback and Flatley",
             "image": null,
             "desc": null,
-            "parent_id": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 4,
-            "name": "Barton PLC",
+            "name": "Klein Ltd",
             "image": null,
             "desc": null,
-            "parent_id": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 5,
-            "name": "Prohaska, Kiehn and Hodkiewicz",
+            "name": "Bernhard LLC",
             "image": null,
             "desc": null,
-            "parent_id": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "parent_id": 5,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 6,
-            "name": "Bed",
+            "name": "Moore LLC",
             "image": null,
             "desc": null,
-            "parent_id": null,
-            "created_at": null,
-            "updated_at": null
+            "parent_id": 5,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "Gerlach Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 4,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 8,
+            "name": "Barrows-Bechtelar",
+            "image": null,
+            "desc": null,
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 9,
+            "name": "Grady PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 2,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 10,
+            "name": "Rosenbaum, Flatley and Grimes",
+            "image": null,
+            "desc": null,
+            "parent_id": 10,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 11,
+            "name": "Littel PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 12,
+            "name": "Collier, Veum and Crona",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 13,
+            "name": "Mosciski Group",
+            "image": null,
+            "desc": null,
+            "parent_id": 5,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 14,
+            "name": "Kilback Group",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 15,
+            "name": "Hane Group",
+            "image": null,
+            "desc": null,
+            "parent_id": 4,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 16,
+            "name": "Reinger, Mann and Yundt",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 17,
+            "name": "Zemlak, Douglas and Rutherford",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 18,
+            "name": "Kunze-Prohaska",
+            "image": null,
+            "desc": null,
+            "parent_id": 7,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 19,
+            "name": "McClure LLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 7,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 20,
+            "name": "Rempel Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 5,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 21,
+            "name": "Sauer Group",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 22,
+            "name": "Schowalter-Kassulke",
+            "image": null,
+            "desc": null,
+            "parent_id": 5,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 23,
+            "name": "Kulas-Hansen",
+            "image": null,
+            "desc": null,
+            "parent_id": 2,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 24,
+            "name": "Jacobi-Kozey",
+            "image": null,
+            "desc": null,
+            "parent_id": 2,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 25,
+            "name": "Green-Bergnaum",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 26,
+            "name": "Labadie, Stracke and Aufderhar",
+            "image": null,
+            "desc": null,
+            "parent_id": 4,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 27,
+            "name": "Bernier Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 28,
+            "name": "Kuhlman LLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 2,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 29,
+            "name": "Marquardt LLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 30,
+            "name": "Skiles, Spinka and Mayer",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 31,
+            "name": "Lynch and Sons",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 32,
+            "name": "Bins LLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 33,
+            "name": "Doyle Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 10,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 34,
+            "name": "Senger and Sons",
+            "image": null,
+            "desc": null,
+            "parent_id": 4,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 35,
+            "name": "Ritchie, Pfannerstill and Collier",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 36,
+            "name": "Pollich Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 37,
+            "name": "Feil, Kunze and Lesch",
+            "image": null,
+            "desc": null,
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 38,
+            "name": "Parisian, Collier and King",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 39,
+            "name": "Ullrich, Waters and Gleichner",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 40,
+            "name": "Jaskolski Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 41,
+            "name": "Hackett Group",
+            "image": null,
+            "desc": null,
+            "parent_id": 4,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 42,
+            "name": "Fahey and Sons",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 43,
+            "name": "Krajcik Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 7,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 44,
+            "name": "Carroll Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 3,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 45,
+            "name": "Erdman, Reynolds and Konopelski",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 46,
+            "name": "Marvin LLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 47,
+            "name": "Predovic, Predovic and Connelly",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 48,
+            "name": "Bashirian, Donnelly and Vandervort",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 49,
+            "name": "Krajcik-Williamson",
+            "image": null,
+            "desc": null,
+            "parent_id": 10,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 50,
+            "name": "Luettgen-Halvorson",
+            "image": null,
+            "desc": null,
+            "parent_id": 2,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         }
     ]
 }</code></pre>
@@ -681,138 +1077,57 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": {
         "id": 1,
-        "name": "Stiedemann-McClure",
+        "name": "Senger and Sons",
         "image": null,
         "desc": null,
-        "parent_id": 6,
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
+        "parent_id": 2,
+        "created_at": "2021-03-26T13:40:35.000000Z",
+        "updated_at": "2021-03-26T14:01:53.000000Z"
     }
 }</code></pre>
 <h3>HTTP Request</h3>
 <p><code>GET api/category/{category}</code></p>
 <!-- END_977e23840a7e9249b1f7136f1eadabe2 -->
-<!-- START_f1c003f354e5a35c6d35b6c7e0ad365d -->
-<h2>api/parent-category</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/parent-category" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/parent-category"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response =&gt; response.json())
-    .then(json =&gt; console.log(json));</code></pre>
-<blockquote>
-<p>Example response (200):</p>
-</blockquote>
-<pre><code class="language-json">[
-    {
-        "id": 2,
-        "name": "Walker-Thiel",
-        "image": null,
-        "desc": null,
-        "parent_id": null,
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
-    },
-    {
-        "id": 3,
-        "name": "Brown, Kris and Larkin",
-        "image": null,
-        "desc": null,
-        "parent_id": null,
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
-    },
-    {
-        "id": 4,
-        "name": "Barton PLC",
-        "image": null,
-        "desc": null,
-        "parent_id": null,
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
-    },
-    {
-        "id": 5,
-        "name": "Prohaska, Kiehn and Hodkiewicz",
-        "image": null,
-        "desc": null,
-        "parent_id": null,
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
-    },
-    {
-        "id": 6,
-        "name": "Bed",
-        "image": null,
-        "desc": null,
-        "parent_id": null,
-        "created_at": null,
-        "updated_at": null
-    }
-]</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/parent-category</code></p>
-<!-- END_f1c003f354e5a35c6d35b6c7e0ad365d -->
-<!-- START_be0117b866e4205ee9be84cf3fc97d70 -->
-<h2>api/parent-category/{id}</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/parent-category/1" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/parent-category/1"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response =&gt; response.json())
-    .then(json =&gt; console.log(json));</code></pre>
-<blockquote>
-<p>Example response (200):</p>
-</blockquote>
-<pre><code class="language-json">[]</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/parent-category/{id}</code></p>
-<!-- END_be0117b866e4205ee9be84cf3fc97d70 -->
 <h1>Comment</h1>
 <p>APIs for comment</p>
-<!-- START_b9d6267392532c6008f9ac9629a3d4c3 -->
-<h2>Display comments by product id</h2>
+<!-- START_e795fade4d25e2473e7fd22cababfe99 -->
+<h2>Store a newly Comment</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://127.0.0.1:8000/api/comment" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/comment"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/comment</code></p>
+<!-- END_e795fade4d25e2473e7fd22cababfe99 -->
+<!-- START_820bc036154f8d8ed569b9728dba9650 -->
+<h2>Display a listing of the resource.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/comment/comment-product/" \
+    -G "http://127.0.0.1:8000/api/comment" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment/comment-product/"
+    "http://127.0.0.1:8000/api/comment"
 );
 
 let headers = {
@@ -833,8 +1148,146 @@ fetch(url, {
     "message": "Server Error"
 }</code></pre>
 <h3>HTTP Request</h3>
-<p><code>GET api/comment/comment-product/{product_id?}</code></p>
-<!-- END_b9d6267392532c6008f9ac9629a3d4c3 -->
+<p><code>GET api/comment</code></p>
+<!-- END_820bc036154f8d8ed569b9728dba9650 -->
+<!-- START_290df647fbc0fcbe56d880990e4bfdfc -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/comment/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/comment/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "comment": "Aspernatur sunt nesciunt dicta provident.",
+        "user": {
+            "id": 4,
+            "name": "Dr. Emmalee Lakin",
+            "email": "arjun38@example.net",
+            "email_verified_at": "2021-03-26T13:40:35.000000Z",
+            "phone": "+5606251880968",
+            "gender": 2,
+            "avatar": null,
+            "level": 0,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        "created_at": "2021-03-26T13:40:35.000000Z",
+        "updated_at": "2021-03-26T13:40:35.000000Z"
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/comment/{comment}</code></p>
+<!-- END_290df647fbc0fcbe56d880990e4bfdfc -->
+<!-- START_ba21d63d662b79aca99bb9e603625f5b -->
+<h2>Display comments by product id</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/comment-by-product/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/comment-by-product/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 14,
+            "comment": "Omnis quo perferendis aliquid voluptates minima magnam animi.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 65,
+            "comment": "Et quaerat sed tempore magnam modi quia.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 101,
+            "comment": "good job",
+            "user": {
+                "id": 11,
+                "name": "FiDai Inc",
+                "email": "fdai3105@gmail.com",
+                "email_verified_at": "2021-03-26T13:42:06.000000Z",
+                "phone": "123",
+                "gender": 1,
+                "avatar": null,
+                "level": 1,
+                "created_at": "2021-03-26T13:41:17.000000Z",
+                "updated_at": "2021-03-26T13:42:06.000000Z"
+            },
+            "created_at": "2021-03-28T09:10:04.000000Z",
+            "updated_at": "2021-03-28T09:10:04.000000Z"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/comment-by-product/{product_id}</code></p>
+<!-- END_ba21d63d662b79aca99bb9e603625f5b -->
 <h1>Product</h1>
 <p>APIs for product</p>
 <!-- START_dc538d69a8586a7a3c36d4393cee42e6 -->
@@ -868,273 +1321,323 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Kavon McKenzie III",
-            "price": 3831297,
-            "desc": "Dicta iusto id iusto fugiat sed. Rem consequatur dolorem vitae voluptate nobis repudiandae. Veniam quas quam vero.",
+            "name": "Lavina Lynch",
+            "price": 9286366,
+            "desc": "Asperiores omnis mollitia ut omnis aut non. Suscipit exercitationem velit dolorem fugiat est sequi. Et ipsa harum itaque sunt.",
+            "stock": 36,
+            "bought": 8,
+            "warranty": 17,
+            "rating": 1,
+            "rating_averaged": 5,
             "brand": {
                 "id": 4,
-                "name": "Cassin Group",
+                "name": "Carroll, Reichert and Bauch",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 1,
-                "name": "Stiedemann-McClure",
+                "id": 15,
+                "name": "Hane Group",
                 "image": null,
                 "desc": null,
-                "parent_id": 6,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 4,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 2,
-            "name": "Dr. Rosella Batz",
-            "price": 7272882,
-            "desc": "Odio veniam repellat dolore est optio cupiditate qui. Id quasi tenetur asperiores nulla. Consequatur consectetur non suscipit illo provident dolores natus quas.",
+            "name": "Prof. Judah Blanda",
+            "price": 4254352,
+            "desc": "Et vero quidem excepturi eius esse. Blanditiis fuga aperiam dolorem. Ut dolores mollitia alias omnis officiis aut commodi cum.",
+            "stock": 13,
+            "bought": 39,
+            "warranty": 9,
+            "rating": 2,
+            "rating_averaged": 1,
             "brand": {
-                "id": 1,
-                "name": "Bahringer and Sons",
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 5,
-                "name": "Prohaska, Kiehn and Hodkiewicz",
+                "id": 6,
+                "name": "Moore LLC",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 3,
-            "name": "Uriah Huel",
-            "price": 6078976,
-            "desc": "Sequi voluptas fugit et velit rem et et. Ut aliquid inventore amet similique praesentium velit qui quas. Vel eius qui animi fugit quibusdam.",
+            "name": "Prof. Lesly Hilpert DDS",
+            "price": 8553384,
+            "desc": "Est qui necessitatibus quo temporibus nam voluptatem. Laborum quod eveniet similique blanditiis possimus et omnis. Fugiat illum voluptatem veritatis voluptas quo.",
+            "stock": 10,
+            "bought": 34,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
                 "id": 5,
-                "name": "Schimmel-Gusikowski",
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 20,
+                "name": "Rempel Ltd",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 4,
-            "name": "Adrain Hoppe",
-            "price": 3228568,
-            "desc": "Eius eos sed sed dolorem harum quia. Sed odit qui quia asperiores nulla consequatur. Asperiores autem totam iste eum. Non non consequatur aut.",
+            "name": "Bella Graham",
+            "price": 2938619,
+            "desc": "Fugit ut deserunt harum eum voluptates voluptatem aut. Nihil deserunt nulla est sapiente quasi et. Quam occaecati esse quae voluptatem corporis soluta aut. Et ex nihil est iste excepturi.",
+            "stock": 100,
+            "bought": 3,
+            "warranty": 8,
+            "rating": 2,
+            "rating_averaged": 2,
             "brand": {
                 "id": 3,
-                "name": "Marks, Olson and Carter",
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "id": 2,
+                "name": "Goyette, Mertz and Lehner",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 5,
-            "name": "Ashlee Senger",
-            "price": 309156,
-            "desc": "Amet deserunt ipsum qui totam blanditiis et nulla. Et fugiat est reprehenderit veritatis perspiciatis. Mollitia qui accusamus est et.",
+            "name": "Dandre Purdy MD",
+            "price": 3430925,
+            "desc": "Qui voluptatibus harum et ut nihil omnis. Numquam dolor tempore animi saepe ea cupiditate odio. Soluta at a officiis amet dolor ea. Et in maxime facilis quidem.",
+            "stock": 65,
+            "bought": 10,
+            "warranty": 1,
+            "rating": 1,
+            "rating_averaged": 0,
             "brand": {
-                "id": 4,
-                "name": "Cassin Group",
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
                 "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "name": "Littel, Kilback and Flatley",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 9,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 6,
-            "name": "Kane Corwin",
-            "price": 4856469,
-            "desc": "Sint provident voluptatem ut laboriosam provident iusto non. Rerum reprehenderit aut corporis adipisci adipisci recusandae. Perspiciatis quis vero mollitia illo quaerat.",
+            "name": "Javon Bailey",
+            "price": 7592670,
+            "desc": "Eveniet sunt dicta ut dolores quia. Ducimus at recusandae sit qui omnis. Magnam sint molestias rerum in officiis ex placeat.",
+            "stock": 90,
+            "bought": 5,
+            "warranty": 13,
+            "rating": 3,
+            "rating_averaged": 2.5,
             "brand": {
-                "id": 3,
-                "name": "Marks, Olson and Carter",
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 9,
+                "name": "Grady PLC",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 2,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 7,
-            "name": "Kari Stanton",
-            "price": 1168678,
-            "desc": "Eos nulla itaque ducimus vero mollitia esse. Vel ut quia ut beatae harum. Dolorem placeat voluptas omnis dolores suscipit dolorum.",
+            "name": "Marguerite Pacocha",
+            "price": 6518211,
+            "desc": "Autem amet laboriosam omnis. Rem perspiciatis quos sed est facilis ut qui. Sit dolor quae quaerat consectetur consequatur quisquam ea consequatur. Et expedita quam rerum nisi nisi ducimus.",
+            "stock": 29,
+            "bought": 24,
+            "warranty": 13,
+            "rating": 5,
+            "rating_averaged": 2,
             "brand": {
-                "id": 2,
-                "name": "McCullough, Feeney and Legros",
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 4,
-                "name": "Barton PLC",
+                "id": 17,
+                "name": "Zemlak, Douglas and Rutherford",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 6,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 8,
-            "name": "Pattie Littel",
-            "price": 9996076,
-            "desc": "Adipisci tempora facere unde et. Voluptatibus quia officiis qui quidem. Qui quo aut asperiores ea molestias.",
+            "name": "Prof. Antonietta Lowe",
+            "price": 1778634,
+            "desc": "Esse corporis sed omnis consequuntur molestias vero voluptatibus. Et explicabo tempore consequuntur quam. Repellat at eaque quia voluptas quod aliquid excepturi.",
+            "stock": 70,
+            "bought": 39,
+            "warranty": 3,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
-                "id": 4,
-                "name": "Cassin Group",
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "id": 18,
+                "name": "Kunze-Prohaska",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 9,
-            "name": "Brenda Runte",
-            "price": 8876370,
-            "desc": "Ipsam alias minima quo optio et. Voluptas quas eaque labore odio voluptates. Vel aliquid neque doloremque voluptate aliquam et.",
+            "name": "Erna Predovic",
+            "price": 933006,
+            "desc": "Distinctio voluptas id officia iusto voluptatibus a. Itaque ut eum est ea quasi deleniti at. Quia autem dolores sint eos velit enim. Esse quia blanditiis dolore sint perspiciatis.",
+            "stock": 85,
+            "bought": 30,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
-                "id": 1,
-                "name": "Bahringer and Sons",
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 8,
+                "name": "Barrows-Bechtelar",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 10,
-            "name": "Libbie Dickens",
-            "price": 5220571,
-            "desc": "Accusamus repudiandae assumenda odio. Impedit quis inventore cumque modi nihil voluptates laboriosam. Officiis non aut qui sint nobis aliquam ipsum.",
+            "name": "Dr. Jeramy Swaniawski",
+            "price": 1709014,
+            "desc": "Harum modi nihil tenetur earum eum placeat ipsam voluptates. Impedit neque ut dicta perspiciatis necessitatibus. Cum est consequatur eaque eum fuga in.",
+            "stock": 54,
+            "bought": 36,
+            "warranty": 0,
+            "rating": 3,
+            "rating_averaged": 1.5,
             "brand": {
-                "id": 5,
-                "name": "Schimmel-Gusikowski",
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 18,
+                "name": "Kunze-Prohaska",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         }
     ],
     "links": {
@@ -1213,30 +1716,35 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": {
         "id": 1,
-        "name": "Kavon McKenzie III",
-        "price": 3831297,
-        "desc": "Dicta iusto id iusto fugiat sed. Rem consequatur dolorem vitae voluptate nobis repudiandae. Veniam quas quam vero.",
+        "name": "Lavina Lynch",
+        "price": 9286366,
+        "desc": "Asperiores omnis mollitia ut omnis aut non. Suscipit exercitationem velit dolorem fugiat est sequi. Et ipsa harum itaque sunt.",
+        "stock": 36,
+        "bought": 8,
+        "warranty": 17,
+        "rating": 1,
+        "rating_averaged": 5,
         "brand": {
             "id": 4,
-            "name": "Cassin Group",
+            "name": "Carroll, Reichert and Bauch",
             "image": null,
             "desc": null,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         "category": {
-            "id": 1,
-            "name": "Stiedemann-McClure",
+            "id": 15,
+            "name": "Hane Group",
             "image": null,
             "desc": null,
-            "parent_id": 6,
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "parent_id": 4,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         "images": [],
         "attributes": [],
-        "created_at": "2021-03-22T11:46:24.000000Z",
-        "updated_at": "2021-03-22T11:46:24.000000Z"
+        "created_at": "2021-03-26T13:40:35.000000Z",
+        "updated_at": "2021-03-26T13:40:35.000000Z"
     }
 }</code></pre>
 <h3>HTTP Request</h3>
@@ -1279,273 +1787,323 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Kavon McKenzie III",
-            "price": 3831297,
-            "desc": "Dicta iusto id iusto fugiat sed. Rem consequatur dolorem vitae voluptate nobis repudiandae. Veniam quas quam vero.",
+            "name": "Lavina Lynch",
+            "price": 9286366,
+            "desc": "Asperiores omnis mollitia ut omnis aut non. Suscipit exercitationem velit dolorem fugiat est sequi. Et ipsa harum itaque sunt.",
+            "stock": 36,
+            "bought": 8,
+            "warranty": 17,
+            "rating": 1,
+            "rating_averaged": 5,
             "brand": {
                 "id": 4,
-                "name": "Cassin Group",
+                "name": "Carroll, Reichert and Bauch",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 1,
-                "name": "Stiedemann-McClure",
+                "id": 15,
+                "name": "Hane Group",
                 "image": null,
                 "desc": null,
-                "parent_id": 6,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 4,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 2,
-            "name": "Dr. Rosella Batz",
-            "price": 7272882,
-            "desc": "Odio veniam repellat dolore est optio cupiditate qui. Id quasi tenetur asperiores nulla. Consequatur consectetur non suscipit illo provident dolores natus quas.",
+            "name": "Prof. Judah Blanda",
+            "price": 4254352,
+            "desc": "Et vero quidem excepturi eius esse. Blanditiis fuga aperiam dolorem. Ut dolores mollitia alias omnis officiis aut commodi cum.",
+            "stock": 13,
+            "bought": 39,
+            "warranty": 9,
+            "rating": 2,
+            "rating_averaged": 1,
             "brand": {
-                "id": 1,
-                "name": "Bahringer and Sons",
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 5,
-                "name": "Prohaska, Kiehn and Hodkiewicz",
+                "id": 6,
+                "name": "Moore LLC",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 3,
-            "name": "Uriah Huel",
-            "price": 6078976,
-            "desc": "Sequi voluptas fugit et velit rem et et. Ut aliquid inventore amet similique praesentium velit qui quas. Vel eius qui animi fugit quibusdam.",
+            "name": "Prof. Lesly Hilpert DDS",
+            "price": 8553384,
+            "desc": "Est qui necessitatibus quo temporibus nam voluptatem. Laborum quod eveniet similique blanditiis possimus et omnis. Fugiat illum voluptatem veritatis voluptas quo.",
+            "stock": 10,
+            "bought": 34,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
                 "id": 5,
-                "name": "Schimmel-Gusikowski",
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 20,
+                "name": "Rempel Ltd",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 4,
-            "name": "Adrain Hoppe",
-            "price": 3228568,
-            "desc": "Eius eos sed sed dolorem harum quia. Sed odit qui quia asperiores nulla consequatur. Asperiores autem totam iste eum. Non non consequatur aut.",
+            "name": "Bella Graham",
+            "price": 2938619,
+            "desc": "Fugit ut deserunt harum eum voluptates voluptatem aut. Nihil deserunt nulla est sapiente quasi et. Quam occaecati esse quae voluptatem corporis soluta aut. Et ex nihil est iste excepturi.",
+            "stock": 100,
+            "bought": 3,
+            "warranty": 8,
+            "rating": 2,
+            "rating_averaged": 2,
             "brand": {
                 "id": 3,
-                "name": "Marks, Olson and Carter",
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "id": 2,
+                "name": "Goyette, Mertz and Lehner",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 5,
-            "name": "Ashlee Senger",
-            "price": 309156,
-            "desc": "Amet deserunt ipsum qui totam blanditiis et nulla. Et fugiat est reprehenderit veritatis perspiciatis. Mollitia qui accusamus est et.",
+            "name": "Dandre Purdy MD",
+            "price": 3430925,
+            "desc": "Qui voluptatibus harum et ut nihil omnis. Numquam dolor tempore animi saepe ea cupiditate odio. Soluta at a officiis amet dolor ea. Et in maxime facilis quidem.",
+            "stock": 65,
+            "bought": 10,
+            "warranty": 1,
+            "rating": 1,
+            "rating_averaged": 0,
             "brand": {
-                "id": 4,
-                "name": "Cassin Group",
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
                 "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "name": "Littel, Kilback and Flatley",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 9,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 6,
-            "name": "Kane Corwin",
-            "price": 4856469,
-            "desc": "Sint provident voluptatem ut laboriosam provident iusto non. Rerum reprehenderit aut corporis adipisci adipisci recusandae. Perspiciatis quis vero mollitia illo quaerat.",
+            "name": "Javon Bailey",
+            "price": 7592670,
+            "desc": "Eveniet sunt dicta ut dolores quia. Ducimus at recusandae sit qui omnis. Magnam sint molestias rerum in officiis ex placeat.",
+            "stock": 90,
+            "bought": 5,
+            "warranty": 13,
+            "rating": 3,
+            "rating_averaged": 2.5,
             "brand": {
-                "id": 3,
-                "name": "Marks, Olson and Carter",
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 9,
+                "name": "Grady PLC",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 2,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 7,
-            "name": "Kari Stanton",
-            "price": 1168678,
-            "desc": "Eos nulla itaque ducimus vero mollitia esse. Vel ut quia ut beatae harum. Dolorem placeat voluptas omnis dolores suscipit dolorum.",
+            "name": "Marguerite Pacocha",
+            "price": 6518211,
+            "desc": "Autem amet laboriosam omnis. Rem perspiciatis quos sed est facilis ut qui. Sit dolor quae quaerat consectetur consequatur quisquam ea consequatur. Et expedita quam rerum nisi nisi ducimus.",
+            "stock": 29,
+            "bought": 24,
+            "warranty": 13,
+            "rating": 5,
+            "rating_averaged": 2,
             "brand": {
-                "id": 2,
-                "name": "McCullough, Feeney and Legros",
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 4,
-                "name": "Barton PLC",
+                "id": 17,
+                "name": "Zemlak, Douglas and Rutherford",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 6,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 8,
-            "name": "Pattie Littel",
-            "price": 9996076,
-            "desc": "Adipisci tempora facere unde et. Voluptatibus quia officiis qui quidem. Qui quo aut asperiores ea molestias.",
+            "name": "Prof. Antonietta Lowe",
+            "price": 1778634,
+            "desc": "Esse corporis sed omnis consequuntur molestias vero voluptatibus. Et explicabo tempore consequuntur quam. Repellat at eaque quia voluptas quod aliquid excepturi.",
+            "stock": 70,
+            "bought": 39,
+            "warranty": 3,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
-                "id": 4,
-                "name": "Cassin Group",
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "id": 18,
+                "name": "Kunze-Prohaska",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 9,
-            "name": "Brenda Runte",
-            "price": 8876370,
-            "desc": "Ipsam alias minima quo optio et. Voluptas quas eaque labore odio voluptates. Vel aliquid neque doloremque voluptate aliquam et.",
+            "name": "Erna Predovic",
+            "price": 933006,
+            "desc": "Distinctio voluptas id officia iusto voluptatibus a. Itaque ut eum est ea quasi deleniti at. Quia autem dolores sint eos velit enim. Esse quia blanditiis dolore sint perspiciatis.",
+            "stock": 85,
+            "bought": 30,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
-                "id": 1,
-                "name": "Bahringer and Sons",
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 8,
+                "name": "Barrows-Bechtelar",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 10,
-            "name": "Libbie Dickens",
-            "price": 5220571,
-            "desc": "Accusamus repudiandae assumenda odio. Impedit quis inventore cumque modi nihil voluptates laboriosam. Officiis non aut qui sint nobis aliquam ipsum.",
+            "name": "Dr. Jeramy Swaniawski",
+            "price": 1709014,
+            "desc": "Harum modi nihil tenetur earum eum placeat ipsam voluptates. Impedit neque ut dicta perspiciatis necessitatibus. Cum est consequatur eaque eum fuga in.",
+            "stock": 54,
+            "bought": 36,
+            "warranty": 0,
+            "rating": 3,
+            "rating_averaged": 1.5,
             "brand": {
-                "id": 5,
-                "name": "Schimmel-Gusikowski",
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
+                "id": 18,
+                "name": "Kunze-Prohaska",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         }
     ],
     "links": {
@@ -1617,7 +2175,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/popular-product?limit=voluptates" \
+    -G "http://127.0.0.1:8000/api/popular-product?limit=rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -1625,7 +2183,7 @@ fetch(url, {
 );
 
 let params = {
-    "limit": "voluptates",
+    "limit": "rerum",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1647,274 +2205,324 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": [
         {
+            "id": 13,
+            "name": "Arlene Langosh I",
+            "price": 1179871,
+            "desc": "Necessitatibus suscipit adipisci laudantium ipsa voluptas animi cum aut. Necessitatibus possimus veniam qui. Ipsa ea accusantium cum accusantium.",
+            "stock": 76,
+            "bought": 40,
+            "warranty": 10,
+            "rating": 1,
+            "rating_averaged": 2,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 29,
+                "name": "Marquardt LLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
             "id": 2,
-            "name": "Dr. Rosella Batz",
-            "price": 7272882,
-            "desc": "Odio veniam repellat dolore est optio cupiditate qui. Id quasi tenetur asperiores nulla. Consequatur consectetur non suscipit illo provident dolores natus quas.",
-            "brand": {
-                "id": 1,
-                "name": "Bahringer and Sons",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 5,
-                "name": "Prohaska, Kiehn and Hodkiewicz",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 6,
-            "name": "Kane Corwin",
-            "price": 4856469,
-            "desc": "Sint provident voluptatem ut laboriosam provident iusto non. Rerum reprehenderit aut corporis adipisci adipisci recusandae. Perspiciatis quis vero mollitia illo quaerat.",
-            "brand": {
-                "id": 3,
-                "name": "Marks, Olson and Carter",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 2,
-                "name": "Walker-Thiel",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 25,
-            "name": "Ewell Leannon",
-            "price": 7613340,
-            "desc": "Harum aliquam quia soluta consequatur nihil. Maxime qui modi fugiat odio ut repudiandae. Qui sunt repellendus nihil quas dicta distinctio placeat. Ut nisi eaque corporis consectetur libero ut nemo.",
-            "brand": {
-                "id": 2,
-                "name": "McCullough, Feeney and Legros",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 4,
-                "name": "Barton PLC",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 28,
-            "name": "Ahmad Ritchie",
-            "price": 943768,
-            "desc": "Ea dolores natus ratione. Optio magnam est perferendis placeat dolores. Ut voluptas adipisci laborum qui quidem ut. Repudiandae quo et repellat rerum. Pariatur maxime et qui aperiam.",
-            "brand": {
-                "id": 1,
-                "name": "Bahringer and Sons",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 12,
-            "name": "Abdiel Fritsch",
-            "price": 3221806,
-            "desc": "Vel omnis qui perferendis eius quia. Id dolore omnis consequatur iusto assumenda repellat impedit. Laboriosam reprehenderit neque recusandae aut vero.",
-            "brand": {
-                "id": 2,
-                "name": "McCullough, Feeney and Legros",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 4,
-                "name": "Barton PLC",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 19,
-            "name": "Gretchen Huels IV",
-            "price": 463868,
-            "desc": "Sit velit tenetur a sunt error. Et et architecto iure soluta tempore nemo. Non voluptas voluptatem perspiciatis suscipit ut et dolor. Porro saepe minus hic sit qui quia.",
+            "name": "Prof. Judah Blanda",
+            "price": 4254352,
+            "desc": "Et vero quidem excepturi eius esse. Blanditiis fuga aperiam dolorem. Ut dolores mollitia alias omnis officiis aut commodi cum.",
+            "stock": 13,
+            "bought": 39,
+            "warranty": 9,
+            "rating": 2,
+            "rating_averaged": 1,
             "brand": {
                 "id": 5,
-                "name": "Schimmel-Gusikowski",
+                "name": "Schumm, Lueilwitz and Jacobs",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "id": 6,
+                "name": "Moore LLC",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 7,
-            "name": "Kari Stanton",
-            "price": 1168678,
-            "desc": "Eos nulla itaque ducimus vero mollitia esse. Vel ut quia ut beatae harum. Dolorem placeat voluptas omnis dolores suscipit dolorum.",
-            "brand": {
-                "id": 2,
-                "name": "McCullough, Feeney and Legros",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 4,
-                "name": "Barton PLC",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 8,
-            "name": "Pattie Littel",
-            "price": 9996076,
-            "desc": "Adipisci tempora facere unde et. Voluptatibus quia officiis qui quidem. Qui quo aut asperiores ea molestias.",
+            "name": "Prof. Antonietta Lowe",
+            "price": 1778634,
+            "desc": "Esse corporis sed omnis consequuntur molestias vero voluptatibus. Et explicabo tempore consequuntur quam. Repellat at eaque quia voluptas quod aliquid excepturi.",
+            "stock": 70,
+            "bought": 39,
+            "warranty": 3,
+            "rating": 1,
+            "rating_averaged": 2,
             "brand": {
-                "id": 4,
-                "name": "Cassin Group",
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Brown, Kris and Larkin",
+                "id": 18,
+                "name": "Kunze-Prohaska",
                 "image": null,
                 "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 11,
+            "name": "Jayne Dickens",
+            "price": 7739011,
+            "desc": "Quaerat voluptatem ad adipisci dolorum. Quis et voluptate velit molestiae. Ut repellat et harum nihil impedit enim.",
+            "stock": 63,
+            "bought": 39,
+            "warranty": 23,
+            "rating": 1,
+            "rating_averaged": 1,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 36,
+                "name": "Pollich Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 8,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 29,
-            "name": "Emmitt Rippin I",
-            "price": 5828853,
-            "desc": "Qui exercitationem rerum aut hic. Et totam sint non possimus. Voluptatem saepe sapiente voluptas amet sit quae atque. Ut quae quia dolor qui rerum. Suscipit veritatis autem nam corrupti ut molestiae.",
+            "name": "Ray Bayer Jr.",
+            "price": 6657306,
+            "desc": "Culpa omnis aliquam sed aut. Modi vel consequuntur distinctio nihil exercitationem molestiae velit.",
+            "stock": 21,
+            "bought": 39,
+            "warranty": 19,
+            "rating": 1,
+            "rating_averaged": 0,
             "brand": {
-                "id": 5,
-                "name": "Schimmel-Gusikowski",
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 4,
-                "name": "Barton PLC",
-                "image": null,
-                "desc": null,
-                "parent_id": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 13,
-            "name": "Keyshawn Muller",
-            "price": 9336021,
-            "desc": "Et facilis et aliquid tempora illum. Expedita quo quibusdam distinctio eaque iure accusamus a. Odio quia modi ratione et voluptates. Nesciunt nesciunt amet blanditiis voluptatum.",
-            "brand": {
-                "id": 5,
-                "name": "Schimmel-Gusikowski",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 1,
-                "name": "Stiedemann-McClure",
+                "id": 21,
+                "name": "Sauer Group",
                 "image": null,
                 "desc": null,
                 "parent_id": 6,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 18,
+            "name": "Prof. Gage Wolff",
+            "price": 9476453,
+            "desc": "Ipsa molestias non nesciunt quasi. Voluptatem incidunt fuga omnis aliquid. Possimus cupiditate qui fuga a quas tempore.",
+            "stock": 63,
+            "bought": 37,
+            "warranty": 13,
+            "rating": 3,
+            "rating_averaged": 3,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 36,
+                "name": "Pollich Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 8,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 10,
+            "name": "Dr. Jeramy Swaniawski",
+            "price": 1709014,
+            "desc": "Harum modi nihil tenetur earum eum placeat ipsam voluptates. Impedit neque ut dicta perspiciatis necessitatibus. Cum est consequatur eaque eum fuga in.",
+            "stock": 54,
+            "bought": 36,
+            "warranty": 0,
+            "rating": 3,
+            "rating_averaged": 1.5,
+            "brand": {
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 18,
+                "name": "Kunze-Prohaska",
+                "image": null,
+                "desc": null,
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 22,
+            "name": "Dr. Adah Spencer",
+            "price": 8058504,
+            "desc": "Sit deserunt quos et asperiores provident esse. Eligendi tempora officiis pariatur quod sunt qui omnis. Explicabo illo consequatur molestiae nobis delectus officiis libero.",
+            "stock": 86,
+            "bought": 35,
+            "warranty": 3,
+            "rating": 2,
+            "rating_averaged": 4.5,
+            "brand": {
+                "id": 4,
+                "name": "Carroll, Reichert and Bauch",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 18,
+                "name": "Kunze-Prohaska",
+                "image": null,
+                "desc": null,
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 3,
+            "name": "Prof. Lesly Hilpert DDS",
+            "price": 8553384,
+            "desc": "Est qui necessitatibus quo temporibus nam voluptatem. Laborum quod eveniet similique blanditiis possimus et omnis. Fugiat illum voluptatem veritatis voluptas quo.",
+            "stock": 10,
+            "bought": 34,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 2,
+            "brand": {
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 20,
+                "name": "Rempel Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 30,
+            "name": "Trenton Denesik IV",
+            "price": 3020782,
+            "desc": "Dolor aspernatur maiores ut aspernatur. Iure assumenda numquam quia quos. Molestias quia dolor ipsum alias aut reiciendis.",
+            "stock": 17,
+            "bought": 34,
+            "warranty": 15,
+            "rating": 2,
+            "rating_averaged": 1.5,
+            "brand": {
+                "id": 4,
+                "name": "Carroll, Reichert and Bauch",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 14,
+                "name": "Kilback Group",
+                "image": null,
+                "desc": null,
+                "parent_id": 8,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         }
     ],
     "links": {
@@ -1980,50 +2588,17 @@ fetch(url, {
 </tbody>
 </table>
 <!-- END_1df1aa72c0b2999caf24e34335e826a7 -->
-<!-- START_c5f9769c6bebb3acf811f95eaef3f6b9 -->
+<!-- START_ea23fa15ffa575a8ca6d3bd2a9cb792b -->
 <h2>Show products in parent category</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/product-in-parent/1" \
+    -G "http://127.0.0.1:8000/api/product-by-parent-category/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/product-in-parent/1"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers: headers,
-})
-    .then(response =&gt; response.json())
-    .then(json =&gt; console.log(json));</code></pre>
-<blockquote>
-<p>Example response (200):</p>
-</blockquote>
-<pre><code class="language-json">{
-    "data": []
-}</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/product-in-parent/{id}</code></p>
-<!-- END_c5f9769c6bebb3acf811f95eaef3f6b9 -->
-<!-- START_81f884f0583d5d10de3fe78838f09846 -->
-<h2>Show products in sub category</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/product-in-sub/1" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/product-in-sub/1"
+    "http://127.0.0.1:8000/api/product-by-parent-category/1"
 );
 
 let headers = {
@@ -2043,91 +2618,172 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": [
         {
-            "id": 1,
-            "name": "Kavon McKenzie III",
-            "price": 3831297,
-            "desc": "Dicta iusto id iusto fugiat sed. Rem consequatur dolorem vitae voluptate nobis repudiandae. Veniam quas quam vero.",
+            "id": 26,
+            "name": "Dr. Krista Goodwin",
+            "price": 6837286,
+            "desc": "Inventore facilis rerum dolor quo. Sint voluptas et a quidem qui quia est. Sed consequatur doloribus aut aut.",
+            "stock": 21,
+            "bought": 21,
+            "warranty": 14,
+            "rating": 3,
+            "rating_averaged": 4.5,
             "brand": {
-                "id": 4,
-                "name": "Cassin Group",
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 1,
-                "name": "Stiedemann-McClure",
+                "id": 48,
+                "name": "Bashirian, Donnelly and Vandervort",
                 "image": null,
                 "desc": null,
-                "parent_id": 6,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
+                "parent_id": 1,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 13,
-            "name": "Keyshawn Muller",
-            "price": 9336021,
-            "desc": "Et facilis et aliquid tempora illum. Expedita quo quibusdam distinctio eaque iure accusamus a. Odio quia modi ratione et voluptates. Nesciunt nesciunt amet blanditiis voluptatum.",
-            "brand": {
-                "id": 5,
-                "name": "Schimmel-Gusikowski",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 1,
-                "name": "Stiedemann-McClure",
-                "image": null,
-                "desc": null,
-                "parent_id": 6,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
-        },
-        {
-            "id": 14,
-            "name": "Alayna Ernser IV",
-            "price": 4930529,
-            "desc": "Laudantium ipsam quos in et. Velit qui sint sunt neque laboriosam rerum provident. Assumenda aliquid minus et omnis quia reiciendis molestiae numquam.",
-            "brand": {
-                "id": 5,
-                "name": "Schimmel-Gusikowski",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "category": {
-                "id": 1,
-                "name": "Stiedemann-McClure",
-                "image": null,
-                "desc": null,
-                "parent_id": 6,
-                "created_at": "2021-03-22T11:46:24.000000Z",
-                "updated_at": "2021-03-22T11:46:24.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-22T11:46:24.000000Z",
-            "updated_at": "2021-03-22T11:46:24.000000Z"
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         }
-    ]
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/product-by-parent-category\/1?page=1",
+        "last": "http:\/\/localhost\/api\/product-by-parent-category\/1?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "links": [
+            {
+                "url": null,
+                "label": "pagination.previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/product-by-parent-category\/1?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": null,
+                "label": "pagination.next",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/product-by-parent-category\/1",
+        "per_page": 10,
+        "to": 1,
+        "total": 1
+    }
 }</code></pre>
 <h3>HTTP Request</h3>
-<p><code>GET api/product-in-sub/{id}</code></p>
-<!-- END_81f884f0583d5d10de3fe78838f09846 -->
+<p><code>GET api/product-by-parent-category/{id}</code></p>
+<!-- END_ea23fa15ffa575a8ca6d3bd2a9cb792b -->
+<!-- START_ae03d88973d288010a9b74619812d3db -->
+<h2>Show products in sub category</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/product-by-category/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/product-by-category/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 16,
+            "name": "Lina Berge",
+            "price": 6284418,
+            "desc": "Sed beatae et et est fuga sint provident. Corrupti incidunt a dolorum. In a quae nam aut sunt distinctio nam magni.",
+            "stock": 93,
+            "bought": 12,
+            "warranty": 10,
+            "rating": 0,
+            "rating_averaged": 0,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 1,
+                "name": "Senger and Sons",
+                "image": null,
+                "desc": null,
+                "parent_id": 2,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T14:01:53.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/product-by-category\/1?page=1",
+        "last": "http:\/\/localhost\/api\/product-by-category\/1?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "links": [
+            {
+                "url": null,
+                "label": "pagination.previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/product-by-category\/1?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": null,
+                "label": "pagination.next",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/product-by-category\/1",
+        "per_page": 10,
+        "to": 1,
+        "total": 1
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/product-by-category/{id}</code></p>
+<!-- END_ae03d88973d288010a9b74619812d3db -->
 <h1>Rating</h1>
 <p>APIs for rating</p>
 <!-- START_e2cf52df507d02a2867a78c3c1dd77b5 -->
@@ -2161,453 +2817,953 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "rating": 0,
-            "comment": "Ut nihil quia perferendis fugiat rerum expedita.",
-            "product_id": 17,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Rerum hic quia pariatur facere quo.",
+            "user": {
+                "id": 10,
+                "name": "Prof. Cleora Kovacek II",
+                "email": "ubarton@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9206733324268",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 2,
-            "rating": 2,
-            "comment": "Sint in natus cupiditate esse consequatur.",
-            "product_id": 7,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "Et minus rem tempora eum amet impedit qui ut.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 3,
             "rating": 5,
-            "comment": "Sit veniam error neque.",
-            "product_id": 11,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Enim minus quaerat officiis et.",
+            "user": {
+                "id": 9,
+                "name": "Jordon Murazik",
+                "email": "ozemlak@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+6252411210203",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 4,
-            "rating": 4,
-            "comment": "Quos laboriosam aut sit.",
-            "product_id": 17,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Dolor voluptatem velit in sint.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 5,
             "rating": 2,
-            "comment": "Quibusdam iure corporis expedita saepe consequatur.",
-            "product_id": 3,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Dolor sunt sit ea voluptatibus.",
+            "user": {
+                "id": 7,
+                "name": "Riley Schuster",
+                "email": "leonor59@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7502861700675",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 6,
-            "rating": 2,
-            "comment": "Sunt voluptatem accusantium quis vero sed.",
-            "product_id": 26,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Et officia in occaecati in voluptatibus.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 7,
-            "rating": 4,
-            "comment": "Animi qui itaque in fugiat facere reprehenderit similique.",
-            "product_id": 23,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "Quas laboriosam facilis eum est est.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 8,
-            "rating": 4,
-            "comment": "Ex recusandae molestiae odio enim.",
-            "product_id": 19,
-            "user_id": 2,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Dolor expedita est qui hic id omnis nesciunt quis.",
+            "user": {
+                "id": 7,
+                "name": "Riley Schuster",
+                "email": "leonor59@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7502861700675",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 9,
-            "rating": 4,
-            "comment": "Et beatae nobis omnis quia illum consequatur.",
-            "product_id": 8,
-            "user_id": 8,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Nam quia dolores qui similique eos voluptas.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 10,
-            "rating": 0,
-            "comment": "Qui nostrum harum aliquam.",
-            "product_id": 24,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Aliquid rerum natus maxime aut et quis.",
+            "user": {
+                "id": 10,
+                "name": "Prof. Cleora Kovacek II",
+                "email": "ubarton@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9206733324268",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 11,
-            "rating": 3,
-            "comment": "Molestias autem similique fuga reiciendis molestiae cum a.",
-            "product_id": 25,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Quo vel omnis dolor pariatur.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 12,
-            "rating": 0,
-            "comment": "Harum labore ut voluptas est eos.",
-            "product_id": 11,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Ad a vel consequatur commodi.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 13,
-            "rating": 1,
-            "comment": "Qui qui quod esse pariatur odio voluptatem delectus.",
-            "product_id": 12,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Sed accusamus voluptas cumque aperiam.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 14,
-            "rating": 3,
-            "comment": "Dolorem dolor sed cum et.",
-            "product_id": 2,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Maiores ipsum quia animi exercitationem quo.",
+            "user": {
+                "id": 9,
+                "name": "Jordon Murazik",
+                "email": "ozemlak@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+6252411210203",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 15,
-            "rating": 5,
-            "comment": "Est voluptate impedit unde pariatur mollitia.",
-            "product_id": 28,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Nobis voluptas nam minima incidunt.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 16,
-            "rating": 4,
-            "comment": "Sequi sequi error vitae.",
-            "product_id": 12,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "Fuga eum officiis voluptatem quo nostrum velit.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 17,
             "rating": 5,
-            "comment": "Saepe nihil maxime cum placeat et voluptates consequuntur.",
-            "product_id": 20,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Ex reprehenderit harum nemo.",
+            "user": {
+                "id": 5,
+                "name": "Antone White",
+                "email": "aniya.koss@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7284782298951",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 18,
-            "rating": 5,
-            "comment": "Ea iure voluptas porro nemo incidunt.",
-            "product_id": 14,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Et explicabo dolorum perferendis quas et qui dolor.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 19,
-            "rating": 3,
-            "comment": "Est deserunt aut qui et explicabo doloribus.",
-            "product_id": 25,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Eaque dicta voluptatem perspiciatis quos autem nobis.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 20,
-            "rating": 1,
-            "comment": "In in adipisci et.",
-            "product_id": 27,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "In dolorem aut qui possimus voluptatum ut.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 21,
-            "rating": 1,
-            "comment": "Quibusdam rerum aut ratione fugit deserunt consequatur commodi.",
-            "product_id": 27,
-            "user_id": 8,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "Voluptas dolor quis maiores voluptates beatae.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 22,
-            "rating": 3,
-            "comment": "Quod adipisci ea quo aut non dolor excepturi.",
-            "product_id": 22,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 5,
+            "comment": "Sit voluptates dolorum libero ut nihil aut veniam.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 23,
             "rating": 4,
-            "comment": "Ut id rem velit nihil nostrum enim.",
-            "product_id": 30,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Expedita hic doloribus fugiat dolore quia.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 24,
-            "rating": 5,
-            "comment": "Iure vel quisquam laboriosam perspiciatis natus.",
-            "product_id": 23,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "Tempore doloribus exercitationem iusto ut unde esse.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 25,
-            "rating": 3,
-            "comment": "Ut et in perspiciatis ut architecto sequi qui.",
-            "product_id": 23,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Esse tenetur tempore ut cumque itaque eius veritatis.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 26,
             "rating": 2,
-            "comment": "Ipsa voluptatibus porro recusandae quod vel et at.",
-            "product_id": 4,
-            "user_id": 2,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Ex corrupti odio quasi iusto quidem nihil itaque.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 27,
-            "rating": 5,
-            "comment": "Quas facilis quia minima assumenda.",
-            "product_id": 4,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Ipsum libero nemo nemo.",
+            "user": {
+                "id": 10,
+                "name": "Prof. Cleora Kovacek II",
+                "email": "ubarton@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9206733324268",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 28,
-            "rating": 1,
-            "comment": "Aut et repudiandae maiores quae consequatur quaerat.",
-            "product_id": 14,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Illo aperiam dolore qui eligendi et nihil exercitationem voluptatum.",
+            "user": {
+                "id": 10,
+                "name": "Prof. Cleora Kovacek II",
+                "email": "ubarton@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9206733324268",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 29,
-            "rating": 2,
-            "comment": "Commodi iure sint officia atque earum maiores qui.",
-            "product_id": 30,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Dolores illum autem explicabo voluptate.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 30,
-            "rating": 0,
-            "comment": "Culpa ipsum adipisci quia.",
-            "product_id": 10,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 3,
+            "comment": "Repudiandae quae sint quas aliquam.",
+            "user": {
+                "id": 9,
+                "name": "Jordon Murazik",
+                "email": "ozemlak@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+6252411210203",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 31,
-            "rating": 3,
-            "comment": "Nam error laborum nihil similique labore ut.",
-            "product_id": 26,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Deserunt placeat eligendi ut placeat.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 32,
-            "rating": 1,
-            "comment": "Quos vero rerum omnis perferendis omnis eius cupiditate.",
-            "product_id": 9,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Natus qui veritatis ea quia.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 33,
-            "rating": 0,
-            "comment": "Nostrum rerum non velit culpa rerum.",
-            "product_id": 8,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Tenetur omnis officiis earum dolore libero illo.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 34,
-            "rating": 3,
-            "comment": "Iste beatae esse aliquid et doloribus distinctio.",
-            "product_id": 1,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 5,
+            "comment": "Esse quaerat possimus qui nulla ut fugit.",
+            "user": {
+                "id": 9,
+                "name": "Jordon Murazik",
+                "email": "ozemlak@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+6252411210203",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 35,
-            "rating": 1,
-            "comment": "Nobis illum quibusdam ducimus et.",
-            "product_id": 15,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Laboriosam ab vel iusto non et.",
+            "user": {
+                "id": 7,
+                "name": "Riley Schuster",
+                "email": "leonor59@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7502861700675",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 36,
-            "rating": 1,
-            "comment": "Et enim omnis sunt molestias et illum quis.",
-            "product_id": 27,
-            "user_id": 8,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Voluptates provident consequatur architecto quia iusto officiis dolores.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 37,
-            "rating": 5,
-            "comment": "Sunt ipsum iste et dolores.",
-            "product_id": 22,
-            "user_id": 2,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Et quia explicabo neque officia deleniti quae et eos.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 38,
             "rating": 0,
-            "comment": "Vero corporis est qui omnis quidem est ut.",
-            "product_id": 24,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Esse voluptatum facilis debitis quia.",
+            "user": {
+                "id": 10,
+                "name": "Prof. Cleora Kovacek II",
+                "email": "ubarton@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9206733324268",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 39,
-            "rating": 0,
-            "comment": "Ea recusandae est qui ex ratione quia.",
-            "product_id": 2,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Laboriosam fugit ea repellat et at.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 40,
-            "rating": 1,
-            "comment": "Mollitia et fuga ut sed.",
-            "product_id": 26,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Commodi et non libero omnis necessitatibus ea.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 41,
-            "rating": 4,
-            "comment": "Neque aut similique id dolores quisquam.",
-            "product_id": 1,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 5,
+            "comment": "Facere nostrum autem et libero et qui occaecati et.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 42,
             "rating": 2,
-            "comment": "Rerum asperiores non a ad labore rem.",
-            "product_id": 21,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Aut ratione est beatae.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 43,
-            "rating": 3,
-            "comment": "Temporibus voluptate voluptatibus maiores possimus ullam labore omnis voluptate.",
-            "product_id": 21,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Beatae molestiae quidem corrupti maiores voluptas sunt.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 44,
-            "rating": 3,
-            "comment": "Est odit repudiandae quidem rerum et voluptatem voluptas dolor.",
-            "product_id": 1,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 5,
+            "comment": "Ipsam dolorum sunt blanditiis dignissimos ducimus expedita officiis.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 45,
-            "rating": 2,
-            "comment": "Autem ut at voluptate quia dolores.",
-            "product_id": 8,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 1,
+            "comment": "Perspiciatis optio dolores dolorem perspiciatis numquam labore quos cum.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 46,
-            "rating": 5,
-            "comment": "Eveniet voluptas dolorum corporis ut quas ratione dolorem.",
-            "product_id": 25,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 4,
+            "comment": "Asperiores exercitationem vero hic ut officiis fugiat ducimus ex.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 47,
-            "rating": 3,
-            "comment": "Facere id accusamus quis provident possimus.",
-            "product_id": 14,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 5,
+            "comment": "Fuga velit voluptatem commodi nihil.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 48,
-            "rating": 2,
-            "comment": "Vel voluptas doloribus delectus.",
-            "product_id": 30,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 0,
+            "comment": "Veniam occaecati facere voluptas ratione fuga.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 49,
-            "rating": 5,
-            "comment": "Eveniet excepturi aspernatur dolores ducimus.",
-            "product_id": 1,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "rating": 2,
+            "comment": "Aliquid ratione incidunt nihil nesciunt autem in.",
+            "user": {
+                "id": 5,
+                "name": "Antone White",
+                "email": "aniya.koss@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7284782298951",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
             "id": 50,
             "rating": 4,
-            "comment": "Voluptates odio nostrum molestiae enim tempore.",
-            "product_id": 12,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "comment": "Libero voluptatem animi maiores omnis aut quis aut.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
         }
     ]
 }</code></pre>
@@ -2644,28 +3800,38 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": {
         "id": 1,
-        "rating": 0,
-        "comment": "Ut nihil quia perferendis fugiat rerum expedita.",
-        "product_id": 17,
-        "user_id": 9,
-        "created_at": "2021-03-22T11:46:25.000000Z",
-        "updated_at": "2021-03-22T11:46:25.000000Z"
+        "rating": 4,
+        "comment": "Rerum hic quia pariatur facere quo.",
+        "user": {
+            "id": 10,
+            "name": "Prof. Cleora Kovacek II",
+            "email": "ubarton@example.org",
+            "email_verified_at": "2021-03-26T13:40:35.000000Z",
+            "phone": "+9206733324268",
+            "gender": 2,
+            "avatar": null,
+            "level": 0,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        "created_at": "2021-03-26T13:40:35.000000Z",
+        "updated_at": "2021-03-26T13:40:35.000000Z"
     }
 }</code></pre>
 <h3>HTTP Request</h3>
 <p><code>GET api/rating/{rating}</code></p>
 <!-- END_d44382a67dad858edca95bf02a4642fb -->
-<!-- START_e42ceedbb38aa06f2859aa0f8af5ba18 -->
+<!-- START_c54775bdd8bb93942b3e4d1e4a0a0dd3 -->
 <h2>Display ratings by product id</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/rating/rating-product/" \
+    -G "http://127.0.0.1:8000/api/rating-by-product/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/rating/rating-product/"
+    "http://127.0.0.1:8000/api/rating-by-product/1"
 );
 
 let headers = {
@@ -2680,25 +3846,106 @@ fetch(url, {
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <blockquote>
-<p>Example response (500):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Server Error"
+    "data": [
+        {
+            "id": 44,
+            "rating": 5,
+            "comment": "Ipsam dolorum sunt blanditiis dignissimos ducimus expedita officiis.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        }
+    ]
 }</code></pre>
 <h3>HTTP Request</h3>
-<p><code>GET api/rating/rating-product/{product_id?}</code></p>
-<!-- END_e42ceedbb38aa06f2859aa0f8af5ba18 -->
-<!-- START_820bc036154f8d8ed569b9728dba9650 -->
+<p><code>GET api/rating-by-product/{product_id}</code></p>
+<!-- END_c54775bdd8bb93942b3e4d1e4a0a0dd3 -->
+<h1>general</h1>
+<!-- START_f9301c03a9281c0847565f96e6f723de -->
+<h2>Get ordered</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/orders" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/orders"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/orders</code></p>
+<!-- END_f9301c03a9281c0847565f96e6f723de -->
+<!-- START_d4be91a3a8d5235a2d282e7158c2bdb6 -->
+<h2>Checkout</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://127.0.0.1:8000/api/checkout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/checkout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/checkout</code></p>
+<!-- END_d4be91a3a8d5235a2d282e7158c2bdb6 -->
+<!-- START_f1c003f354e5a35c6d35b6c7e0ad365d -->
 <h2>Display a listing of the resource.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/comment" \
+    -G "http://127.0.0.1:8000/api/parent-category" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment"
+    "http://127.0.0.1:8000/api/parent-category"
 );
 
 let headers = {
@@ -2719,470 +3966,100 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "rating": 0,
-            "comment": "Ut nihil quia perferendis fugiat rerum expedita.",
-            "product_id": 17,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Zulauf, Cormier and Becker",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 2,
-            "rating": 2,
-            "comment": "Sint in natus cupiditate esse consequatur.",
-            "product_id": 7,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Collins, Keeling and Stoltenberg",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 3,
-            "rating": 5,
-            "comment": "Sit veniam error neque.",
-            "product_id": 11,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Hessel-Gibson",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 4,
-            "rating": 4,
-            "comment": "Quos laboriosam aut sit.",
-            "product_id": 17,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "D'Amore, Block and Block",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 5,
-            "rating": 2,
-            "comment": "Quibusdam iure corporis expedita saepe consequatur.",
-            "product_id": 3,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Schamberger-Brekke",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 6,
-            "rating": 2,
-            "comment": "Sunt voluptatem accusantium quis vero sed.",
-            "product_id": 26,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Dibbert Ltd",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 7,
-            "rating": 4,
-            "comment": "Animi qui itaque in fugiat facere reprehenderit similique.",
-            "product_id": 23,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Reichert, Gleichner and Vandervort",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 8,
-            "rating": 4,
-            "comment": "Ex recusandae molestiae odio enim.",
-            "product_id": 19,
-            "user_id": 2,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Davis Group",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 9,
-            "rating": 4,
-            "comment": "Et beatae nobis omnis quia illum consequatur.",
-            "product_id": 8,
-            "user_id": 8,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "Runolfsson, Dooley and Jenkins",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         },
         {
             "id": 10,
-            "rating": 0,
-            "comment": "Qui nostrum harum aliquam.",
-            "product_id": 24,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 11,
-            "rating": 3,
-            "comment": "Molestias autem similique fuga reiciendis molestiae cum a.",
-            "product_id": 25,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 12,
-            "rating": 0,
-            "comment": "Harum labore ut voluptas est eos.",
-            "product_id": 11,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 13,
-            "rating": 1,
-            "comment": "Qui qui quod esse pariatur odio voluptatem delectus.",
-            "product_id": 12,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 14,
-            "rating": 3,
-            "comment": "Dolorem dolor sed cum et.",
-            "product_id": 2,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 15,
-            "rating": 5,
-            "comment": "Est voluptate impedit unde pariatur mollitia.",
-            "product_id": 28,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 16,
-            "rating": 4,
-            "comment": "Sequi sequi error vitae.",
-            "product_id": 12,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 17,
-            "rating": 5,
-            "comment": "Saepe nihil maxime cum placeat et voluptates consequuntur.",
-            "product_id": 20,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 18,
-            "rating": 5,
-            "comment": "Ea iure voluptas porro nemo incidunt.",
-            "product_id": 14,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 19,
-            "rating": 3,
-            "comment": "Est deserunt aut qui et explicabo doloribus.",
-            "product_id": 25,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 20,
-            "rating": 1,
-            "comment": "In in adipisci et.",
-            "product_id": 27,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 21,
-            "rating": 1,
-            "comment": "Quibusdam rerum aut ratione fugit deserunt consequatur commodi.",
-            "product_id": 27,
-            "user_id": 8,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 22,
-            "rating": 3,
-            "comment": "Quod adipisci ea quo aut non dolor excepturi.",
-            "product_id": 22,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 23,
-            "rating": 4,
-            "comment": "Ut id rem velit nihil nostrum enim.",
-            "product_id": 30,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 24,
-            "rating": 5,
-            "comment": "Iure vel quisquam laboriosam perspiciatis natus.",
-            "product_id": 23,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 25,
-            "rating": 3,
-            "comment": "Ut et in perspiciatis ut architecto sequi qui.",
-            "product_id": 23,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 26,
-            "rating": 2,
-            "comment": "Ipsa voluptatibus porro recusandae quod vel et at.",
-            "product_id": 4,
-            "user_id": 2,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 27,
-            "rating": 5,
-            "comment": "Quas facilis quia minima assumenda.",
-            "product_id": 4,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 28,
-            "rating": 1,
-            "comment": "Aut et repudiandae maiores quae consequatur quaerat.",
-            "product_id": 14,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 29,
-            "rating": 2,
-            "comment": "Commodi iure sint officia atque earum maiores qui.",
-            "product_id": 30,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 30,
-            "rating": 0,
-            "comment": "Culpa ipsum adipisci quia.",
-            "product_id": 10,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 31,
-            "rating": 3,
-            "comment": "Nam error laborum nihil similique labore ut.",
-            "product_id": 26,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 32,
-            "rating": 1,
-            "comment": "Quos vero rerum omnis perferendis omnis eius cupiditate.",
-            "product_id": 9,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 33,
-            "rating": 0,
-            "comment": "Nostrum rerum non velit culpa rerum.",
-            "product_id": 8,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 34,
-            "rating": 3,
-            "comment": "Iste beatae esse aliquid et doloribus distinctio.",
-            "product_id": 1,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 35,
-            "rating": 1,
-            "comment": "Nobis illum quibusdam ducimus et.",
-            "product_id": 15,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 36,
-            "rating": 1,
-            "comment": "Et enim omnis sunt molestias et illum quis.",
-            "product_id": 27,
-            "user_id": 8,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 37,
-            "rating": 5,
-            "comment": "Sunt ipsum iste et dolores.",
-            "product_id": 22,
-            "user_id": 2,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 38,
-            "rating": 0,
-            "comment": "Vero corporis est qui omnis quidem est ut.",
-            "product_id": 24,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 39,
-            "rating": 0,
-            "comment": "Ea recusandae est qui ex ratione quia.",
-            "product_id": 2,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 40,
-            "rating": 1,
-            "comment": "Mollitia et fuga ut sed.",
-            "product_id": 26,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 41,
-            "rating": 4,
-            "comment": "Neque aut similique id dolores quisquam.",
-            "product_id": 1,
-            "user_id": 4,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 42,
-            "rating": 2,
-            "comment": "Rerum asperiores non a ad labore rem.",
-            "product_id": 21,
-            "user_id": 1,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 43,
-            "rating": 3,
-            "comment": "Temporibus voluptate voluptatibus maiores possimus ullam labore omnis voluptate.",
-            "product_id": 21,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 44,
-            "rating": 3,
-            "comment": "Est odit repudiandae quidem rerum et voluptatem voluptas dolor.",
-            "product_id": 1,
-            "user_id": 6,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 45,
-            "rating": 2,
-            "comment": "Autem ut at voluptate quia dolores.",
-            "product_id": 8,
-            "user_id": 9,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 46,
-            "rating": 5,
-            "comment": "Eveniet voluptas dolorum corporis ut quas ratione dolorem.",
-            "product_id": 25,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 47,
-            "rating": 3,
-            "comment": "Facere id accusamus quis provident possimus.",
-            "product_id": 14,
-            "user_id": 7,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 48,
-            "rating": 2,
-            "comment": "Vel voluptas doloribus delectus.",
-            "product_id": 30,
-            "user_id": 10,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 49,
-            "rating": 5,
-            "comment": "Eveniet excepturi aspernatur dolores ducimus.",
-            "product_id": 1,
-            "user_id": 5,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
-        },
-        {
-            "id": 50,
-            "rating": 4,
-            "comment": "Voluptates odio nostrum molestiae enim tempore.",
-            "product_id": 12,
-            "user_id": 3,
-            "created_at": "2021-03-22T11:46:25.000000Z",
-            "updated_at": "2021-03-22T11:46:25.000000Z"
+            "name": "O'Connell and Sons",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-03-26T13:40:34.000000Z",
+            "updated_at": "2021-03-26T13:40:34.000000Z"
         }
     ]
 }</code></pre>
 <h3>HTTP Request</h3>
-<p><code>GET api/comment</code></p>
-<!-- END_820bc036154f8d8ed569b9728dba9650 -->
-<!-- START_290df647fbc0fcbe56d880990e4bfdfc -->
+<p><code>GET api/parent-category</code></p>
+<!-- END_f1c003f354e5a35c6d35b6c7e0ad365d -->
+<!-- START_6745be727df30614b14000051ee0581e -->
 <h2>Display the specified resource.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/comment/1" \
+    -G "http://127.0.0.1:8000/api/get-sub-category/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/comment/1"
+    "http://127.0.0.1:8000/api/get-sub-category/1"
 );
 
 let headers = {
@@ -3200,19 +4077,48 @@ fetch(url, {
 <p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "data": {
-        "id": 1,
-        "rating": 0,
-        "comment": "Ut nihil quia perferendis fugiat rerum expedita.",
-        "product_id": 17,
-        "user_id": 9,
-        "created_at": "2021-03-22T11:46:25.000000Z",
-        "updated_at": "2021-03-22T11:46:25.000000Z"
-    }
+    "data": [
+        {
+            "id": 16,
+            "name": "Reinger, Mann and Yundt",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 25,
+            "name": "Green-Bergnaum",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 38,
+            "name": "Parisian, Collier and King",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 48,
+            "name": "Bashirian, Donnelly and Vandervort",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        }
+    ]
 }</code></pre>
 <h3>HTTP Request</h3>
-<p><code>GET api/comment/{comment}</code></p>
-<!-- END_290df647fbc0fcbe56d880990e4bfdfc -->
+<p><code>GET api/get-sub-category/{parentId}</code></p>
+<!-- END_6745be727df30614b14000051ee0581e -->
       </div>
       <div class="dark-box">
                         <div class="lang-selector">
