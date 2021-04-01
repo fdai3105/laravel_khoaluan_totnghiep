@@ -89,6 +89,14 @@ class AuthController extends Controller {
         try {
             $user = User::find($request->user()->id);
             $user->update($request->all());
+
+            if($request->hasFile('avatar')) {
+                $image = $request->file('avatar');
+                $fileName = preg_replace("/(?:\s\s+|\n|\t)/", "", $user->name . '_' . $image->getClientOriginalName());
+                $fileAddress = $image->move('upload', $fileName);
+                $user->avatar = $fileAddress;
+                $user->save();
+            }
             return response()->json(['message' => 'updated success']);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 422);

@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth:api,web'], function () {
         Route::post('user-edit', [AuthController::class, 'edit']);
     });
 });
+
 Route::apiResource('brand', BrandController::class);
 
 Route::apiResource('parent-category', ParentCategoryController::class);
