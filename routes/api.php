@@ -46,6 +46,7 @@ Route::get('new-product', [ProductController::class, 'newProducts']);
 Route::get('popular-product', [ProductController::class, 'popular']);
 Route::get('product-by-parent-category/{id}', [ProductController::class, 'productsInParent']);
 Route::get('product-by-category/{id}', [ProductController::class, 'productsInSub']);
+Route::get('search-product', [ProductController::class, 'search']);
 
 Route::apiResource('rating', RatingController::class)->only(['index', 'show']);
 Route::get('rating-by-product/{product_id}', [RatingController::class, 'getRatingByProduct']);

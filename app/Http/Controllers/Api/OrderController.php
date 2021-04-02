@@ -25,6 +25,7 @@ class OrderController extends Controller {
      * Checkout
      *
      * @param Request $request
+     * @return false|\Illuminate\Http\JsonResponse
      */
     public function checkout(Request $request) {
         $products_id = $request->input('products');
@@ -45,6 +46,8 @@ class OrderController extends Controller {
             foreach ($products_id as $key => $id) {
                 $product = Product::find($id);
                 $totalPerItem = $product->price * $products_quantity[$key];
+                $product->stock--;
+                $product->save();
                 $total = +$totalPerItem;
                 OrderDetail::create([
                     'quantity' => $products_quantity[$key],

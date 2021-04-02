@@ -91,4 +91,26 @@ class ProductController extends Controller {
         $products = Product::where('category_id', '=', $id)->paginate($this->paginate);
         return ProductResource::collection($products);
     }
+
+    /**
+     * @param Request $request
+     * @return AnonymousResourceCollection
+     */
+    public function search(Request $request): AnonymousResourceCollection {
+        $keyWord = $request->input('name');
+
+        $products = Product::where('name', 'like', "%$keyWord%");
+
+        if ($request->has('price-sort')) {
+            $priceSort = $request->input('price-sort');
+            $products->orderBy('price', $priceSort);
+        }
+
+        if ($request->has('name-sort')) {
+            $nameSort = $request->input('name-sort');
+            $products->orderBy('name', $nameSort);
+        }
+
+        return ProductResource::collection($products->get());
+    }
 }
