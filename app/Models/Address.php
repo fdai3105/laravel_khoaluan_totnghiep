@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -25,17 +26,17 @@ use Illuminate\Support\Carbon;
  * @property-read int|null $order_count
  * @property-read User $user
  * @mixin Eloquent
- * @method static \Illuminate\Database\Eloquent\Builder|Address newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Address newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Address query()
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereCity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereDistrict($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereUserId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Address whereWard($value)
+ * @method static Builder|Address newModelQuery()
+ * @method static Builder|Address newQuery()
+ * @method static Builder|Address query()
+ * @method static Builder|Address whereAddress($value)
+ * @method static Builder|Address whereCity($value)
+ * @method static Builder|Address whereCreatedAt($value)
+ * @method static Builder|Address whereDistrict($value)
+ * @method static Builder|Address whereId($value)
+ * @method static Builder|Address whereUpdatedAt($value)
+ * @method static Builder|Address whereUserId($value)
+ * @method static Builder|Address whereWard($value)
  */
 class Address extends Model {
     use HasFactory;

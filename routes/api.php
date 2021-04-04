@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AddressController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CommentController;
@@ -27,6 +28,7 @@ Route::post('register', [AuthController::class, 'register']);
 Route::group(['middleware' => 'auth:api,web'], function () {
     Route::middleware('verified')->group(function () {
         Route::apiResource('comment', CommentController::class)->only(['store']);
+        Route::apiResource('address', AddressController::class);
         Route::get('orders', [OrderController::class, 'orders']);
         Route::post('checkout', [OrderController::class, 'checkout']);
 

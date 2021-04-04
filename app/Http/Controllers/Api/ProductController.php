@@ -111,6 +111,6 @@ class ProductController extends Controller {
             $products->orderBy('name', $nameSort);
         }
 
-        return ProductResource::collection($products->get());
+        return ProductResource::collection($products->paginate());
     }
 }
