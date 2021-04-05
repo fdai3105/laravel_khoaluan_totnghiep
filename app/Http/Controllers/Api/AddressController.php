@@ -75,12 +75,14 @@ class AddressController extends Controller {
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return Response
+     * @return JsonResponse
      */
-    public function destroy(int $id): Response {
+    public function destroy(int $id): JsonResponse {
         try {
             Address::findOrFail($id)->delete();
+            return response()->json(['message' => 'deleted address success']);
         } catch (\Exception $e) {
+            return response()->json(['message' => $e->getMessage()], 409);
         }
     }
 }
