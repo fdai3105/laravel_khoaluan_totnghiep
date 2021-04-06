@@ -48,6 +48,156 @@
 <p>Welcome to the generated API reference.
 <a href="{{ route("apidoc.json") }}">Get Postman Collection</a></p>
 <!-- END_INFO -->
+<h1>Address</h1>
+<p>APIs for address</p>
+<!-- START_3e89affc00678ae6402d4e91d0072a4f -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/address" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/address"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/address</code></p>
+<!-- END_3e89affc00678ae6402d4e91d0072a4f -->
+<!-- START_56a3d62a5759f4f59b42a3732b8ba8e3 -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://127.0.0.1:8000/api/address" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/address"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/address</code></p>
+<!-- END_56a3d62a5759f4f59b42a3732b8ba8e3 -->
+<!-- START_931c4a4dc2f4c4ff26ad9e085dc47fa6 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/address/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/address/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/address/{address}</code></p>
+<!-- END_931c4a4dc2f4c4ff26ad9e085dc47fa6 -->
+<!-- START_459bbf3a84f4048ddc40c9deaed665ea -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://127.0.0.1:8000/api/address/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/address/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/address/{address}</code></p>
+<p><code>PATCH api/address/{address}</code></p>
+<!-- END_459bbf3a84f4048ddc40c9deaed665ea -->
+<!-- START_8ea6d34a23eeff2623af9ad9ae1b407e -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://127.0.0.1:8000/api/address/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/address/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/address/{address}</code></p>
+<!-- END_8ea6d34a23eeff2623af9ad9ae1b407e -->
 <h1>Authenticator</h1>
 <p>APIs of auth</p>
 <!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
@@ -59,7 +209,7 @@
     "http://127.0.0.1:8000/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"dicta","email":"similique","password":"illo","phone":"voluptas","gender":7}'
+    -d '{"name":"et","email":"consequuntur","password":"tenetur","phone":"cumque","gender":14}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://127.0.0.1:8000/api/register"
@@ -71,11 +221,11 @@ let headers = {
 };
 
 let body = {
-    "name": "dicta",
-    "email": "similique",
-    "password": "illo",
-    "phone": "voluptas",
-    "gender": 7
+    "name": "et",
+    "email": "consequuntur",
+    "password": "tenetur",
+    "phone": "cumque",
+    "gender": 14
 }
 
 fetch(url, {
@@ -131,6 +281,33 @@ fetch(url, {
 </tbody>
 </table>
 <!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+<!-- START_9e4f7ce66ec57f190ca9d116d8248e20 -->
+<h2>api/user-edit</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://127.0.0.1:8000/api/user-edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/user-edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/user-edit</code></p>
+<!-- END_9e4f7ce66ec57f190ca9d116d8248e20 -->
 <!-- START_61739f3220a224b34228600649230ad1 -->
 <h2>Log the user out of the application.</h2>
 <blockquote>
@@ -498,6 +675,46 @@ fetch(url, {
             "desc": null,
             "created_at": "2021-03-26T13:40:34.000000Z",
             "updated_at": "2021-03-26T13:40:34.000000Z"
+        },
+        {
+            "id": 6,
+            "name": "Nolan-Mohr",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:10.000000Z",
+            "updated_at": "2021-04-04T11:31:10.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "Braun PLC",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:10.000000Z",
+            "updated_at": "2021-04-04T11:31:10.000000Z"
+        },
+        {
+            "id": 8,
+            "name": "Paucek PLC",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:10.000000Z",
+            "updated_at": "2021-04-04T11:31:10.000000Z"
+        },
+        {
+            "id": 9,
+            "name": "Carter-Romaguera",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:10.000000Z",
+            "updated_at": "2021-04-04T11:31:10.000000Z"
+        },
+        {
+            "id": 10,
+            "name": "Crona-Von",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:10.000000Z",
+            "updated_at": "2021-04-04T11:31:10.000000Z"
         }
     ]
 }</code></pre>
@@ -1041,6 +1258,456 @@ fetch(url, {
             "parent_id": 2,
             "created_at": "2021-03-26T13:40:35.000000Z",
             "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 51,
+            "name": "Hintz LLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 13,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 52,
+            "name": "Larkin PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 10,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 53,
+            "name": "Adams Group",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 54,
+            "name": "Stanton Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 16,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 55,
+            "name": "Kuhlman-Cassin",
+            "image": null,
+            "desc": null,
+            "parent_id": 16,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 56,
+            "name": "Conroy, Grady and Ullrich",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 57,
+            "name": "Harris, Ebert and Conroy",
+            "image": null,
+            "desc": null,
+            "parent_id": 16,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 58,
+            "name": "Mueller and Sons",
+            "image": null,
+            "desc": null,
+            "parent_id": 20,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 59,
+            "name": "Ernser PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 60,
+            "name": "Lemke-Marquardt",
+            "image": null,
+            "desc": null,
+            "parent_id": 19,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 61,
+            "name": "Eichmann-Mayer",
+            "image": null,
+            "desc": null,
+            "parent_id": 20,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 62,
+            "name": "Sawayn Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 19,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 63,
+            "name": "Rodriguez Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 11,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 64,
+            "name": "Collier-Shanahan",
+            "image": null,
+            "desc": null,
+            "parent_id": 13,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 65,
+            "name": "Blanda, Stiedemann and Howell",
+            "image": null,
+            "desc": null,
+            "parent_id": 2,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 66,
+            "name": "Bogisich, Weber and Bogisich",
+            "image": null,
+            "desc": null,
+            "parent_id": 12,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 67,
+            "name": "Howe-Kulas",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 68,
+            "name": "Stroman Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 16,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 69,
+            "name": "Ritchie, Murphy and Champlin",
+            "image": null,
+            "desc": null,
+            "parent_id": 12,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 70,
+            "name": "O'Hara-Rowe",
+            "image": null,
+            "desc": null,
+            "parent_id": 15,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 71,
+            "name": "Kuhn Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 4,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 72,
+            "name": "Watsica-Koss",
+            "image": null,
+            "desc": null,
+            "parent_id": 15,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 73,
+            "name": "Beatty, Hoeger and Stiedemann",
+            "image": null,
+            "desc": null,
+            "parent_id": 19,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 74,
+            "name": "Connelly, Wehner and Hauck",
+            "image": null,
+            "desc": null,
+            "parent_id": 15,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 75,
+            "name": "Franecki-Schuppe",
+            "image": null,
+            "desc": null,
+            "parent_id": 19,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 76,
+            "name": "Ward, Trantow and Konopelski",
+            "image": null,
+            "desc": null,
+            "parent_id": 12,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 77,
+            "name": "Gleichner-Ortiz",
+            "image": null,
+            "desc": null,
+            "parent_id": 7,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 78,
+            "name": "Wehner, Goodwin and Maggio",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 79,
+            "name": "Hintz and Sons",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 80,
+            "name": "Kub-Gusikowski",
+            "image": null,
+            "desc": null,
+            "parent_id": 11,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 81,
+            "name": "Sanford, Glover and Blick",
+            "image": null,
+            "desc": null,
+            "parent_id": 5,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 82,
+            "name": "Rowe-Kuvalis",
+            "image": null,
+            "desc": null,
+            "parent_id": 10,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 83,
+            "name": "Pacocha PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 18,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 84,
+            "name": "Feil, Harber and Kuhn",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 85,
+            "name": "Hills Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 17,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 86,
+            "name": "Nader, Strosin and Lakin",
+            "image": null,
+            "desc": null,
+            "parent_id": 20,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 87,
+            "name": "Goyette Ltd",
+            "image": null,
+            "desc": null,
+            "parent_id": 11,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 88,
+            "name": "Collier-Satterfield",
+            "image": null,
+            "desc": null,
+            "parent_id": 6,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 89,
+            "name": "Corkery-Abernathy",
+            "image": null,
+            "desc": null,
+            "parent_id": 14,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 90,
+            "name": "Metz, Hessel and Vandervort",
+            "image": null,
+            "desc": null,
+            "parent_id": 19,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 91,
+            "name": "West PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 3,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 92,
+            "name": "Schinner Inc",
+            "image": null,
+            "desc": null,
+            "parent_id": 15,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 93,
+            "name": "Zemlak-Gislason",
+            "image": null,
+            "desc": null,
+            "parent_id": 12,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 94,
+            "name": "Beier-Gorczany",
+            "image": null,
+            "desc": null,
+            "parent_id": 7,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 95,
+            "name": "Ratke, Hermann and Tremblay",
+            "image": null,
+            "desc": null,
+            "parent_id": 16,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 96,
+            "name": "Fisher-Kuphal",
+            "image": null,
+            "desc": null,
+            "parent_id": 9,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 97,
+            "name": "Auer, Langosh and Heaney",
+            "image": null,
+            "desc": null,
+            "parent_id": 5,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 98,
+            "name": "Bauch, Quitzon and Moen",
+            "image": null,
+            "desc": null,
+            "parent_id": 8,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 99,
+            "name": "Homenick, Rosenbaum and Flatley",
+            "image": null,
+            "desc": null,
+            "parent_id": 10,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 100,
+            "name": "Vandervort, Williamson and O'Conner",
+            "image": null,
+            "desc": null,
+            "parent_id": 18,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         }
     ]
 }</code></pre>
@@ -1270,18 +1937,72 @@ fetch(url, {
             "comment": "good job",
             "user": {
                 "id": 11,
-                "name": "FiDai Inc",
+                "name": "Dai123",
                 "email": "fdai3105@gmail.com",
                 "email_verified_at": "2021-03-26T13:42:06.000000Z",
                 "phone": "123",
                 "gender": 1,
-                "avatar": null,
+                "avatar": "upload\\Dai123_IMG_20200131_012124.jpg",
                 "level": 1,
                 "created_at": "2021-03-26T13:41:17.000000Z",
-                "updated_at": "2021-03-26T13:42:06.000000Z"
+                "updated_at": "2021-04-01T07:02:39.000000Z"
             },
             "created_at": "2021-03-28T09:10:04.000000Z",
             "updated_at": "2021-03-28T09:10:04.000000Z"
+        },
+        {
+            "id": 158,
+            "comment": "Rerum et et sint doloribus et qui consequatur.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 173,
+            "comment": "Qui rerum et omnis temporibus fuga repellat.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 180,
+            "comment": "Numquam pariatur quia officia vitae consequatur.",
+            "user": {
+                "id": 17,
+                "name": "Alf Morissette",
+                "email": "heaney.ilene@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+9839311969889",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
         }
     ]
 }</code></pre>
@@ -1327,8 +2048,8 @@ fetch(url, {
             "stock": 36,
             "bought": 8,
             "warranty": 17,
-            "rating": 1,
-            "rating_averaged": 5,
+            "rating": 2,
+            "rating_averaged": 3,
             "brand": {
                 "id": 4,
                 "name": "Carroll, Reichert and Bauch",
@@ -1359,8 +2080,8 @@ fetch(url, {
             "stock": 13,
             "bought": 39,
             "warranty": 9,
-            "rating": 2,
-            "rating_averaged": 1,
+            "rating": 3,
+            "rating_averaged": 0.5,
             "brand": {
                 "id": 5,
                 "name": "Schumm, Lueilwitz and Jacobs",
@@ -1391,8 +2112,8 @@ fetch(url, {
             "stock": 10,
             "bought": 34,
             "warranty": 21,
-            "rating": 1,
-            "rating_averaged": 2,
+            "rating": 2,
+            "rating_averaged": 3.5,
             "brand": {
                 "id": 5,
                 "name": "Schumm, Lueilwitz and Jacobs",
@@ -1455,8 +2176,8 @@ fetch(url, {
             "stock": 65,
             "bought": 10,
             "warranty": 1,
-            "rating": 1,
-            "rating_averaged": 0,
+            "rating": 2,
+            "rating_averaged": 1.5,
             "brand": {
                 "id": 5,
                 "name": "Schumm, Lueilwitz and Jacobs",
@@ -1487,8 +2208,8 @@ fetch(url, {
             "stock": 90,
             "bought": 5,
             "warranty": 13,
-            "rating": 3,
-            "rating_averaged": 2.5,
+            "rating": 4,
+            "rating_averaged": 3,
             "brand": {
                 "id": 1,
                 "name": "Ratke, Bernhard and Schaefer",
@@ -1583,8 +2304,8 @@ fetch(url, {
             "stock": 85,
             "bought": 30,
             "warranty": 21,
-            "rating": 1,
-            "rating_averaged": 2,
+            "rating": 4,
+            "rating_averaged": 1.5,
             "brand": {
                 "id": 2,
                 "name": "Schaefer, Ernser and Nienow",
@@ -1642,14 +2363,14 @@ fetch(url, {
     ],
     "links": {
         "first": "http:\/\/localhost\/api\/product?page=1",
-        "last": "http:\/\/localhost\/api\/product?page=3",
+        "last": "http:\/\/localhost\/api\/product?page=6",
         "prev": null,
         "next": "http:\/\/localhost\/api\/product?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
-        "last_page": 3,
+        "last_page": 6,
         "links": [
             {
                 "url": null,
@@ -1672,6 +2393,21 @@ fetch(url, {
                 "active": false
             },
             {
+                "url": "http:\/\/localhost\/api\/product?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/product?page=5",
+                "label": "5",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/product?page=6",
+                "label": "6",
+                "active": false
+            },
+            {
                 "url": "http:\/\/localhost\/api\/product?page=2",
                 "label": "pagination.next",
                 "active": false
@@ -1680,7 +2416,7 @@ fetch(url, {
         "path": "http:\/\/localhost\/api\/product",
         "per_page": 10,
         "to": 10,
-        "total": 30
+        "total": 60
     }
 }</code></pre>
 <h3>HTTP Request</h3>
@@ -1722,8 +2458,8 @@ fetch(url, {
         "stock": 36,
         "bought": 8,
         "warranty": 17,
-        "rating": 1,
-        "rating_averaged": 5,
+        "rating": 2,
+        "rating_averaged": 3,
         "brand": {
             "id": 4,
             "name": "Carroll, Reichert and Bauch",
@@ -1786,15 +2522,111 @@ fetch(url, {
 <pre><code class="language-json">{
     "data": [
         {
-            "id": 1,
-            "name": "Lavina Lynch",
-            "price": 9286366,
-            "desc": "Asperiores omnis mollitia ut omnis aut non. Suscipit exercitationem velit dolorem fugiat est sequi. Et ipsa harum itaque sunt.",
-            "stock": 36,
-            "bought": 8,
-            "warranty": 17,
+            "id": 31,
+            "name": "Andres Bauch",
+            "price": 4511857,
+            "desc": "Necessitatibus voluptate quo facilis recusandae. Aut quas nobis nihil sint. Dolore numquam iure eum eius. Qui voluptas architecto repudiandae.",
+            "stock": 18,
+            "bought": 5,
+            "warranty": 18,
             "rating": 1,
-            "rating_averaged": 5,
+            "rating_averaged": 4,
+            "brand": {
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 66,
+                "name": "Bogisich, Weber and Bogisich",
+                "image": null,
+                "desc": null,
+                "parent_id": 12,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 32,
+            "name": "Conrad Klein",
+            "price": 6302278,
+            "desc": "Libero esse non et culpa corporis quos. Aut consequatur et minus ut iste. Omnis enim tempore est. Atque error blanditiis sit harum aut natus vel. Qui aperiam consequatur occaecati dolore repellat.",
+            "stock": 91,
+            "bought": 27,
+            "warranty": 1,
+            "rating": 1,
+            "rating_averaged": 3,
+            "brand": {
+                "id": 8,
+                "name": "Paucek PLC",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 4,
+                "name": "Klein Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 33,
+            "name": "Iva Moen",
+            "price": 9648870,
+            "desc": "Voluptatem laudantium voluptatum qui aliquam eum itaque et. Eius quidem omnis excepturi et. Qui qui possimus a exercitationem ut unde.",
+            "stock": 57,
+            "bought": 12,
+            "warranty": 5,
+            "rating": 3,
+            "rating_averaged": 0.5,
+            "brand": {
+                "id": 6,
+                "name": "Nolan-Mohr",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 11,
+                "name": "Littel PLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 34,
+            "name": "Mr. Paxton Dicki",
+            "price": 4845728,
+            "desc": "Sit totam incidunt accusamus rem asperiores ipsa voluptatem. Illum praesentium quo aut deleniti reiciendis dolorem est. Sint occaecati nostrum molestias voluptas.",
+            "stock": 53,
+            "bought": 10,
+            "warranty": 9,
+            "rating": 2,
+            "rating_averaged": 2,
             "brand": {
                 "id": 4,
                 "name": "Carroll, Reichert and Bauch",
@@ -1804,136 +2636,40 @@ fetch(url, {
                 "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 15,
-                "name": "Hane Group",
+                "id": 35,
+                "name": "Ritchie, Pfannerstill and Collier",
                 "image": null,
                 "desc": null,
-                "parent_id": 4,
+                "parent_id": 8,
                 "created_at": "2021-03-26T13:40:35.000000Z",
                 "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         },
         {
-            "id": 2,
-            "name": "Prof. Judah Blanda",
-            "price": 4254352,
-            "desc": "Et vero quidem excepturi eius esse. Blanditiis fuga aperiam dolorem. Ut dolores mollitia alias omnis officiis aut commodi cum.",
-            "stock": 13,
-            "bought": 39,
+            "id": 35,
+            "name": "Dr. Jarrett Ryan V",
+            "price": 1820217,
+            "desc": "Deleniti voluptas quo et non commodi. Quisquam qui et qui saepe perspiciatis eius consectetur. Non vel rerum at consequuntur voluptatem.",
+            "stock": 21,
+            "bought": 22,
             "warranty": 9,
-            "rating": 2,
-            "rating_averaged": 1,
-            "brand": {
-                "id": 5,
-                "name": "Schumm, Lueilwitz and Jacobs",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 6,
-                "name": "Moore LLC",
-                "image": null,
-                "desc": null,
-                "parent_id": 5,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 3,
-            "name": "Prof. Lesly Hilpert DDS",
-            "price": 8553384,
-            "desc": "Est qui necessitatibus quo temporibus nam voluptatem. Laborum quod eveniet similique blanditiis possimus et omnis. Fugiat illum voluptatem veritatis voluptas quo.",
-            "stock": 10,
-            "bought": 34,
-            "warranty": 21,
-            "rating": 1,
-            "rating_averaged": 2,
-            "brand": {
-                "id": 5,
-                "name": "Schumm, Lueilwitz and Jacobs",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 20,
-                "name": "Rempel Ltd",
-                "image": null,
-                "desc": null,
-                "parent_id": 5,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 4,
-            "name": "Bella Graham",
-            "price": 2938619,
-            "desc": "Fugit ut deserunt harum eum voluptates voluptatem aut. Nihil deserunt nulla est sapiente quasi et. Quam occaecati esse quae voluptatem corporis soluta aut. Et ex nihil est iste excepturi.",
-            "stock": 100,
-            "bought": 3,
-            "warranty": 8,
-            "rating": 2,
-            "rating_averaged": 2,
-            "brand": {
-                "id": 3,
-                "name": "Gislason, Johnson and Pouros",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 2,
-                "name": "Goyette, Mertz and Lehner",
-                "image": null,
-                "desc": null,
-                "parent_id": 3,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 5,
-            "name": "Dandre Purdy MD",
-            "price": 3430925,
-            "desc": "Qui voluptatibus harum et ut nihil omnis. Numquam dolor tempore animi saepe ea cupiditate odio. Soluta at a officiis amet dolor ea. Et in maxime facilis quidem.",
-            "stock": 65,
-            "bought": 10,
-            "warranty": 1,
-            "rating": 1,
+            "rating": 0,
             "rating_averaged": 0,
             "brand": {
-                "id": 5,
-                "name": "Schumm, Lueilwitz and Jacobs",
+                "id": 7,
+                "name": "Braun PLC",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
             },
             "category": {
-                "id": 3,
-                "name": "Littel, Kilback and Flatley",
+                "id": 27,
+                "name": "Bernier Inc",
                 "image": null,
                 "desc": null,
                 "parent_id": 9,
@@ -1942,113 +2678,17 @@ fetch(url, {
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         },
         {
-            "id": 6,
-            "name": "Javon Bailey",
-            "price": 7592670,
-            "desc": "Eveniet sunt dicta ut dolores quia. Ducimus at recusandae sit qui omnis. Magnam sint molestias rerum in officiis ex placeat.",
-            "stock": 90,
-            "bought": 5,
-            "warranty": 13,
-            "rating": 3,
-            "rating_averaged": 2.5,
-            "brand": {
-                "id": 1,
-                "name": "Ratke, Bernhard and Schaefer",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 9,
-                "name": "Grady PLC",
-                "image": null,
-                "desc": null,
-                "parent_id": 2,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 7,
-            "name": "Marguerite Pacocha",
-            "price": 6518211,
-            "desc": "Autem amet laboriosam omnis. Rem perspiciatis quos sed est facilis ut qui. Sit dolor quae quaerat consectetur consequatur quisquam ea consequatur. Et expedita quam rerum nisi nisi ducimus.",
-            "stock": 29,
-            "bought": 24,
-            "warranty": 13,
-            "rating": 5,
-            "rating_averaged": 2,
-            "brand": {
-                "id": 5,
-                "name": "Schumm, Lueilwitz and Jacobs",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 17,
-                "name": "Zemlak, Douglas and Rutherford",
-                "image": null,
-                "desc": null,
-                "parent_id": 6,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 8,
-            "name": "Prof. Antonietta Lowe",
-            "price": 1778634,
-            "desc": "Esse corporis sed omnis consequuntur molestias vero voluptatibus. Et explicabo tempore consequuntur quam. Repellat at eaque quia voluptas quod aliquid excepturi.",
-            "stock": 70,
-            "bought": 39,
-            "warranty": 3,
-            "rating": 1,
-            "rating_averaged": 2,
-            "brand": {
-                "id": 3,
-                "name": "Gislason, Johnson and Pouros",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 18,
-                "name": "Kunze-Prohaska",
-                "image": null,
-                "desc": null,
-                "parent_id": 7,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 9,
-            "name": "Erna Predovic",
-            "price": 933006,
-            "desc": "Distinctio voluptas id officia iusto voluptatibus a. Itaque ut eum est ea quasi deleniti at. Quia autem dolores sint eos velit enim. Esse quia blanditiis dolore sint perspiciatis.",
-            "stock": 85,
-            "bought": 30,
-            "warranty": 21,
+            "id": 36,
+            "name": "Davin Berge",
+            "price": 202282,
+            "desc": "Quas aliquam tenetur et hic vel harum dolore. Magnam voluptates ullam nemo.",
+            "stock": 75,
+            "bought": 11,
+            "warranty": 2,
             "rating": 1,
             "rating_averaged": 2,
             "brand": {
@@ -2060,62 +2700,158 @@ fetch(url, {
                 "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 8,
-                "name": "Barrows-Bechtelar",
+                "id": 71,
+                "name": "Kuhn Inc",
                 "image": null,
                 "desc": null,
-                "parent_id": 3,
+                "parent_id": 4,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 37,
+            "name": "Ms. Ocie Ondricka Sr.",
+            "price": 8966456,
+            "desc": "Molestias provident recusandae nulla inventore. Labore quis natus vero dolorem voluptatem quaerat. Natus dolorem quia consequuntur eaque ipsum assumenda et nobis.",
+            "stock": 26,
+            "bought": 17,
+            "warranty": 21,
+            "rating": 2,
+            "rating_averaged": 4,
+            "brand": {
+                "id": 7,
+                "name": "Braun PLC",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 42,
+                "name": "Fahey and Sons",
+                "image": null,
+                "desc": null,
+                "parent_id": 9,
                 "created_at": "2021-03-26T13:40:35.000000Z",
                 "updated_at": "2021-03-26T13:40:35.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         },
         {
-            "id": 10,
-            "name": "Dr. Jeramy Swaniawski",
-            "price": 1709014,
-            "desc": "Harum modi nihil tenetur earum eum placeat ipsam voluptates. Impedit neque ut dicta perspiciatis necessitatibus. Cum est consequatur eaque eum fuga in.",
-            "stock": 54,
+            "id": 38,
+            "name": "Ana Moore",
+            "price": 1632759,
+            "desc": "Quia excepturi qui aut. Nemo saepe assumenda debitis voluptatem et ab aut. Doloribus id quam voluptatem eaque eos voluptate ipsa.",
+            "stock": 85,
             "bought": 36,
             "warranty": 0,
-            "rating": 3,
-            "rating_averaged": 1.5,
+            "rating": 1,
+            "rating_averaged": 3,
             "brand": {
-                "id": 1,
-                "name": "Ratke, Bernhard and Schaefer",
+                "id": 6,
+                "name": "Nolan-Mohr",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 94,
+                "name": "Beier-Gorczany",
+                "image": null,
+                "desc": null,
+                "parent_id": 7,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 39,
+            "name": "Erna Wolf",
+            "price": 4276536,
+            "desc": "Id ipsum quaerat soluta porro. Qui sunt et accusamus consequatur nihil. Soluta quia dolorum sunt velit.",
+            "stock": 59,
+            "bought": 17,
+            "warranty": 16,
+            "rating": 0,
+            "rating_averaged": 0,
+            "brand": {
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
                 "image": null,
                 "desc": null,
                 "created_at": "2021-03-26T13:40:34.000000Z",
                 "updated_at": "2021-03-26T13:40:34.000000Z"
             },
             "category": {
-                "id": 18,
-                "name": "Kunze-Prohaska",
+                "id": 81,
+                "name": "Sanford, Glover and Blick",
                 "image": null,
                 "desc": null,
-                "parent_id": 7,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
+                "parent_id": 5,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 40,
+            "name": "Zola Collins",
+            "price": 814407,
+            "desc": "Aut aut asperiores dolor expedita dolor. Aperiam suscipit officia vero asperiores velit suscipit molestiae. Aut facilis occaecati est dolorem.",
+            "stock": 31,
+            "bought": 32,
+            "warranty": 13,
+            "rating": 0,
+            "rating_averaged": 0,
+            "brand": {
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 77,
+                "name": "Gleichner-Ortiz",
+                "image": null,
+                "desc": null,
+                "parent_id": 7,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         }
     ],
     "links": {
         "first": "http:\/\/localhost\/api\/new-product?page=1",
-        "last": "http:\/\/localhost\/api\/new-product?page=3",
+        "last": "http:\/\/localhost\/api\/new-product?page=6",
         "prev": null,
         "next": "http:\/\/localhost\/api\/new-product?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
-        "last_page": 3,
+        "last_page": 6,
         "links": [
             {
                 "url": null,
@@ -2138,6 +2874,21 @@ fetch(url, {
                 "active": false
             },
             {
+                "url": "http:\/\/localhost\/api\/new-product?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/new-product?page=5",
+                "label": "5",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/new-product?page=6",
+                "label": "6",
+                "active": false
+            },
+            {
                 "url": "http:\/\/localhost\/api\/new-product?page=2",
                 "label": "pagination.next",
                 "active": false
@@ -2146,7 +2897,7 @@ fetch(url, {
         "path": "http:\/\/localhost\/api\/new-product",
         "per_page": 10,
         "to": 10,
-        "total": 30
+        "total": 60
     }
 }</code></pre>
 <h3>HTTP Request</h3>
@@ -2175,7 +2926,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://127.0.0.1:8000/api/popular-product?limit=rerum" \
+    -G "http://127.0.0.1:8000/api/popular-product?limit=itaque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -2183,7 +2934,7 @@ fetch(url, {
 );
 
 let params = {
-    "limit": "rerum",
+    "limit": "itaque",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2212,7 +2963,7 @@ fetch(url, {
             "stock": 76,
             "bought": 40,
             "warranty": 10,
-            "rating": 1,
+            "rating": 2,
             "rating_averaged": 2,
             "brand": {
                 "id": 2,
@@ -2244,8 +2995,8 @@ fetch(url, {
             "stock": 13,
             "bought": 39,
             "warranty": 9,
-            "rating": 2,
-            "rating_averaged": 1,
+            "rating": 3,
+            "rating_averaged": 0.5,
             "brand": {
                 "id": 5,
                 "name": "Schumm, Lueilwitz and Jacobs",
@@ -2365,6 +3116,38 @@ fetch(url, {
             "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
+            "id": 60,
+            "name": "Veronica Fritsch",
+            "price": 6127135,
+            "desc": "Voluptatem eum eum sunt nemo et aut libero. Eos eum laborum asperiores et nemo et est. Dolores repellat voluptatem et officia ut. Ratione accusantium non et quo quo consectetur ut.",
+            "stock": 18,
+            "bought": 38,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 3,
+            "brand": {
+                "id": 6,
+                "name": "Nolan-Mohr",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 9,
+                "name": "Grady PLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 2,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
             "id": 18,
             "name": "Prof. Gage Wolff",
             "price": 9476453,
@@ -2372,8 +3155,8 @@ fetch(url, {
             "stock": 63,
             "bought": 37,
             "warranty": 13,
-            "rating": 3,
-            "rating_averaged": 3,
+            "rating": 4,
+            "rating_averaged": 2.5,
             "brand": {
                 "id": 2,
                 "name": "Schaefer, Ernser and Nienow",
@@ -2395,6 +3178,38 @@ fetch(url, {
             "attributes": [],
             "created_at": "2021-03-26T13:40:35.000000Z",
             "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 52,
+            "name": "Mr. Lowell Schaefer",
+            "price": 1487021,
+            "desc": "Aut quae unde sint. Ad vel id maxime tenetur. Et dolor officia vero pariatur repudiandae.",
+            "stock": 18,
+            "bought": 37,
+            "warranty": 20,
+            "rating": 1,
+            "rating_averaged": 4,
+            "brand": {
+                "id": 6,
+                "name": "Nolan-Mohr",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 65,
+                "name": "Blanda, Stiedemann and Howell",
+                "image": null,
+                "desc": null,
+                "parent_id": 2,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         },
         {
             "id": 10,
@@ -2429,112 +3244,48 @@ fetch(url, {
             "updated_at": "2021-03-26T13:40:35.000000Z"
         },
         {
-            "id": 22,
-            "name": "Dr. Adah Spencer",
-            "price": 8058504,
-            "desc": "Sit deserunt quos et asperiores provident esse. Eligendi tempora officiis pariatur quod sunt qui omnis. Explicabo illo consequatur molestiae nobis delectus officiis libero.",
-            "stock": 86,
-            "bought": 35,
-            "warranty": 3,
-            "rating": 2,
-            "rating_averaged": 4.5,
+            "id": 38,
+            "name": "Ana Moore",
+            "price": 1632759,
+            "desc": "Quia excepturi qui aut. Nemo saepe assumenda debitis voluptatem et ab aut. Doloribus id quam voluptatem eaque eos voluptate ipsa.",
+            "stock": 85,
+            "bought": 36,
+            "warranty": 0,
+            "rating": 1,
+            "rating_averaged": 3,
             "brand": {
-                "id": 4,
-                "name": "Carroll, Reichert and Bauch",
+                "id": 6,
+                "name": "Nolan-Mohr",
                 "image": null,
                 "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
             },
             "category": {
-                "id": 18,
-                "name": "Kunze-Prohaska",
+                "id": 94,
+                "name": "Beier-Gorczany",
                 "image": null,
                 "desc": null,
                 "parent_id": 7,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
             },
             "images": [],
             "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 3,
-            "name": "Prof. Lesly Hilpert DDS",
-            "price": 8553384,
-            "desc": "Est qui necessitatibus quo temporibus nam voluptatem. Laborum quod eveniet similique blanditiis possimus et omnis. Fugiat illum voluptatem veritatis voluptas quo.",
-            "stock": 10,
-            "bought": 34,
-            "warranty": 21,
-            "rating": 1,
-            "rating_averaged": 2,
-            "brand": {
-                "id": 5,
-                "name": "Schumm, Lueilwitz and Jacobs",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 20,
-                "name": "Rempel Ltd",
-                "image": null,
-                "desc": null,
-                "parent_id": 5,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
-        },
-        {
-            "id": 30,
-            "name": "Trenton Denesik IV",
-            "price": 3020782,
-            "desc": "Dolor aspernatur maiores ut aspernatur. Iure assumenda numquam quia quos. Molestias quia dolor ipsum alias aut reiciendis.",
-            "stock": 17,
-            "bought": 34,
-            "warranty": 15,
-            "rating": 2,
-            "rating_averaged": 1.5,
-            "brand": {
-                "id": 4,
-                "name": "Carroll, Reichert and Bauch",
-                "image": null,
-                "desc": null,
-                "created_at": "2021-03-26T13:40:34.000000Z",
-                "updated_at": "2021-03-26T13:40:34.000000Z"
-            },
-            "category": {
-                "id": 14,
-                "name": "Kilback Group",
-                "image": null,
-                "desc": null,
-                "parent_id": 8,
-                "created_at": "2021-03-26T13:40:35.000000Z",
-                "updated_at": "2021-03-26T13:40:35.000000Z"
-            },
-            "images": [],
-            "attributes": [],
-            "created_at": "2021-03-26T13:40:35.000000Z",
-            "updated_at": "2021-03-26T13:40:35.000000Z"
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         }
     ],
     "links": {
         "first": "http:\/\/localhost\/api\/popular-product?page=1",
-        "last": "http:\/\/localhost\/api\/popular-product?page=3",
+        "last": "http:\/\/localhost\/api\/popular-product?page=6",
         "prev": null,
         "next": "http:\/\/localhost\/api\/popular-product?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
-        "last_page": 3,
+        "last_page": 6,
         "links": [
             {
                 "url": null,
@@ -2557,6 +3308,21 @@ fetch(url, {
                 "active": false
             },
             {
+                "url": "http:\/\/localhost\/api\/popular-product?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/popular-product?page=5",
+                "label": "5",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/popular-product?page=6",
+                "label": "6",
+                "active": false
+            },
+            {
                 "url": "http:\/\/localhost\/api\/popular-product?page=2",
                 "label": "pagination.next",
                 "active": false
@@ -2565,7 +3331,7 @@ fetch(url, {
         "path": "http:\/\/localhost\/api\/popular-product",
         "per_page": 10,
         "to": 10,
-        "total": 30
+        "total": 60
     }
 }</code></pre>
 <h3>HTTP Request</h3>
@@ -2617,6 +3383,38 @@ fetch(url, {
 </blockquote>
 <pre><code class="language-json">{
     "data": [
+        {
+            "id": 43,
+            "name": "Mortimer Jacobs",
+            "price": 1956136,
+            "desc": "Vel molestias nihil corrupti rerum occaecati suscipit sunt. Magnam tenetur ut nisi facilis qui inventore. Voluptas sed sed dicta vel quis aspernatur rerum et.",
+            "stock": 99,
+            "bought": 3,
+            "warranty": 9,
+            "rating": 1,
+            "rating_averaged": 0,
+            "brand": {
+                "id": 8,
+                "name": "Paucek PLC",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-04-04T11:31:10.000000Z",
+                "updated_at": "2021-04-04T11:31:10.000000Z"
+            },
+            "category": {
+                "id": 25,
+                "name": "Green-Bergnaum",
+                "image": null,
+                "desc": null,
+                "parent_id": 1,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
         {
             "id": 26,
             "name": "Dr. Krista Goodwin",
@@ -2679,8 +3477,8 @@ fetch(url, {
         ],
         "path": "http:\/\/localhost\/api\/product-by-parent-category\/1",
         "per_page": 10,
-        "to": 1,
-        "total": 1
+        "to": 2,
+        "total": 2
     }
 }</code></pre>
 <h3>HTTP Request</h3>
@@ -2784,6 +3582,567 @@ fetch(url, {
 <h3>HTTP Request</h3>
 <p><code>GET api/product-by-category/{id}</code></p>
 <!-- END_ae03d88973d288010a9b74619812d3db -->
+<!-- START_29a4ca6b78fb58cb87f46855903df7f0 -->
+<h2>api/search-product</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://127.0.0.1:8000/api/search-product" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/search-product"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "name": "Lavina Lynch",
+            "price": 9286366,
+            "desc": "Asperiores omnis mollitia ut omnis aut non. Suscipit exercitationem velit dolorem fugiat est sequi. Et ipsa harum itaque sunt.",
+            "stock": 36,
+            "bought": 8,
+            "warranty": 17,
+            "rating": 2,
+            "rating_averaged": 3,
+            "brand": {
+                "id": 4,
+                "name": "Carroll, Reichert and Bauch",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 15,
+                "name": "Hane Group",
+                "image": null,
+                "desc": null,
+                "parent_id": 4,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 2,
+            "name": "Prof. Judah Blanda",
+            "price": 4254352,
+            "desc": "Et vero quidem excepturi eius esse. Blanditiis fuga aperiam dolorem. Ut dolores mollitia alias omnis officiis aut commodi cum.",
+            "stock": 13,
+            "bought": 39,
+            "warranty": 9,
+            "rating": 3,
+            "rating_averaged": 0.5,
+            "brand": {
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 6,
+                "name": "Moore LLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 3,
+            "name": "Prof. Lesly Hilpert DDS",
+            "price": 8553384,
+            "desc": "Est qui necessitatibus quo temporibus nam voluptatem. Laborum quod eveniet similique blanditiis possimus et omnis. Fugiat illum voluptatem veritatis voluptas quo.",
+            "stock": 10,
+            "bought": 34,
+            "warranty": 21,
+            "rating": 2,
+            "rating_averaged": 3.5,
+            "brand": {
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 20,
+                "name": "Rempel Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 5,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 4,
+            "name": "Bella Graham",
+            "price": 2938619,
+            "desc": "Fugit ut deserunt harum eum voluptates voluptatem aut. Nihil deserunt nulla est sapiente quasi et. Quam occaecati esse quae voluptatem corporis soluta aut. Et ex nihil est iste excepturi.",
+            "stock": 100,
+            "bought": 3,
+            "warranty": 8,
+            "rating": 2,
+            "rating_averaged": 2,
+            "brand": {
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 2,
+                "name": "Goyette, Mertz and Lehner",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 5,
+            "name": "Dandre Purdy MD",
+            "price": 3430925,
+            "desc": "Qui voluptatibus harum et ut nihil omnis. Numquam dolor tempore animi saepe ea cupiditate odio. Soluta at a officiis amet dolor ea. Et in maxime facilis quidem.",
+            "stock": 65,
+            "bought": 10,
+            "warranty": 1,
+            "rating": 2,
+            "rating_averaged": 1.5,
+            "brand": {
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 3,
+                "name": "Littel, Kilback and Flatley",
+                "image": null,
+                "desc": null,
+                "parent_id": 9,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 6,
+            "name": "Javon Bailey",
+            "price": 7592670,
+            "desc": "Eveniet sunt dicta ut dolores quia. Ducimus at recusandae sit qui omnis. Magnam sint molestias rerum in officiis ex placeat.",
+            "stock": 90,
+            "bought": 5,
+            "warranty": 13,
+            "rating": 4,
+            "rating_averaged": 3,
+            "brand": {
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 9,
+                "name": "Grady PLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 2,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "Marguerite Pacocha",
+            "price": 6518211,
+            "desc": "Autem amet laboriosam omnis. Rem perspiciatis quos sed est facilis ut qui. Sit dolor quae quaerat consectetur consequatur quisquam ea consequatur. Et expedita quam rerum nisi nisi ducimus.",
+            "stock": 29,
+            "bought": 24,
+            "warranty": 13,
+            "rating": 5,
+            "rating_averaged": 2,
+            "brand": {
+                "id": 5,
+                "name": "Schumm, Lueilwitz and Jacobs",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 17,
+                "name": "Zemlak, Douglas and Rutherford",
+                "image": null,
+                "desc": null,
+                "parent_id": 6,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 8,
+            "name": "Prof. Antonietta Lowe",
+            "price": 1778634,
+            "desc": "Esse corporis sed omnis consequuntur molestias vero voluptatibus. Et explicabo tempore consequuntur quam. Repellat at eaque quia voluptas quod aliquid excepturi.",
+            "stock": 70,
+            "bought": 39,
+            "warranty": 3,
+            "rating": 1,
+            "rating_averaged": 2,
+            "brand": {
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 18,
+                "name": "Kunze-Prohaska",
+                "image": null,
+                "desc": null,
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 9,
+            "name": "Erna Predovic",
+            "price": 933006,
+            "desc": "Distinctio voluptas id officia iusto voluptatibus a. Itaque ut eum est ea quasi deleniti at. Quia autem dolores sint eos velit enim. Esse quia blanditiis dolore sint perspiciatis.",
+            "stock": 85,
+            "bought": 30,
+            "warranty": 21,
+            "rating": 4,
+            "rating_averaged": 1.5,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 8,
+                "name": "Barrows-Bechtelar",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 10,
+            "name": "Dr. Jeramy Swaniawski",
+            "price": 1709014,
+            "desc": "Harum modi nihil tenetur earum eum placeat ipsam voluptates. Impedit neque ut dicta perspiciatis necessitatibus. Cum est consequatur eaque eum fuga in.",
+            "stock": 54,
+            "bought": 36,
+            "warranty": 0,
+            "rating": 3,
+            "rating_averaged": 1.5,
+            "brand": {
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 18,
+                "name": "Kunze-Prohaska",
+                "image": null,
+                "desc": null,
+                "parent_id": 7,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 11,
+            "name": "Jayne Dickens",
+            "price": 7739011,
+            "desc": "Quaerat voluptatem ad adipisci dolorum. Quis et voluptate velit molestiae. Ut repellat et harum nihil impedit enim.",
+            "stock": 63,
+            "bought": 39,
+            "warranty": 23,
+            "rating": 1,
+            "rating_averaged": 1,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 36,
+                "name": "Pollich Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 8,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 12,
+            "name": "Dr. Kathleen Mraz",
+            "price": 5498348,
+            "desc": "Enim itaque excepturi est quo nostrum. Neque earum nihil sit esse quo qui. Alias velit beatae quae. Commodi laboriosam est labore culpa nostrum vitae ea.",
+            "stock": 75,
+            "bought": 25,
+            "warranty": 12,
+            "rating": 6,
+            "rating_averaged": 4,
+            "brand": {
+                "id": 3,
+                "name": "Gislason, Johnson and Pouros",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 4,
+                "name": "Klein Ltd",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 13,
+            "name": "Arlene Langosh I",
+            "price": 1179871,
+            "desc": "Necessitatibus suscipit adipisci laudantium ipsa voluptas animi cum aut. Necessitatibus possimus veniam qui. Ipsa ea accusantium cum accusantium.",
+            "stock": 76,
+            "bought": 40,
+            "warranty": 10,
+            "rating": 2,
+            "rating_averaged": 2,
+            "brand": {
+                "id": 2,
+                "name": "Schaefer, Ernser and Nienow",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 29,
+                "name": "Marquardt LLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 3,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 14,
+            "name": "Mr. Luigi Koepp DVM",
+            "price": 2079754,
+            "desc": "Deserunt exercitationem quo facilis quia. Eius animi quidem officia enim incidunt non. Maiores eum vel quasi delectus pariatur. Quo aut rerum aliquid cum ea ducimus consequuntur.",
+            "stock": 56,
+            "bought": 3,
+            "warranty": 22,
+            "rating": 4,
+            "rating_averaged": 4,
+            "brand": {
+                "id": 4,
+                "name": "Carroll, Reichert and Bauch",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 28,
+                "name": "Kuhlman LLC",
+                "image": null,
+                "desc": null,
+                "parent_id": 2,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 15,
+            "name": "Nellie Willms",
+            "price": 240474,
+            "desc": "Et inventore nihil repellat dolores quisquam et. Corporis qui delectus architecto saepe rerum pariatur dolores. Itaque nesciunt magni qui ullam quam perferendis.",
+            "stock": 23,
+            "bought": 7,
+            "warranty": 21,
+            "rating": 1,
+            "rating_averaged": 3,
+            "brand": {
+                "id": 1,
+                "name": "Ratke, Bernhard and Schaefer",
+                "image": null,
+                "desc": null,
+                "created_at": "2021-03-26T13:40:34.000000Z",
+                "updated_at": "2021-03-26T13:40:34.000000Z"
+            },
+            "category": {
+                "id": 49,
+                "name": "Krajcik-Williamson",
+                "image": null,
+                "desc": null,
+                "parent_id": 10,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "images": [],
+            "attributes": [],
+            "created_at": "2021-03-26T13:40:35.000000Z",
+            "updated_at": "2021-03-26T13:40:35.000000Z"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/search-product?page=1",
+        "last": "http:\/\/localhost\/api\/search-product?page=4",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/search-product?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 4,
+        "links": [
+            {
+                "url": null,
+                "label": "pagination.previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/search-product?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "http:\/\/localhost\/api\/search-product?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/search-product?page=3",
+                "label": "3",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/search-product?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/search-product?page=2",
+                "label": "pagination.next",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/search-product",
+        "per_page": 15,
+        "to": 15,
+        "total": 60
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/search-product</code></p>
+<!-- END_29a4ca6b78fb58cb87f46855903df7f0 -->
 <h1>Rating</h1>
 <p>APIs for rating</p>
 <!-- START_e2cf52df507d02a2867a78c3c1dd77b5 -->
@@ -3764,6 +5123,956 @@ fetch(url, {
             },
             "created_at": "2021-03-26T13:40:35.000000Z",
             "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 51,
+            "rating": 4,
+            "comment": "Possimus ratione odio dolorem et voluptatem labore aut.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 52,
+            "rating": 1,
+            "comment": "Aliquid rerum doloremque quasi eveniet repellendus cum aut.",
+            "user": {
+                "id": 20,
+                "name": "Archibald Torp",
+                "email": "runolfsdottir.garland@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7511885508922",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 53,
+            "rating": 5,
+            "comment": "Quod in fuga incidunt et porro.",
+            "user": {
+                "id": 9,
+                "name": "Jordon Murazik",
+                "email": "ozemlak@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+6252411210203",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 54,
+            "rating": 5,
+            "comment": "Deserunt alias quos sit neque non voluptas autem.",
+            "user": {
+                "id": 12,
+                "name": "Rogelio Walker",
+                "email": "reid.wehner@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+2670431824535",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 55,
+            "rating": 5,
+            "comment": "Veniam magni ducimus consequatur voluptate voluptatem et temporibus.",
+            "user": {
+                "id": 12,
+                "name": "Rogelio Walker",
+                "email": "reid.wehner@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+2670431824535",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 56,
+            "rating": 0,
+            "comment": "Sit quaerat cum illo sed dolor voluptatem ea.",
+            "user": {
+                "id": 7,
+                "name": "Riley Schuster",
+                "email": "leonor59@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7502861700675",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 57,
+            "rating": 1,
+            "comment": "Incidunt odit laudantium fuga magni sint aut.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 58,
+            "rating": 1,
+            "comment": "Non excepturi quis odio quam mollitia dolor.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 59,
+            "rating": 0,
+            "comment": "Consequatur doloribus iure suscipit.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 60,
+            "rating": 3,
+            "comment": "Eligendi ut adipisci eius quisquam.",
+            "user": {
+                "id": 19,
+                "name": "Prof. Logan Fadel",
+                "email": "hermann.fatima@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7410614869521",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 61,
+            "rating": 1,
+            "comment": "Et iure repellendus rerum nihil.",
+            "user": {
+                "id": 16,
+                "name": "Prof. Myrna Jaskolski Sr.",
+                "email": "garrison23@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+4487080058455",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 62,
+            "rating": 4,
+            "comment": "Molestiae et est ex.",
+            "user": {
+                "id": 18,
+                "name": "Dr. Derick Rogahn",
+                "email": "gaston.stehr@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+1814439697484",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 63,
+            "rating": 3,
+            "comment": "Et tempora accusantium recusandae.",
+            "user": {
+                "id": 12,
+                "name": "Rogelio Walker",
+                "email": "reid.wehner@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+2670431824535",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 64,
+            "rating": 0,
+            "comment": "Est totam ut dolor et.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 65,
+            "rating": 4,
+            "comment": "Non nihil blanditiis excepturi dignissimos est qui.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 66,
+            "rating": 2,
+            "comment": "Et quam aut sunt ut est dolorum.",
+            "user": {
+                "id": 20,
+                "name": "Archibald Torp",
+                "email": "runolfsdottir.garland@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7511885508922",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 67,
+            "rating": 0,
+            "comment": "Ipsa pariatur repellendus omnis et minus architecto quidem numquam.",
+            "user": {
+                "id": 9,
+                "name": "Jordon Murazik",
+                "email": "ozemlak@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+6252411210203",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 68,
+            "rating": 4,
+            "comment": "Repudiandae occaecati fugit tempora sequi voluptatem minus.",
+            "user": {
+                "id": 14,
+                "name": "Jerome Graham",
+                "email": "mrosenbaum@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+8625205762236",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 69,
+            "rating": 4,
+            "comment": "Nostrum pariatur porro laudantium dolores distinctio.",
+            "user": {
+                "id": 20,
+                "name": "Archibald Torp",
+                "email": "runolfsdottir.garland@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7511885508922",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 70,
+            "rating": 4,
+            "comment": "Ut nostrum itaque eos ut quia.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 71,
+            "rating": 3,
+            "comment": "Blanditiis in eum rerum possimus quisquam commodi.",
+            "user": {
+                "id": 11,
+                "name": "Dai123",
+                "email": "fdai3105@gmail.com",
+                "email_verified_at": "2021-03-26T13:42:06.000000Z",
+                "phone": "123",
+                "gender": 1,
+                "avatar": "upload\\Dai123_IMG_20200131_012124.jpg",
+                "level": 1,
+                "created_at": "2021-03-26T13:41:17.000000Z",
+                "updated_at": "2021-04-01T07:02:39.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 72,
+            "rating": 5,
+            "comment": "Quia voluptas eaque facilis sequi.",
+            "user": {
+                "id": 5,
+                "name": "Antone White",
+                "email": "aniya.koss@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7284782298951",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 73,
+            "rating": 2,
+            "comment": "Quia molestiae omnis inventore ratione.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 74,
+            "rating": 2,
+            "comment": "Eaque sit exercitationem delectus.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 75,
+            "rating": 4,
+            "comment": "Autem natus inventore rem mollitia iusto corporis expedita.",
+            "user": {
+                "id": 19,
+                "name": "Prof. Logan Fadel",
+                "email": "hermann.fatima@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7410614869521",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 76,
+            "rating": 3,
+            "comment": "Nobis eos molestiae ullam.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 77,
+            "rating": 4,
+            "comment": "Placeat voluptatibus iure sit eveniet voluptate illum quo.",
+            "user": {
+                "id": 20,
+                "name": "Archibald Torp",
+                "email": "runolfsdottir.garland@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7511885508922",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 78,
+            "rating": 1,
+            "comment": "Voluptas recusandae quia perspiciatis occaecati natus tempora maiores asperiores.",
+            "user": {
+                "id": 17,
+                "name": "Alf Morissette",
+                "email": "heaney.ilene@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+9839311969889",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 79,
+            "rating": 2,
+            "comment": "Sunt et culpa consequatur magni.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 80,
+            "rating": 0,
+            "comment": "Dolorem aut reprehenderit ratione aut.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 81,
+            "rating": 4,
+            "comment": "Ut voluptate asperiores dolorem itaque.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 82,
+            "rating": 3,
+            "comment": "Rem nihil amet excepturi qui recusandae.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 83,
+            "rating": 2,
+            "comment": "Possimus dolores dolor animi dolore fugiat repellendus magnam.",
+            "user": {
+                "id": 11,
+                "name": "Dai123",
+                "email": "fdai3105@gmail.com",
+                "email_verified_at": "2021-03-26T13:42:06.000000Z",
+                "phone": "123",
+                "gender": 1,
+                "avatar": "upload\\Dai123_IMG_20200131_012124.jpg",
+                "level": 1,
+                "created_at": "2021-03-26T13:41:17.000000Z",
+                "updated_at": "2021-04-01T07:02:39.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 84,
+            "rating": 3,
+            "comment": "Aut voluptatem nesciunt officiis sit quam veniam eum.",
+            "user": {
+                "id": 17,
+                "name": "Alf Morissette",
+                "email": "heaney.ilene@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+9839311969889",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 85,
+            "rating": 1,
+            "comment": "Et est sed quisquam laudantium soluta.",
+            "user": {
+                "id": 14,
+                "name": "Jerome Graham",
+                "email": "mrosenbaum@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+8625205762236",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 86,
+            "rating": 4,
+            "comment": "Fugit quis in dolor id.",
+            "user": {
+                "id": 19,
+                "name": "Prof. Logan Fadel",
+                "email": "hermann.fatima@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7410614869521",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 87,
+            "rating": 2,
+            "comment": "Ex non corporis adipisci aliquid.",
+            "user": {
+                "id": 6,
+                "name": "Howell Batz",
+                "email": "wbayer@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+8445948237454",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 88,
+            "rating": 3,
+            "comment": "Consequatur non harum illum et.",
+            "user": {
+                "id": 4,
+                "name": "Dr. Emmalee Lakin",
+                "email": "arjun38@example.net",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+5606251880968",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 89,
+            "rating": 1,
+            "comment": "Adipisci dolores hic eaque.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 90,
+            "rating": 5,
+            "comment": "Nihil dolor dolore iusto voluptatem qui aut at.",
+            "user": {
+                "id": 20,
+                "name": "Archibald Torp",
+                "email": "runolfsdottir.garland@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7511885508922",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 91,
+            "rating": 5,
+            "comment": "Repellat quas fuga accusantium tempora enim molestiae deleniti.",
+            "user": {
+                "id": 8,
+                "name": "Reggie Leannon",
+                "email": "erika35@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2540247228580",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 92,
+            "rating": 0,
+            "comment": "Aperiam debitis et aut est animi.",
+            "user": {
+                "id": 3,
+                "name": "Miss Ella Graham",
+                "email": "balistreri.arne@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+9593744483324",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 93,
+            "rating": 5,
+            "comment": "Totam ut exercitationem pariatur dolorum officiis sint officia.",
+            "user": {
+                "id": 2,
+                "name": "Javon Goldner",
+                "email": "zena62@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+2678718269814",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 94,
+            "rating": 0,
+            "comment": "Dolorem ea totam expedita est ea.",
+            "user": {
+                "id": 13,
+                "name": "Wallace Gerhold V",
+                "email": "qromaguera@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+8492905228059",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 95,
+            "rating": 0,
+            "comment": "Ad vero ab placeat qui consequuntur molestiae et.",
+            "user": {
+                "id": 16,
+                "name": "Prof. Myrna Jaskolski Sr.",
+                "email": "garrison23@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+4487080058455",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 96,
+            "rating": 0,
+            "comment": "Voluptas quas quidem est neque iusto.",
+            "user": {
+                "id": 11,
+                "name": "Dai123",
+                "email": "fdai3105@gmail.com",
+                "email_verified_at": "2021-03-26T13:42:06.000000Z",
+                "phone": "123",
+                "gender": 1,
+                "avatar": "upload\\Dai123_IMG_20200131_012124.jpg",
+                "level": 1,
+                "created_at": "2021-03-26T13:41:17.000000Z",
+                "updated_at": "2021-04-01T07:02:39.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 97,
+            "rating": 3,
+            "comment": "Ut alias consectetur dolor aspernatur quisquam excepturi.",
+            "user": {
+                "id": 19,
+                "name": "Prof. Logan Fadel",
+                "email": "hermann.fatima@example.net",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+7410614869521",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 98,
+            "rating": 0,
+            "comment": "Provident atque molestias accusantium corrupti.",
+            "user": {
+                "id": 5,
+                "name": "Antone White",
+                "email": "aniya.koss@example.org",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+7284782298951",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 99,
+            "rating": 2,
+            "comment": "Dolorem assumenda iusto in in nihil deserunt temporibus quasi.",
+            "user": {
+                "id": 1,
+                "name": "Nya Powlowski",
+                "email": "qhirthe@example.com",
+                "email_verified_at": "2021-03-26T13:40:35.000000Z",
+                "phone": "+3543842415736",
+                "gender": 2,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-03-26T13:40:35.000000Z",
+                "updated_at": "2021-03-26T13:40:35.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
+        },
+        {
+            "id": 100,
+            "rating": 3,
+            "comment": "Tempora illo beatae autem quas in.",
+            "user": {
+                "id": 14,
+                "name": "Jerome Graham",
+                "email": "mrosenbaum@example.com",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+8625205762236",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
         }
     ]
 }</code></pre>
@@ -3868,6 +6177,25 @@ fetch(url, {
             },
             "created_at": "2021-03-26T13:40:35.000000Z",
             "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 61,
+            "rating": 1,
+            "comment": "Et iure repellendus rerum nihil.",
+            "user": {
+                "id": 16,
+                "name": "Prof. Myrna Jaskolski Sr.",
+                "email": "garrison23@example.org",
+                "email_verified_at": "2021-04-04T11:31:11.000000Z",
+                "phone": "+4487080058455",
+                "gender": 1,
+                "avatar": null,
+                "level": 0,
+                "created_at": "2021-04-04T11:31:11.000000Z",
+                "updated_at": "2021-04-04T11:31:11.000000Z"
+            },
+            "created_at": "2021-04-04T11:31:12.000000Z",
+            "updated_at": "2021-04-04T11:31:12.000000Z"
         }
     ]
 }</code></pre>
@@ -4043,6 +6371,86 @@ fetch(url, {
             "desc": null,
             "created_at": "2021-03-26T13:40:34.000000Z",
             "updated_at": "2021-03-26T13:40:34.000000Z"
+        },
+        {
+            "id": 11,
+            "name": "Fadel Inc",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:10.000000Z",
+            "updated_at": "2021-04-04T11:31:10.000000Z"
+        },
+        {
+            "id": 12,
+            "name": "Barton, Zboncak and Ritchie",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 13,
+            "name": "McLaughlin-Grady",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 14,
+            "name": "Jaskolski, Volkman and Hermiston",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 15,
+            "name": "Boyle-Block",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 16,
+            "name": "Gislason-Bergnaum",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 17,
+            "name": "Bradtke-Howe",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 18,
+            "name": "Runolfsdottir-Abernathy",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 19,
+            "name": "Vandervort LLC",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
+        },
+        {
+            "id": 20,
+            "name": "Gleichner, Littel and Collins",
+            "image": null,
+            "desc": null,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         }
     ]
 }</code></pre>
@@ -4113,6 +6521,15 @@ fetch(url, {
             "parent_id": 1,
             "created_at": "2021-03-26T13:40:35.000000Z",
             "updated_at": "2021-03-26T13:40:35.000000Z"
+        },
+        {
+            "id": 59,
+            "name": "Ernser PLC",
+            "image": null,
+            "desc": null,
+            "parent_id": 1,
+            "created_at": "2021-04-04T11:31:11.000000Z",
+            "updated_at": "2021-04-04T11:31:11.000000Z"
         }
     ]
 }</code></pre>

@@ -74,7 +74,7 @@
                         <td class="py-3 px-3">{{ $order->created_at }}</td>
                         <td class="py-3 px-3">
                             <a href=" {{ route('order.show',$order->id) }}"
-                               class="bg-green-600 hover:bg-green-700 rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+                               class="bg-green-600 hover:bg-green-700 transition-colors duration-100 flex justify-center py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">
                                 <svg class="w-4 h-4 text-blue-100 opacity-80" fill="currentColor" viewBox="0 0 20 20"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />

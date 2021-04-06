@@ -73,29 +73,29 @@
                             </thead>
 
                             <!-- body -->
-                            <tbody class="divide-y divide-gray-600 text-blue-100 text-opacity-80">
+                            <tbody class="divide-y divide-gray-600  text-white text-opacity-80">
                             @foreach($order->orderDetail as $detail)
                                 <tr>
                                     <td class="px-6 py-4 ">
-                                        <div class="text-base text-gray-900">{{ $detail->id }}</div>
+                                        <div class="text-base">{{ $detail->id }}</div>
                                     </td>
                                     <td class="px-6 py-4 ">
-                                        <div class="text-base text-gray-900">{{ $detail->product->name }}</div>
+                                        <div class="text-base">{{ $detail->product->name }}</div>
                                     </td>
                                     <td class="px-6 py-4 ">
-                                        <div class="text-base text-gray-900">{{ $detail->product->price }}</div>
+                                        <div class="text-base">{{ $detail->product->price }}</div>
                                     </td>
                                     <td class="px-6 py-4 ">
-                                        <div class="text-base text-gray-900">{{ $detail->quantity}}</div>
+                                        <div class="text-base">{{ $detail->quantity}}</div>
                                     </td>
                                     <td class="px-6 py-4 ">
-                                        <div class="text-base text-gray-900">{{ $detail->total }}</div>
+                                        <div class="text-base">{{ $detail->total }}</div>
                                     </td>
                                 </tr>
                             @endforeach
                             <tr>
                                 <td colspan="5" class="px-6 py-4 text-right">
-                                    <div class="text-lg font-semibold text-gray-600">Total bill: {{ $order->total }}</div>
+                                    <div class="text-lg font-semibold">Total bill: {{ $order->total }}</div>
                                 </td>
                             </tr>
                             </tbody>
@@ -107,7 +107,7 @@
                 <div class="flex flex-shrink flex-col mr-4">
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                         <div class="w-full px-6 py-3">
-                            <p class="text-xs font-medium text-center text-gray-600 uppercase tracking-wider">User</p>
+                            <p class="text-xs font-medium text-center uppercase tracking-wider">User</p>
                         </div>
                         <div class="px-6 py-2 flex flex-row ">
                             <p class="font-semibold text-gray-600">Name: &nbsp;</p>
