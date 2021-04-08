@@ -90,10 +90,10 @@
                             @if($product->updated_at == $product->created_at)
                                 ...
                             @else
-                                {{ $product->updated_at }}
+                                {{ App\Http\Helpers::dateFormat($product->updated_at) }}
                             @endif
                         </td>
-                        <td class="py-3 px-3">{{ $product->created_at }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($product->created_at) }}</td>
 
                         {{-- actions --}}
                         <td class="py-3 px-3">

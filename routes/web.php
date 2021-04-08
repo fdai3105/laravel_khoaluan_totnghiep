@@ -10,6 +10,7 @@ use App\Http\Controllers\ParentCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckRole;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware([CheckRole::class,'verified'])->group(function () {
+Route::middleware([CheckRole::class, 'verified'])->group(function () {
     Route::resource('/', DashboardController::class);
     Route::resource('product', ProductController::class);
     Route::resource('category', ParentCategoryController::class);
@@ -35,4 +36,8 @@ Route::middleware([CheckRole::class,'verified'])->group(function () {
 });
 
 Auth::routes(['verify' => true]);
-Route::get('/logout', [LoginController::class,'logout'])->name('logout');
+Route::get('/mail-demo', function () {
+    $order = Order::first();
+    return view('emails.order_success', ['order' => $order]);
+});
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

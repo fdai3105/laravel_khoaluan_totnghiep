@@ -71,7 +71,7 @@
                         </td>
                         <td class="py-3 px-3">{{ $order->total }}</td>
                         <td class="py-3 px-3">{{ $order->status }}</td>
-                        <td class="py-3 px-3">{{ $order->created_at }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($order->created_at) }}</td>
                         <td class="py-3 px-3">
                             <a href=" {{ route('order.show',$order->id) }}"
                                class="bg-green-600 hover:bg-green-700 transition-colors duration-100 flex justify-center py-3 px-4 space-x-2 rounded-lg font-bold text-opacity-70 hover:text-opacity-100">

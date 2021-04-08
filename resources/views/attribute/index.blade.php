@@ -60,8 +60,8 @@
                     <tr>
                         <td class="py-3 px-3">#{{ $attribute->id }}</td>
                         <td class="py-3 px-3">{{ $attribute->name }}</td>
-                        <td class="py-3 px-3">{{ $attribute->updated_at }}</td>
-                        <td class="py-3 px-3">{{ $attribute->created_at }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($attribute->updated_at) }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($attribute->created_at) }}</td>
 
                         {{-- actions --}}
                         <td class="py-3 px-3">

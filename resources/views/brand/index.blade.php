@@ -65,10 +65,10 @@
                             @if($brand->updated_at == $brand->created_at)
                                 ...
                             @else
-                                {{ $brand->updated_at }}
+                                {{ App\Http\Helpers::dateFormat($brand->updated_at) }}
                             @endif
                         </td>
-                        <td class="py-3 px-3">{{ $brand->created_at }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($brand->created_at) }}</td>
                         <td class="py-3 px-3">
                             <!-- edit button -->
                             @include('brand.particles.edit-modal',['brand'=>$brand])

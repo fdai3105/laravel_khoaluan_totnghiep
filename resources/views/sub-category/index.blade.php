@@ -62,8 +62,8 @@
                         <td class="py-3 px-3">#{{ $category->id }}</td>
                         <td class="py-3 px-3">{{ $category->name }}</td>
                         <td class="py-3 px-3">{{ $category->parent->name }}</td>
-                        <td class="py-3 px-3">{{ $category->updated_at }}</td>
-                        <td class="py-3 px-3">{{ $category->created_at }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($category->updated_at) }}</td>
+                        <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($category->created_at) }}</td>
 
                         {{-- actions --}}
                         <td class="py-3 px-3">

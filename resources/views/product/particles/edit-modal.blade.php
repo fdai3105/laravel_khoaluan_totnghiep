@@ -43,7 +43,7 @@
                             <div class="flex mb-4">
                                 <div class="flex-1 mr-2">
                                     <label for="name" class="text-xs font-semibold">Desc</label>
-                                    <select name="category_id"
+                                    <select name="brand_id"
                                             class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($brands as $brand)
                                             <div class="px-2 py-2">
@@ -58,7 +58,7 @@
 
                                 <div class="flex-1 ml-2">
                                     <label for="name" class="text-xs font-semibold">Desc</label>
-                                    <select name="brand_id"
+                                    <select name="category_id"
                                             class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($categories as $category)
                                             <div class="px-2 py-2">

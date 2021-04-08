@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
+use App\Mail\OrderMail;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Product;
+use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller {
     /**
@@ -25,7 +29,7 @@ class OrderController extends Controller {
      * Checkout
      *
      * @param Request $request
-     * @return false|\Illuminate\Http\JsonResponse
+     * @return false|JsonResponse
      */
     public function checkout(Request $request) {
         $products_id = $request->input('products');
@@ -59,8 +63,11 @@ class OrderController extends Controller {
             $order->update([
                 'total' => $total
             ]);
+
+            Mail::to($request->user()->email)->send(new OrderMail($order));
+
             return response()->json(['message' => 'checkout success'], 200);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 409);
         }
     }

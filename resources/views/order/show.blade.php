@@ -123,7 +123,7 @@
                         </div>
                         <div class="px-6 py-2 flex flex-row ">
                             <p class="font-semibold text-gray-600">Date: &nbsp;</p>
-                            <p>{{ $order->created_at }}</p>
+                            <p>{{ App\Http\Helpers::dateFormat($order->created_at) }}</p>
                         </div>
                         <div class="px-6 py-2 flex flex-row">
                             <p class="font-semibold text-gray-600">Address: &nbsp;</p>

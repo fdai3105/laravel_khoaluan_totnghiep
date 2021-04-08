@@ -72,8 +72,8 @@
                                     Bêđê
                                 @endif
                             </td>
-                            <td class="py-3 px-3">{{ $user->updated_at }}</td>
-                            <td class="py-3 px-3">{{ $user->created_at }}</td>
+                            <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($user->updated_at) }}</td>
+                            <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($user->created_at) }}</td>
                         </tr>
                     @endforeach
                     </tbody>
