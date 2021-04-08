@@ -36,8 +36,4 @@ Route::middleware([CheckRole::class, 'verified'])->group(function () {
 });
 
 Auth::routes(['verify' => true]);
-Route::get('/mail-demo', function () {
-    $order = Order::first();
-    return view('emails.order_success', ['order' => $order]);
-});
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
