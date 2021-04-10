@@ -15,7 +15,7 @@ class CreateOrdersTable extends Migration {
             $table->id();
             $table->string('status');
             $table->bigInteger('total');
-            $table->string('note');
+            $table->string('note')->nullable();
             $table->foreignId('address_id')->references('id')->on('addresses')
                 ->onDelete('cascade');
             $table->foreignId('user_id')->references('id')->on('users')
