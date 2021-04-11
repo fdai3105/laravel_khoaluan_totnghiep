@@ -12,6 +12,5 @@ class VerifyCsrfToken extends Middleware {
      */
     protected $except = [
         '/api/password/email',
-        'api/email/resend',
     ];
 }
