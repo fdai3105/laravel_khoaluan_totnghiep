@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth:api,web'], function () {
         Route::post('checkout', [OrderController::class, 'checkout']);
 
         Route::post('user-edit', [AuthController::class, 'edit']);
+        Route::post('resend-email', [AuthController::class, 'resend']);
     });
 });
 
@@ -59,4 +60,3 @@ Route::get('comment-by-product/{product_id}', [CommentController::class, 'getCom
 Route::group(['middleware' => ['web']], function () {
     Auth::routes(['verify' => true, 'login' => false, 'register' => false]);
 });
-

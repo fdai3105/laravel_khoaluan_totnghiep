@@ -90,7 +90,7 @@ class AuthController extends Controller {
             $user = User::find($request->user()->id);
             $user->update($request->all());
 
-            if($request->hasFile('avatar')) {
+            if ($request->hasFile('avatar')) {
                 $image = $request->file('avatar');
                 $fileName = preg_replace("/(?:\s\s+|\n|\t)/", "", $user->name . '_' . $image->getClientOriginalName());
                 $fileAddress = $image->move('upload', $fileName);
@@ -100,6 +100,19 @@ class AuthController extends Controller {
             return response()->json(['message' => 'updated success']);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 422);
+        }
+    }
+
+    public function resend(Request $request): JsonResponse {
+        if ($request->user()->hasVerifiedEmail()) {
+            return response()->json(['message' => 'user has verified']);
+        }
+        try {
+            $request->user()->sendEmailVerificationNotification();
+            return response()->json(['message' => 'resend success']);
+
+        } catch (Exception $e) {
+            return response()->json(['message' => $e->getMessage()], $e->getCode());
         }
     }
 }

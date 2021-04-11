@@ -37,8 +37,12 @@ class RegisterRequest extends FormRequest {
         return [
             'name.required' => 'The name field is required',
             'email.required' => 'The email field is required',
+            'email.email' => 'The email is not correct type',
+            'email.unique' => 'The email is already register',
             'password.required' => 'The password field is required',
+            'password.min' => 'The password min 8 char',
             'gender.required' => 'The gender field is required',
+            'gender.numeric' => 'The gender not correct type',
         ];
     }
 }

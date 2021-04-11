@@ -13,6 +13,8 @@ class CreateAddressesTable extends Migration {
     public function up() {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('phone');
             $table->string('city');
             $table->string('district');
             $table->string('ward');

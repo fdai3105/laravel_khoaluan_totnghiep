@@ -21,6 +21,8 @@ class AddressFactory extends Factory {
      */
     public function definition(): array {
         return [
+            'name' => $this->faker->userName,
+            'phone' => $this->faker->phoneNumber,
             'city' => $this->faker->state,
             'district' => $this->faker->city,
             'ward' => $this->faker->streetName,
