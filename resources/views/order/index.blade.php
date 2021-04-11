@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <!--/ topbar -->
+        <!--/ end topbar -->
 
         <!-- main content -->
         <div class="bg-gray-700 overflow-hidden overflow-y-scroll rounded-lg mt-8">
@@ -87,6 +87,6 @@
                 </tbody>
             </table>
         </div>
-        <!--/ main content -->
+        <!--/ end main content -->
     </div>
 @endsection

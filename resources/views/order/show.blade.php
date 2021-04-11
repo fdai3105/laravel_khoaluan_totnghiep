@@ -49,96 +49,91 @@
                 <!-- column 1 -->
                 <div class="flex flex-grow flex-col mr-4">
                     <!-- Detail Table -->
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                        <table class="min-w-full table-fixed">
-                            <!-- header -->
-                            <thead class="">
-                            <tr>
-                                <th class="w-1 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                    ID
-                                </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                    Name
-                                </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                    Price
-                                </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                    Quantity
-                                </th>
-                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                    Total
-                                </th>
-                            </tr>
-                            </thead>
+                    <table class="min-w-full table-fixed">
+                        <!-- header -->
+                        <thead class="bg-gray-600 py-2 px-3 sticky top-0">
+                        <tr>
+                            <th class="w-1 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                ID
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                Name
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                Price
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                Quantity
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                Total
+                            </th>
+                        </tr>
+                        </thead>
 
-                            <!-- body -->
-                            <tbody class="divide-y divide-gray-600  text-white text-opacity-80">
-                            @foreach($order->orderDetail as $detail)
-                                <tr>
-                                    <td class="px-6 py-4 ">
-                                        <div class="text-base">{{ $detail->id }}</div>
-                                    </td>
-                                    <td class="px-6 py-4 ">
-                                        <div class="text-base">{{ $detail->product->name }}</div>
-                                    </td>
-                                    <td class="px-6 py-4 ">
-                                        <div class="text-base">{{ $detail->product->price }}</div>
-                                    </td>
-                                    <td class="px-6 py-4 ">
-                                        <div class="text-base">{{ $detail->quantity}}</div>
-                                    </td>
-                                    <td class="px-6 py-4 ">
-                                        <div class="text-base">{{ $detail->total }}</div>
-                                    </td>
-                                </tr>
-                            @endforeach
+                        <!-- body -->
+                        <tbody class="divide-y divide-gray-600  text-white text-opacity-80">
+                        @foreach($order->orderDetail as $detail)
                             <tr>
-                                <td colspan="5" class="px-6 py-4 text-right">
-                                    <div class="text-lg font-semibold">Total bill: {{ $order->total }}</div>
+                                <td class="px-6 py-4 ">
+                                    <div class="text-base">{{ $detail->id }}</div>
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <div class="text-base">{{ $detail->product->name }}</div>
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <div class="text-base">{{ $detail->product->price }}</div>
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <div class="text-base">{{ $detail->quantity}}</div>
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <div class="text-base">{{ $detail->total }}</div>
                                 </td>
                             </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                        @endforeach
+                        <tr>
+                            <td colspan="5" class="px-6 py-4 text-right">
+                                <div class="text-lg font-semibold">Total bill: {{ $order->total }}</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <!-- column 2 -->
-                <div class="flex flex-shrink flex-col mr-4">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                        <div class="w-full px-6 py-3">
-                            <p class="text-xs font-medium text-center uppercase tracking-wider">User</p>
-                        </div>
-                        <div class="px-6 py-2 flex flex-row ">
-                            <p class="font-semibold text-gray-600">Name: &nbsp;</p>
-                            <p>{{ $order->user->name }}</p>
-                        </div>
-                        <div class="px-6 py-2 flex flex-row ">
-                            <p class="font-semibold text-gray-600">Phone number: &nbsp;</p>
-                            <p>{{ $order->user->phone }}</p>
-                        </div>
-                        <div class="px-6 py-2 flex flex-row ">
-                            <p class="font-semibold text-gray-600">Email:&nbsp; </p>
-                            <p>{{ $order->user->email }}</p>
-                        </div>
-                        <div class="px-6 py-2 flex flex-row ">
-                            <p class="font-semibold text-gray-600">Date: &nbsp;</p>
-                            <p>{{ App\Http\Helpers::dateFormat($order->created_at) }}</p>
-                        </div>
-                        <div class="px-6 py-2 flex flex-row">
-                            <p class="font-semibold text-gray-600">Address: &nbsp;</p>
-                            <div class="flex flex-row divide-x divide-gray-400">
-                                <ul class="list-inside list-disc">
-                                    <li>{{ $order->address->city }}</li>
-                                    <li>{{$order->address->district }}</li>
-                                    <li>{{ $order->address->ward }}</li>
-                                </ul>
-                            </div>
+                <div class="flex flex-shrink flex-col">
+                    <div class="bg-gray-600 py-2 px-3 sticky top-0 w-full px-6 py-3">
+                        <p class="text-xs font-medium text-center uppercase tracking-wider">User</p>
+                    </div>
+                    <div class="px-6 py-2 flex flex-row ">
+                        <p class="font-semibold text-gray-400">Name: &nbsp;</p>
+                        <p>{{ $order->user->name }}</p>
+                    </div>
+                    <div class="px-6 py-2 flex flex-row ">
+                        <p class="font-semibold text-gray-400">Phone number: &nbsp;</p>
+                        <p>{{ $order->user->phone }}</p>
+                    </div>
+                    <div class="px-6 py-2 flex flex-row ">
+                        <p class="font-semibold text-gray-400">Email:&nbsp; </p>
+                        <p>{{ $order->user->email }}</p>
+                    </div>
+                    <div class="px-6 py-2 flex flex-row ">
+                        <p class="font-semibold text-gray-400">Date: &nbsp;</p>
+                        <p>{{ App\Http\Helpers::dateFormat($order->created_at) }}</p>
+                    </div>
+                    <div class="px-6 py-2 flex flex-row">
+                        <p class="font-semibold text-gray-400">Address: &nbsp;</p>
+                        <div class="flex flex-row divide-x divide-gray-400">
+                            <ul class="list-inside list-disc">
+                                <li>{{ $order->address->city }}</li>
+                                <li>{{$order->address->district }}</li>
+                                <li>{{ $order->address->ward }}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <!--/ end main content -->
     </div>

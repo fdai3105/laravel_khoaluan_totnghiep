@@ -66,7 +66,7 @@ class OrderController extends Controller {
 
             Mail::to($request->user()->email)->send(new OrderMail($order));
 
-            return response()->json(['message' => 'checkout success'], 200);
+            return response()->json(['message' => 'checkout success']);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 409);
         }
