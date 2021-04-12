@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\OrderDetailResource;
 use App\Http\Resources\OrderResource;
 use App\Mail\OrderMail;
 use App\Models\Order;
@@ -16,13 +17,22 @@ use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller {
     /**
-     * Get ordered
+     * Get orders
      * @param Request $request
      * @return AnonymousResourceCollection
      */
     public function orders(Request $request): AnonymousResourceCollection {
         $order = Order::where('user_id', $request->user()->id)->get();
         return OrderResource::collection($order);
+    }
+
+    /** Get order detail
+     * @param $id
+     * @return AnonymousResourceCollection
+     */
+    public function getOrder($id): AnonymousResourceCollection {
+        $order = Order::findOrFail($id);
+        return OrderDetailResource::collection($order->orderDetail);
     }
 
     /**
@@ -71,10 +81,4 @@ class OrderController extends Controller {
             return response()->json(['message' => $e->getMessage()], 409);
         }
     }
-
-    /**
-     *
-     * @param Request $request
-     */
-    public function d(Request $request) { }
 }
