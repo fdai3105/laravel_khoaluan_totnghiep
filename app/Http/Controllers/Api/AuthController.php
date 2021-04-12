@@ -110,7 +110,6 @@ class AuthController extends Controller {
         try {
             $request->user()->sendEmailVerificationNotification();
             return response()->json(['message' => 'resend success']);
-
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], $e->getCode());
         }

@@ -35,6 +35,8 @@ class AddressController extends Controller {
      */
     public function store(Request $request): JsonResponse {
         $address = Address::create([
+            'name'=> $request->input('name'),
+            'phone' => $request->input('phone'),
             'city' => $request->input('city'),
             'district' => $request->input('district'),
             'ward' => $request->input('ward'),
