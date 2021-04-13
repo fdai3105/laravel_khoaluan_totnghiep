@@ -17,6 +17,7 @@ class OrderResource extends JsonResource {
             "status" => $this->status,
             "total" => $this->total,
             "note" => $this->note,
+            "item" => count($this->orderDetail),
             "address" => new AddressResource($this->address),
             "created_at" => $this->created_at,
             "updated_at" => $this->updated_at,

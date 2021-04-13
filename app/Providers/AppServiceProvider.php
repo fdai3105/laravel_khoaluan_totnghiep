@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        if ($this->app->isLocal()) {
+        if ($this->app->environment()) {
             $this->app->register(IdeHelperServiceProvider::class);
         }
     }
