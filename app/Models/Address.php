@@ -43,7 +43,7 @@ class Address extends Model {
 
     protected $table = 'addresses';
 
-    protected $fillable = ['name', 'phone', 'city', 'district', 'ward', 'address', 'user_id'];
+    protected $fillable = ['name', 'phone', 'city', 'district', 'ward', 'address', 'show', 'user_id'];
 
     public $timestamps = true;
 

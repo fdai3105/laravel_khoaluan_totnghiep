@@ -103,6 +103,10 @@ class AuthController extends Controller {
         }
     }
 
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function resend(Request $request): JsonResponse {
         if ($request->user()->hasVerifiedEmail()) {
             return response()->json(['message' => 'user has verified']);
@@ -113,5 +117,9 @@ class AuthController extends Controller {
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], $e->getCode());
         }
+    }
+
+    public function hasVerifiedEmail(Request $request): JsonResponse {
+        return response()->json($request->user()->hasVerifiedEmail());
     }
 }

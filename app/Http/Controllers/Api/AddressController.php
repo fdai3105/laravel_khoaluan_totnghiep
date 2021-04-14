@@ -23,7 +23,9 @@ class AddressController extends Controller {
      * @return AnonymousResourceCollection
      */
     public function index(Request $request): AnonymousResourceCollection {
-        $address = Address::where('user_id', '=', $request->user()->id)->get();
+        $address = Address::where('user_id', '=', $request->user()->id)
+            ->where('show', '=', true)
+            ->get();
         return AddressResource::collection($address);
     }
 
@@ -35,7 +37,7 @@ class AddressController extends Controller {
      */
     public function store(Request $request): JsonResponse {
         $address = Address::create([
-            'name'=> $request->input('name'),
+            'name' => $request->input('name'),
             'phone' => $request->input('phone'),
             'city' => $request->input('city'),
             'district' => $request->input('district'),
@@ -81,7 +83,7 @@ class AddressController extends Controller {
      */
     public function destroy(int $id): JsonResponse {
         try {
-            Address::findOrFail($id)->delete();
+            Address::findOrFail($id)->get()->show = false;
             return response()->json(['message' => 'deleted address success']);
         } catch (\Exception $e) {
             return response()->json(['message' => $e->getMessage()], 409);

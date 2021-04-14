@@ -37,7 +37,7 @@ Route::group(['middleware' => 'auth:api,web'], function () {
 
         Route::post('user-edit', [AuthController::class, 'edit']);
     });
-
+    Route::get('has-verified-email',[AuthController::class,'hasVerifiedEmail']);
     Route::post('resend-email', [AuthController::class, 'resend']);
 });
 

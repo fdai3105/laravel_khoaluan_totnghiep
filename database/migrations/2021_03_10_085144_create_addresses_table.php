@@ -19,6 +19,7 @@ class CreateAddressesTable extends Migration {
             $table->string('district');
             $table->string('ward');
             $table->string('address');
+            $table->boolean('show')->default(true);
             $table->foreignId('user_id')->references('id')->on('users')
                 ->onDelete('cascade');
             $table->timestamps();
