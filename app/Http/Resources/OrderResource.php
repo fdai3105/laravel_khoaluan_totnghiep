@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\OrderDetail;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class OrderResource extends JsonResource {
@@ -19,6 +20,7 @@ class OrderResource extends JsonResource {
             "note" => $this->note,
             "item" => count($this->orderDetail),
             "address" => new AddressResource($this->address),
+            "order_detail"=> OrderDetailResource::collection($this->orderDetail),
             "created_at" => $this->created_at,
             "updated_at" => $this->updated_at,
         ];
