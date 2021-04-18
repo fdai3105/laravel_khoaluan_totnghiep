@@ -49,7 +49,7 @@ class CategoryController extends Controller {
             $category->image = $fileAddress;
             $category->save();
         }
-        return redirect("category");
+        return redirect("sub-category");
     }
 
     /**
