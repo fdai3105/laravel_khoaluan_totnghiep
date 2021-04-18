@@ -101,7 +101,9 @@ class ParentCategoryController extends Controller {
      * @return Application|RedirectResponse|Response|Redirector
      */
     public function destroy(int $id) {
-        ParentCategory::findOrFail($id)->delete();
+        $category = ParentCategory::findOrFail($id);
+        \Storage::delete($category->image);
+        $category->delete();
         return redirect('category');
     }
 }

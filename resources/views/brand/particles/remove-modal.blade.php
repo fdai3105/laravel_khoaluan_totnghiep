@@ -1,6 +1,6 @@
-<div id="remove-brand-modal-{{$id}}" class="fixed z-10 inset-0 overflow-y-auto hidden">
+<div id="remove-brand-modal-{{$brand->id}}" class="fixed z-10 inset-0 overflow-y-auto hidden">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-        <div class="fixed inset-0 transition-opacity" onclick="removeBrandModal({{ $id }})">
+        <div class="fixed inset-0 transition-opacity" onclick="removeBrandModal({{ $brand->id }})">
             <div class="absolute inset-0 bg-black opacity-60"></div>
         </div>
 
@@ -10,7 +10,7 @@
         <div class="bg-white inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
             {{-- modal body --}}
-            <form action="{{ route('brand.destroy',$id) }}" method="POST">
+            <form action="{{ route('brand.destroy',$brand->id) }}" method="POST">
                 @csrf
                 @method("DELETE")
                 <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="ml-4 text-left">
                             <h3 class="mb-1 text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                                Remove '{{ $name }}'?
+                                Remove '{{ $brand->name }}'?
                             </h3>
                             <p class="text-sm text-gray-500">
                                 Are you sure you want to remove this brand? All of your data will be permanently removed. This action cannot be undone.
@@ -40,8 +40,8 @@
                         Remove
                     </button>
                     <button type="button"
-                            class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                            onclick="removeBrandModal({{ $id }})">
+                            class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                            onclick="removeBrandModal({{ $brand->id }})">
                         Cancel
                     </button>
                 </div>

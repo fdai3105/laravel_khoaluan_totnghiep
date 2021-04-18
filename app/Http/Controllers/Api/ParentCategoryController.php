@@ -9,6 +9,11 @@ use App\Models\ParentCategory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+/**
+ * @group Parent Category
+ *
+ * APIs for parent category
+ */
 class ParentCategoryController extends Controller {
     /**
      * Display a listing of the resource.
