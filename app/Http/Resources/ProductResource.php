@@ -21,6 +21,7 @@ class ProductResource extends JsonResource {
             "stock" => $this->stock,
             "bought" => $this->bought,
             "warranty" => $this->warranty,
+            "discount" => $this->discount,
             "rating"=> count($this->ratings),
             "rating_averaged" => $this->calculationRating(),
             "brand" => $this->brand,

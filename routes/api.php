@@ -51,6 +51,7 @@ Route::apiResource('category', CategoryController::class);
 Route::apiResource('product', ProductController::class);
 Route::get('new-product', [ProductController::class, 'newProducts']);
 Route::get('popular-product', [ProductController::class, 'popular']);
+Route::get('sale-product', [ProductController::class, 'saleProducts']);
 Route::get('product-by-parent-category/{id}', [ProductController::class, 'productsInParent']);
 Route::get('product-by-category/{id}', [ProductController::class, 'productsInSub']);
 Route::get('search-product', [ProductController::class, 'search']);

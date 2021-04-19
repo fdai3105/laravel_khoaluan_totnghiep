@@ -44,12 +44,11 @@ class ProductController extends Controller {
     /**
      * Show new product sort by
      *
-     * @param Request $request
      * @return AnonymousResourceCollection
      *
      * @queryParam  limit Limit of the query. Example : 6
      */
-    public function popular(Request $request): AnonymousResourceCollection {
+    public function popular(): AnonymousResourceCollection {
         $popularProducts = Product::orderBy('bought', 'DESC')
             ->paginate($this->paginate);
         return ProductResource::collection($popularProducts);
@@ -58,13 +57,26 @@ class ProductController extends Controller {
     /**
      * Show hot product sort by updated_at
      *
-     * @param Request $request
      * @return AnonymousResourceCollection
      *
      * @queryParam  limit Limit of the query. Example: 6
      */
-    public function newProducts(Request $request): AnonymousResourceCollection {
+    public function newProducts(): AnonymousResourceCollection {
         $newProducts = Product::orderBy('updated_at', 'DESC')
+            ->paginate($this->paginate);
+        return ProductResource::collection($newProducts);
+    }
+
+    /**
+     * Show sale product sort by discount
+     *
+     * @return AnonymousResourceCollection
+     *
+     * @queryParam  limit Limit of the query. Example: 6
+     */
+    public function saleProducts(): AnonymousResourceCollection {
+        $newProducts = Product::where('discount','!=', 0)
+            ->orderBy('discount', 'DESC')
             ->paginate($this->paginate);
         return ProductResource::collection($newProducts);
     }
