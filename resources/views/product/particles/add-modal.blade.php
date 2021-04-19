@@ -16,7 +16,7 @@
 
                 {{-- footer body --}}
                 <div class="px-4 py-4">
-                    <h3 class="text-lg mb-2 leading-6 font-medium text-gray-900">Add category</h3>
+                    <h3 class="text-lg mb-2 leading-6 font-medium text-gray-900">Add product</h3>
 
                     <div class="flex flex-row">
                         {{-- column 1 --}}
@@ -42,7 +42,7 @@
                             <div class="flex mb-4">
                                 <div class="flex-1 mr-2">
                                     <label for="name" class="text-xs font-semibold">Brand</label>
-                                    <select name="category_id" class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                                    <select name="brand_id" class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($brands as $brand)
                                             <div class="px-2 py-2">
                                                 <option value="{{$brand->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
@@ -55,13 +55,17 @@
 
                                 <div class="flex-1 ml-2">
                                     <label for="name" class="text-xs font-semibold">Desc</label>
-                                    <select name="brand_id" class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                                    <select name="category_id" class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($categories as $category)
-                                            <div class="px-2 py-2">
-                                                <option value="{{$category->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
-                                                    {{$category->name}}
-                                                </option>
-                                            </div>
+                                            <optgroup label="{{ $category->name }}">
+                                            @foreach($category->sub as $sub)
+                                                    <div class="px-2 py-2">
+                                                        <option value="{{$sub->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
+                                                            {{$sub->name}}
+                                                        </option>
+                                                    </div>
+                                            @endforeach
+                                            </optgroup>
                                         @endforeach
                                     </select>
                                 </div>
@@ -108,7 +112,7 @@
                                     </button>
                                 </div>
                                 <div class="mt-1 flex flex-row align-middle">
-                                    <input type="number" name="attributes[]"
+                                    <input type="text" name="attributes[]"
                                            class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                     <select name="attribute_type[]"
                                             class="px-2 h-10 w-20 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">

@@ -61,12 +61,16 @@
                                     <select name="category_id"
                                             class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($categories as $category)
-                                            <div class="px-2 py-2">
-                                                <option value="{{$category->id}}" {{ $product->category_id == $category->id ? "selected" : "" }}
-                                                class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
-                                                    {{$category->name}}
-                                                </option>
-                                            </div>
+                                            <optgroup label="{{ $category->name }}">
+                                                @foreach($category->sub as $sub)
+                                                    <div class="px-2 py-2">
+                                                        <option value="{{$sub->id}}" {{ $sub->category_id == $sub->id ? "selected" : "" }}
+                                                        class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
+                                                            {{$sub->name}}
+                                                        </option>
+                                                    </div>
+                                                @endforeach
+                                            </optgroup>
                                         @endforeach
                                     </select>
                                 </div>
@@ -101,10 +105,12 @@
                                 <label for="name" class="text-xs font-semibold">Images</label>
                                 <br>
                                 <input name="images[]" type="file" accept="image/*" {{--id="filepond"--}} multiple>
-                                @foreach($product->images as $image)
-                                    <img src="{{ $image->image }}" alt=" {{ $image->id }}"
-                                         width="40" height="40">
-                                @endforeach
+                                <div class="mt-2 flex flex-row">
+                                    @foreach($product->images as $image)
+                                        <img class="mr-1" src="{{ $image->image }}" alt="{{ $image->id }}"
+                                             width="40" height="40">
+                                    @endforeach
+                                </div>
                             </div>
 
                             {{-- attributes --}}

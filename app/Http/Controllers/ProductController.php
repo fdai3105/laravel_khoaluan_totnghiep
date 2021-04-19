@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Attribute;
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\ParentCategory;
 use App\Models\Product;
 use App\Models\ProductAttribute;
 use App\Models\ProductImage;
@@ -24,7 +25,7 @@ class ProductController extends Controller {
      */
     public function index() {
         $products = Product::all();
-        $categories = Category::all();
+        $categories = ParentCategory::all();
         $brands = Brand::all();
         $attributes = Attribute::all();
 

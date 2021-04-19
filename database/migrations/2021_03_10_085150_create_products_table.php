@@ -15,12 +15,12 @@ class CreateProductsTable extends Migration {
             $table->id();
             $table->string('name');
             $table->bigInteger('price');
-//            $table->string('short_desc');
-            $table->string('desc');
+            //            $table->string('short_desc');
+            $table->string('desc', 2080);
             $table->integer('stock');
             $table->integer('bought')->default(0);
             $table->integer('warranty');
-            $table->integer('discount');
+            $table->integer('discount')->default(0);
             $table->foreignId('category_id')->references('id')->on('categories')
                 ->onDelete('cascade');
             $table->foreignId('brand_id')->references('id')->on('brands')
