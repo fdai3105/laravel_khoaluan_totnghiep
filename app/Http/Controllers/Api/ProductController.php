@@ -75,7 +75,7 @@ class ProductController extends Controller {
      * @queryParam  limit Limit of the query. Example: 6
      */
     public function saleProducts(): AnonymousResourceCollection {
-        $newProducts = Product::where('discount','!=', 0)
+        $newProducts = Product::where('discount', '!=', 0)
             ->orderBy('discount', 'DESC')
             ->paginate($this->paginate);
         return ProductResource::collection($newProducts);
@@ -124,5 +124,15 @@ class ProductController extends Controller {
         }
 
         return ProductResource::collection($products->paginate());
+    }
+
+    /**
+     * @param int $id
+     * @return AnonymousResourceCollection
+     */
+    public function similar(int $id): AnonymousResourceCollection {
+        $category = Product::find($id)->category;
+        $similar = Product::where('category_id','=',$category->id);
+        return ProductResource::collection($similar->paginate());
     }
 }

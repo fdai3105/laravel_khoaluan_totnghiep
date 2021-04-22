@@ -37,7 +37,7 @@ Route::group(['middleware' => 'auth:api,web'], function () {
 
         Route::post('user-edit', [AuthController::class, 'edit']);
     });
-    Route::get('has-verified-email',[AuthController::class,'hasVerifiedEmail']);
+    Route::get('has-verified-email', [AuthController::class, 'hasVerifiedEmail']);
     Route::post('resend-email', [AuthController::class, 'resend']);
 });
 
@@ -55,6 +55,7 @@ Route::get('sale-product', [ProductController::class, 'saleProducts']);
 Route::get('product-by-parent-category/{id}', [ProductController::class, 'productsInParent']);
 Route::get('product-by-category/{id}', [ProductController::class, 'productsInSub']);
 Route::get('search-product', [ProductController::class, 'search']);
+Route::get('similar-product/{id}', [ProductController::class, 'similar']);
 
 Route::apiResource('rating', RatingController::class)->only(['index', 'show']);
 Route::get('rating-by-product/{product_id}', [RatingController::class, 'getRatingByProduct']);
