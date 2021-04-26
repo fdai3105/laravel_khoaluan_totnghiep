@@ -27,11 +27,12 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth:api,web'], function () {
     Route::middleware('verified')->group(function () {
-        Route::apiResource('comment', CommentController::class)->only(['store','update','destroy']);
+        Route::apiResource('comment', CommentController::class)->only(['store', 'update', 'destroy']);
         Route::apiResource('address', AddressController::class);
 
         Route::get('order/{id}', [OrderController::class, 'getOrder']);
         Route::get('orders', [OrderController::class, 'orders']);
+        Route::post('order/cancel', [OrderController::class, 'cancel']);
 
         Route::post('checkout', [OrderController::class, 'checkout']);
 

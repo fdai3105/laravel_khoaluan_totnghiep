@@ -81,4 +81,17 @@ class OrderController extends Controller {
             return response()->json(['message' => $e->getMessage()], 409);
         }
     }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function cancel(Request $request): JsonResponse {
+        try {
+            Order::findOrFail($request->input('id'))->update(['status' => 'Cancelled']);
+            return response()->json(['message' => 'cancel success']);
+        } catch (Exception $e) {
+            return response()->json(['message' => $e->getMessage()], $e->getCode());
+        }
+    }
 }
