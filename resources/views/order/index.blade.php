@@ -70,7 +70,19 @@
                             </p>
                         </td>
                         <td class="py-3 px-3">{{ $order->total }}</td>
-                        <td class="py-3 px-3">{{ $order->status }}</td>
+                        <td class="py-3 px-3">
+                            <form action="{{ route('update-status', $order->id) }}" method="POST">
+                                @csrf
+                                <select class="bg-gray-800"
+                                        name="status" {{ $order->status == 'Cancelled' ? 'disabled' :'' }}
+                                        onchange="this.form.submit()">
+                                    <option {{ $order->status == 'Pending' ? 'selected' :'' }} value="Pending">Pending</option>
+                                    <option {{ $order->status == 'Shipping' ? 'selected' :'' }} value="Shipping">Shipping</option>
+                                    <option {{ $order->status == 'Completed' ? 'selected' :'' }} value="Completed">Completed</option>
+                                    <option {{ $order->status == 'Cancelled' ? 'selected' :'' }} value="Cancelled">Cancelled</option>
+                                </select>
+                            </form>
+                        </td>
                         <td class="py-3 px-3">{{ App\Http\Helpers::dateFormat($order->created_at) }}</td>
                         <td class="py-3 px-3">
                             <a href=" {{ route('order.show',$order->id) }}"

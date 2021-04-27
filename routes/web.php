@@ -33,6 +33,7 @@ Route::middleware([CheckRole::class, 'verified'])->group(function () {
     Route::resource('attribute', AttributeController::class);
     Route::resource('user', UserController::class);
     Route::resource('order', OrderController::class);
+    Route::post('order/update-status/{id}', [OrderController::class, 'updateStatus'])->name('update-status');
 });
 
 Auth::routes(['verify' => true]);

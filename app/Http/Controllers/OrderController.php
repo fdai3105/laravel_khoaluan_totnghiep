@@ -81,4 +81,9 @@ class OrderController extends Controller {
     public function destroy(Order $order): Response {
         //
     }
+
+    public function updateStatus(Request $request, int $id) {
+        Order::findOrFail($id)->update(['status' => $request->input('status')]);
+        return redirect('order');
+    }
 }
