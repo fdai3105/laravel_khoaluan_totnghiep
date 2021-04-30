@@ -74,7 +74,7 @@
                             <form action="{{ route('update-status', $order->id) }}" method="POST">
                                 @csrf
                                 <select class="bg-gray-800"
-                                        name="status" {{ $order->status == 'Cancelled' ? 'disabled' :'' }}
+                                        name="status" {{ $order->status == 'Cancelled' || $order->status == 'Completed'  ? 'disabled' :'' }}
                                         onchange="this.form.submit()">
                                     <option {{ $order->status == 'Pending' ? 'selected' :'' }} value="Pending">Pending</option>
                                     <option {{ $order->status == 'Shipping' ? 'selected' :'' }} value="Shipping">Shipping</option>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Auth;
 use Exception;
@@ -83,9 +84,9 @@ class AuthController extends Controller {
 
     /**
      * @param Request $request
-     * @return JsonResponse
+     * @return UserResource|JsonResponse
      */
-    public function edit(Request $request): JsonResponse {
+    public function edit(Request $request) {
         try {
             $user = User::find($request->user()->id);
             $user->update($request->all());
@@ -94,10 +95,10 @@ class AuthController extends Controller {
                 $image = $request->file('avatar');
                 $fileName = preg_replace("/(?:\s\s+|\n|\t)/", "", $user->name . '_' . $image->getClientOriginalName());
                 $fileAddress = $image->move('upload', $fileName);
-                $user->avatar = $fileAddress;
+                $user->avatar = $fileAddress->getPathname();
                 $user->save();
             }
-            return response()->json(['message' => 'updated success']);
+            return new UserResource($user);
         } catch (Exception $e) {
             return response()->json(['message' => $e->getMessage()], 422);
         }
