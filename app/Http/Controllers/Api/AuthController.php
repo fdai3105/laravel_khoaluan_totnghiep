@@ -89,7 +89,7 @@ class AuthController extends Controller {
     public function edit(Request $request) {
         try {
             $user = User::find($request->user()->id);
-            $user->update($request->all());
+            $user->update($request->except(['avatar']));
 
             if ($request->hasFile('avatar')) {
                 $image = $request->file('avatar');
