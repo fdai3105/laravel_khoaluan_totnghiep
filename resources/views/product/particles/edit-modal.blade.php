@@ -35,14 +35,23 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="name" class="text-xs font-semibold">Sort desc</label>
+                                <input type="text" name="sort_desc" value="{{ $product->sort_desc }}"
+                                       class="mt-1 px-2 py-2 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                            </div>
+
+                            <div class="mb-4">
                                 <label for="name" class="text-xs font-semibold">Desc</label>
                                 <textarea type="text" name="desc"
                                           class="mt-1 px-2 py-2 h-32 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">{{ $product->desc }}</textarea>
                             </div>
+                        </div>
 
+                        {{-- column 2 --}}
+                        <div class="flex-1">
                             <div class="flex mb-4">
                                 <div class="flex-1 mr-2">
-                                    <label for="name" class="text-xs font-semibold">Desc</label>
+                                    <label for="name" class="text-xs font-semibold">Brands</label>
                                     <select name="brand_id"
                                             class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($brands as $brand)
@@ -57,7 +66,7 @@
                                 </div>
 
                                 <div class="flex-1 ml-2">
-                                    <label for="name" class="text-xs font-semibold">Desc</label>
+                                    <label for="name" class="text-xs font-semibold">Category</label>
                                     <select name="category_id"
                                             class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                         @foreach($categories as $category)
@@ -75,10 +84,7 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
 
-                        {{-- column 2 --}}
-                        <div class="flex-1">
 
                             <div class="mb-4">
                                 <label for="name" class="text-xs font-semibold">Stock</label>
@@ -151,7 +157,7 @@
                                         <input name="attribute_id[]" value=""
                                                class="hidden">
                                         <select name="attribute_type[]"
-                                                class="px-2 h-10 w-20 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
+                                                class="px-2 h-10 w-32 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                                             @foreach($attributes as $attribute)
                                                 <div class="px-2 py-2">
                                                     <option value="{{ $attribute->id }}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
@@ -206,7 +212,7 @@
         const ele = '<div class="mt-1 flex flex-row align-middle"> ' +
             '<input type="text" name="attributes[]"class="w-full h-10 px-2 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
             '<input name="attribute_id[]" value="" class="hidden">' +
-            '<select name="attribute_type[]"class="px-2 h-10 w-20 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
+            '<select name="attribute_type[]"class="px-2 h-10 w-28 mr-2 border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">' +
             '@foreach($attributes as $attribute)<div class="px-2 py-2"> <option name="attribute_type[]" value="{{$attribute->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">{{$attribute->name}}</option> </div>@endforeach' +
             '</select></div>'
         $('#attribute-' + id).append(ele)

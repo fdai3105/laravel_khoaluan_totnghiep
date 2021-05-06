@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/email-verify',function (){
+    return view('auth.verify_success');
+});
+
 Route::middleware([CheckRole::class, 'verified'])->group(function () {
     Route::resource('/', DashboardController::class);
     Route::resource('product', ProductController::class);

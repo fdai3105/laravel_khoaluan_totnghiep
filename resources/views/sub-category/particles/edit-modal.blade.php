@@ -29,7 +29,7 @@
                         <select name="parent_id" class="mt-1 px-2 h-10 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-gray-600 text-sm rounded-md">
                             @foreach($parents as $parent)
                                 <div class="px-2 py-2">
-                                    <option value="{{$parent->id}}" class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
+                                    <option value="{{$parent->id}}" {{ $parent->id == $category->parent->id ? 'selected' : ''  }}  class="block px-4 py-2 bg-transparent text-sm text-gray-700 focus:outline-none focus:bg-gray-400 hover:bg-current hover:text-gray-900">
                                         {{$parent->name}}
                                     </option>
                                 </div>

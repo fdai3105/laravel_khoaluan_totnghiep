@@ -63,6 +63,7 @@ class Product extends Model {
         'name',
         'price',
         'desc',
+        'sort_desc',
         'stock',
         'bought',
         'warranty',

@@ -15,8 +15,8 @@ class CreateProductsTable extends Migration {
             $table->id();
             $table->string('name');
             $table->bigInteger('price');
-            //            $table->string('short_desc');
-            $table->string('desc', 2080);
+            $table->string('sort_desc')->nullable();
+            $table->string('desc', 2080)->nullable();
             $table->integer('stock');
             $table->integer('bought')->default(0);
             $table->integer('warranty');
