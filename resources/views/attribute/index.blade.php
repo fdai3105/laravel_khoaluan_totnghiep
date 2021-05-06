@@ -69,7 +69,7 @@
                             @include('attribute.particles.edit-modal',['category'=>$attribute])
                             <button type="button"
                                     class="bg-green-600 hover:bg-green-700 mr-1 rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-green-400"
-                                    onclick="editCategoryModal({{ $attribute->id}})">
+                                    onclick="editAttributeModal({{ $attribute->id}})">
                                 <svg class="w-4 h-4 text-blue-100 opacity-80" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                 </svg>
@@ -79,7 +79,7 @@
                             @include('attribute.particles.remove-modal',['id'=> $attribute->id, 'name'=>$attribute->name])
                             <button type="button"
                                     class="bg-red-600 hover:bg-red-700 rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-red-400"
-                                    onclick="removeCategoryModal({{ $attribute->id }})">
+                                    onclick="removeAttributeModal({{ $attribute->id }})">
                                 <svg class="w-4 h-4 text-blue-100 opacity-80" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>

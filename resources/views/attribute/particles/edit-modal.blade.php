@@ -2,7 +2,7 @@
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
 
         {{-- space --}}
-        <div class="fixed inset-0 transition-opacity" onclick="editCategoryModal({{$category->id}})">
+        <div class="fixed inset-0 transition-opacity" onclick="editAttributeModal({{$category->id}})">
             <div class="absolute inset-0 bg-black opacity-60"></div>
         </div>
 
@@ -31,7 +31,7 @@
                     </button>
                     <button type="button"
                             class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                            onclick="editCategoryModal({{ $category->name }})">
+                            onclick="editAttributeModal({{ $category->id }})">
                         Cancel
                     </button>
                 </div>
@@ -41,7 +41,7 @@
 </div>
 
 <script>
-    function editCategoryModal($id) {
+    function editAttributeModal($id) {
         const modal = document.getElementById("edit-category-modal-" + $id)
         if (modal.classList.contains("hidden")) {
             modal.classList.remove('hidden')
